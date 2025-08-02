@@ -14,12 +14,12 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sravanthkod.github.io" # the base hostname & protocol for your site
 github_username:  sravanthkod
-twitter_username: kalpeshk2011
+twitter_username: sravanthkod
 linkedin_username: sravanthk27
-stackoverflow: 5080995/martianwars
+# stackoverflow: 5080995/martianwars
 include: ['_pages']
 footer-links-active:
-  stackoverflow: true
+  stackoverflow: False
 
 # Build settings
 markdown: kramdown
