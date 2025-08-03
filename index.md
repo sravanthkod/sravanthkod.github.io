@@ -22,13 +22,17 @@ Email ID: [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.c
 <table>
 <col width="100px">
 <col width="630px">
+  <tr><td><b>Aug 2025:</b></td><td>Serving as a reviewer for NeruIPS 2025 BERT2S Workshop!</td></tr>
   <tr><td><b>Jul 2025:</b></td><td>Awarded spot award for signifcant contributions to novel speculative decoding algorithm. More details about algorithm will be out soon!</td></tr>
   <tr><td><b>Jul 2025:</b></td><td>1 Paper submitted to EMNLP 2025!</td></tr>
+  <tr><td><b>Jul 2024:</b></td><td>Served as reviewer for ICML 2025 AI4MATH Workshop, Scipy 2025 Proceddings!</td></tr>
   <tr><td><b>Jun 2025:</b></td><td>2 Papers submitted to Samsung Best Paper Award!</td></tr>
+  <tr><td><b>Jun 2025:</b></td><td>Served as reviewer for ACL 2025 Student Research Workshop!</td></tr>
   <tr><td><b>May 2025:</b></td><td>1 Paper submitted to NeurIPS 2025!</td></tr>
+  <tr><td><b>May 2025:</b></td><td>Served as a reviewer for ACL 2025 REALM workshop!</td></tr>
   <tr><td><b>Feb 2025:</b></td><td>Awarded MD Project Incentive award at Samsung for significant contribution towards AI model acceleration!</td></tr>
-  <tr><td><b>Jan 2025:</b></td><td>Awarded Team Awesome award for Samsung Gauss - L model commercialization into S25 series! </td></tr>
-  <tr><td><b>Dec 2024:</b></td><td>1 <a href="https://ieeexplore.ieee.org/document/10888855" target="_blank">Paper</a> accepted to IEEE ICASSP 2025</td></tr>
+  <tr><td><b>Jan 2025:</b></td><td>Awarded Team Awesome award for Samsung Gauss - L model commercialization into Galaxy S25 series! </td></tr>
+  <tr><td><b>Dec 2024:</b></td><td>1 <a href="https://ieeexplore.ieee.org/document/10888855" target="_blank">Paper</a> accepted to IEEE ICASSP 2025!</td></tr>
   <!-- <tr><td><b>Sept 2024:</b></td><td>2 Papers submitted to IEEE ICASSP 2025!</td></tr> -->
   <tr><td><b>Aug 2024:</b></td><td>Started working as a Research Engineer at Samsung Research!</td></tr>
-  <tr><td><b>Jul 2024:</b></td><td>Graduated from IIT Hyderabad!</td></tr>
+  <tr><td><b>Jul 2024:</b></td><td>Graduated from IIT Hyderabad with major in CS & minor in Entrepreneurship!</td></tr>
