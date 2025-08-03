@@ -1,5 +1,3 @@
-<!-- # Teaching Experience -->
-
 ---
 layout: page
 title: Teaching
