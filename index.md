@@ -5,7 +5,7 @@ layout: page
 
 <img style="float: right; width: 35%; padding: 6px;" src=" {{ site.url }}/assets/sravanth_profile_3.jpeg">
 
-I am a Research Engineer at [Samsung Research](https://research.samsung.com/sri-b). I work on optimizing AI models for edge device deployment, leveraging techniques like Neural Architecture Search, Quantization and Pruning to improve performance and efficiency. My focus is on both traditional and generative AI models.
+I am Sravanth Kodavanti, working as a Research Engineer at [Samsung Research](https://research.samsung.com/sri-b). I work on optimizing AI models for edge device deployment, leveraging techniques like Neural Architecture Search, Quantization and Pruning to improve performance and efficiency. My focus is on both traditional and generative AI models.
 
 <!-- I completed my PhD in 2023 in Computer Science at [UMass Amherst](http://cs.umass.edu/) advised by Prof. [Mohit Iyyer](https://people.cs.umass.edu/~miyyer/) in the [UMass NLP](http://nlp.cs.umass.edu/) lab. My research at UMass was supported by the [Google PhD Fellowship](https://research.google/outreach/phd-fellowship/). Before UMass, I received my undergraduate degree at [IIT Bombay](http://iitb.ac.in). During my PhD and undergrad, I also did some fun internships at [Google DeepMind](https://research.google) (Summer 2019 - Spring 2022), [Allen AI](https://allenai.org/) (Summer 2022), [Toyota Technological Institute at Chicago](https://www.ttic.edu/) (Summer 2017) and [Mozilla](https://www.mozilla.org/en-US/) (Summer 2016). -->
 
@@ -23,11 +23,11 @@ Email ID: [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.c
 <col width="100px">
 <col width="630px">
   <tr><td><b>Aug 2025:</b></td><td>Serving as a reviewer for NeruIPS 2025 BERT2S Workshop!</td></tr>
-  <tr><td><b>Jul 2025:</b></td><td>Awarded spot award for signifcant contributions to novel speculative decoding algorithm. More details about algorithm will be out soon!</td></tr>
-  <tr><td><b>Jul 2025:</b></td><td>1 Paper submitted to EMNLP 2025!</td></tr>
-  <tr><td><b>Jul 2024:</b></td><td>Served as reviewer for ICML 2025 AI4MATH Workshop, Scipy 2025 Proceddings!</td></tr>
+  <tr><td><b>Jul 2025:</b></td><td>Awarded Spot award at Samsung for signifcant contributions to novel speculative decoding algorithm. More details about algorithm will be out soon!</td></tr>
+  <tr><td><b>Jul 2025:</b></td><td>1 Paper submitted to EMNLP 2025 Industry Track!</td></tr>
+  <tr><td><b>Jul 2025:</b></td><td>Served as reviewer for ICML 2025 AI4MATH Workshop, Scipy 2025 Proceddings!</td></tr>
   <tr><td><b>Jun 2025:</b></td><td>2 Papers submitted to Samsung Best Paper Award!</td></tr>
-  <tr><td><b>Jun 2025:</b></td><td>Served as reviewer for ACL 2025 Student Research Workshop!</td></tr>
+  <tr><td><b>Jun 2025:</b></td><td>Served as a reviewer for ACL 2025 Student Research Workshop!</td></tr>
   <tr><td><b>May 2025:</b></td><td>1 Paper submitted to NeurIPS 2025!</td></tr>
   <tr><td><b>May 2025:</b></td><td>Served as a reviewer for ACL 2025 REALM workshop!</td></tr>
   <tr><td><b>Feb 2025:</b></td><td>Awarded MD Project Incentive award at Samsung for significant contribution towards AI model acceleration!</td></tr>
