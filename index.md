@@ -22,7 +22,7 @@ Email ID: [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.c
 <table>
 <col width="100px">
 <col width="630px">
-  <tr><td><b>Dec 2024:</b></td><td>1 <a href="https://ieeexplore.ieee.org/document/10888855" target="_blank">Paper accepted to IEEE ICASSP 2025</a></td></tr>
+  <tr><td><b>Dec 2024:</b></td><td>1 <a href="https://ieeexplore.ieee.org/document/10888855" target="_blank">Paper</a>accepted to IEEE ICASSP 2025</td></tr>
   <!-- <tr><td><b>Sept 2024:</b></td><td>2 Papers submitted to IEEE ICASSP 2025!</td></tr> -->
-  <tr><td><b>August 2024:</b></td><td>Started working as a Research Engineer at Samsung Research!</td></tr>
-  <tr><td><b>July 2024:</b></td><td>Graduated from IIT Hyderabad!</td></tr>
+  <tr><td><b>Aug 2024:</b></td><td>Started working as a Research Engineer at Samsung Research!</td></tr>
+  <tr><td><b>Jul 2024:</b></td><td>Graduated from IIT Hyderabad!</td></tr>
