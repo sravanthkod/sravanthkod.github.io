@@ -2,5 +2,5 @@
 layout: page
 title: Teaching
 permalink: /teaching/
-order: 1
+order: 2
 ---
