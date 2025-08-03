@@ -5,37 +5,40 @@ permalink: /Teaching/
 order: 2
 ---
 
-<!-- ## Overview -->
-As a Teaching Assistant at [Departmnent of CSE, IIT Hyderabad](https://cse.iith.ac.in/), I supported instructors, guided students, and contributed to a positive learning environment. My work included facilitating discussions, leading labs and tutorials, and assisting with course materials to enhance student understanding.
+# Teaching
 
-<!-- ---
+As a Teaching Assistant in the [Department of Computer Science and Engineering, IIT Hyderabad](https://cse.iith.ac.in/), I have played a key role in supporting instructors, mentoring students, and fostering a collaborative learning environment. My TA assignments have given me the opportunity to facilitate discussions, organize labs and tutorials, and help deliver challenging course content with clarity and engagement.
 
-## Teaching Assistantships -->
+## Teaching Assistantships
 
 ### Theory of Computation
-- **Term:** Spring'24
-- **Instructors:** [Dr. Subrahmanyam Kalyanasundaram](https://people.iith.ac.in/subruk/) and [Dr. Karteek Sreenivasaiah](https://people.iith.ac.in/karteek/)
+- **Term:** Spring 2024
+- **Instructors:** [Dr. Subrahmanyam Kalyanasundaram](https://people.iith.ac.in/subruk/), [Dr. Karteek Sreenivasaiah](https://people.iith.ac.in/karteek/)
+- **Highlights:**
+  - Assisted in lectures, prepared practice problems, and supported student queries during tutorials.
+  - Helped coordinate assignments and assessments, ensuring timely feedback.
 
-<!-- --- -->
-
-### Database Managment System
-- **Term:** Fall'23
+### Database Management System
+- **Term:** Fall 2023
 - **Instructor:** [Dr. Manish Singh](https://people.iith.ac.in/msingh/)
-
-<!-- --- -->
+- **Highlights:**
+  - Guided lab sessions and clarified core database concepts for students.
+  - Contributed to assignment design and grading, and provided individual guidance during office hours.
 
 ### Operating Systems
-- **Term:** Spring'22
+- **Term:** Spring 2022
 - **Instructor:** [Dr. Sathya Peri](https://people.iith.ac.in/sathya_p/)
-
-<!-- --- -->
+- **Highlights:**
+  - Supported lectures by managing lab exercises on OS concepts.
+  - Assisted in assignment evaluation and provided hands-on help with programming projects.
 
 ### Discrete Mathematics
-- **Term:** Spring'21
+- **Term:** Spring 2021
 - **Instructor:** [Dr. Rakesh Venkat](https://people.iith.ac.in/rakeshvenkat/)
+- **Highlights:**
+  - Led discussion sections and provided additional problem-solving sessions for students.
+  - Helped design quizzes and assisted with grading.
 
-<!-- ---
+---
 
-## Additional Comments
-
-- [Any extra notes about your overall TA experience or teaching philosophy] -->
+*My experience as a TA has strengthened my communication and teamwork skills, deepened my understanding of computer science fundamentals, and affirmed my commitment to student-centered education.*
