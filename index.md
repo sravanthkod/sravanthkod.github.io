@@ -3,7 +3,7 @@ layout: page
 ---
 {% include JB/setup %}
 
-<img style="float: right; width: 35%; padding: 6px;" src=" {{ site.url }}/assets/sravanth_profile_3.jpg">
+<img style="float: right; width: 35%; padding: 6px;" src=" {{ site.url }}/assets/sravanth_profile_3.jpeg">
 
 I am a Research Engineer at [Samsung Research](https://research.samsung.com/sri-b). I work on optimizing AI models for edge device deployment, leveraging techniques like Neural Architecture Search, Quantization and Pruning to improve performance and efficiency. My focus is on both traditional and generative AI models.
 
