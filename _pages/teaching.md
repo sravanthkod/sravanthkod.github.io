@@ -18,6 +18,8 @@ As a Teaching Assistant in the [Department of Computer Science and Engineering, 
      - Assisted in lectures, prepared practice problems, and supported student queries during tutorials.  
      - Coordinated assignments and assessments, ensuring timely and constructive feedback.  
 
+---
+
 2. **Database Management System**  
    - **Term:** Fall 2023  
    - **Instructor:** [Dr. Manish Singh](https://people.iith.ac.in/msingh/)  
@@ -25,12 +27,16 @@ As a Teaching Assistant in the [Department of Computer Science and Engineering, 
      - Guided lab sessions and clarified core database concepts for students.  
      - Contributed to assignment design, grading, and provided individual guidance during office hours.  
 
+---
+
 3. **Operating Systems**  
    - **Term:** Spring 2022  
    - **Instructor:** [Dr. Sathya Peri](https://people.iith.ac.in/sathya_p/)  
    - **Highlights:**  
      - Supported lectures by managing and supervising lab exercises on OS concepts.  
      - Assisted in assignment evaluation and offered hands-on programming project support.  
+
+---
 
 4. **Discrete Mathematics**  
    - **Term:** Spring 2021  
