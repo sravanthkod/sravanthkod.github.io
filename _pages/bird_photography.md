@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: page
 title: Birding
 permalink: /birding/
@@ -167,4 +167,4 @@ All photographs here have been taken using a Canon EOS 90D with a Sigma 100-400m
 .imgContainer{
     display:inline-block;
 }
-</style>
+</style> -->
