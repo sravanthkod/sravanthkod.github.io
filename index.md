@@ -5,7 +5,7 @@ layout: page
 
 <img style="float: right; width: 35%; padding: 6px;" src=" {{ site.url }}/assets/sravanth_profile_3.jpeg">
 
-I am Sravanth Kodavanti, working as a Research Engineer at [Samsung Research](https://research.samsung.com/sri-b). I work on optimizing AI models for edge device deployment, leveraging techniques like Neural Architecture Search, Quantization and Pruning to improve performance and efficiency. My focus is on both traditional and generative AI models.
+I am Sravanth Kodavanti, working as a Research Engineer at [Samsung Research](https://research.samsung.com/sri-b) under the guidance of [Dr. Srinivas Soumitri](https://www.linkedin.com/in/srinivas-s-miriyala/). I work on optimizing AI models for edge device deployment, leveraging techniques like Neural Architecture Search, Quantization and Pruning to improve performance and efficiency. My focus is on both traditional and generative AI models.
 
 <!-- I completed my PhD in 2023 in Computer Science at [UMass Amherst](http://cs.umass.edu/) advised by Prof. [Mohit Iyyer](https://people.cs.umass.edu/~miyyer/) in the [UMass NLP](http://nlp.cs.umass.edu/) lab. My research at UMass was supported by the [Google PhD Fellowship](https://research.google/outreach/phd-fellowship/). Before UMass, I received my undergraduate degree at [IIT Bombay](http://iitb.ac.in). During my PhD and undergrad, I also did some fun internships at [Google DeepMind](https://research.google) (Summer 2019 - Spring 2022), [Allen AI](https://allenai.org/) (Summer 2022), [Toyota Technological Institute at Chicago](https://www.ttic.edu/) (Summer 2017) and [Mozilla](https://www.mozilla.org/en-US/) (Summer 2016). -->
 
