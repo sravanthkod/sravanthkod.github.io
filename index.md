@@ -26,7 +26,7 @@ Email ID: [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.c
   <tr><td><b>Jul 2025:</b></td><td>Awarded Spot award at Samsung for signifcant contributions to novel speculative decoding algorithm. More details about algorithm will be out soon!</td></tr>
   <tr><td><b>Jul 2025:</b></td><td>1 Paper submitted to EMNLP 2025 Industry Track!</td></tr>
   <tr><td><b>Jul 2025:</b></td><td>Served as reviewer for ICML 2025 AI4MATH Workshop, Scipy 2025 Proceddings!</td></tr>
-  <tr><td><b>Jun 2025:</b></td><td>2 Papers submitted to Samsung Best Paper Award!</td></tr>
+  <!-- <tr><td><b>Jun 2025:</b></td><td>2 Papers submitted to Samsung Best Paper Award!</td></tr> -->
   <tr><td><b>Jun 2025:</b></td><td>Served as a reviewer for ACL 2025 Student Research Workshop!</td></tr>
   <tr><td><b>May 2025:</b></td><td>1 Paper submitted to NeurIPS 2025!</td></tr>
   <tr><td><b>May 2025:</b></td><td>Served as a reviewer for ACL 2025 REALM workshop!</td></tr>
