@@ -4,8 +4,15 @@ title: Projects
 permalink: /projects/
 order: 5
 ---
+Outlining my projects that I have done during undergrad
 
-Outlining my non-published projects here (open source contributions, course research projects, designed homeworks). My research work can be seen [here](/research/).
+#### **Course Projects**
+
+* **Optimizing B - Spline curves for robot navigation**:        
+Optmization of Drone navigation system with minimal mechanical damage. Project was under supervision of [Dr. P.Rajyalakshmi](https://people.iith.ac.in/raji/)
+[Report]({{ site.url }}/assets/IoT_Report.pdf) 
+[Slides]({{ site.url }}/assets/IoT_Slides.pdf)
+<!-- Outlining my non-published projects here (open source contributions, course research projects, designed homeworks). My research work can be seen [here](/research/).
 
 #### **Other Research (Course Projects)**
 
@@ -56,4 +63,4 @@ All these datasets are compatible with [SRILM](http://www.speech.sri.com/project
 ### **Alternate PDF versions of papers**
 
 RELiC paper: [paper](https://martiansideofthemoon.github.io/assets/relic_paper_gse.pdf)  
-RankGen paper: [paper](https://martiansideofthemoon.github.io/assets/rankgen_paper_gse.pdf)  
+RankGen paper: [paper](https://martiansideofthemoon.github.io/assets/rankgen_paper_gse.pdf)   -->
