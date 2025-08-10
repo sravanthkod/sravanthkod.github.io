@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Other Projects
-permalink: /other_projects/
+title: Projeccts
+permalink: /projects/
 order: 5
 ---
 
