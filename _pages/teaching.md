@@ -11,39 +11,39 @@ As a Teaching Assistant in the [Department of Computer Science and Engineering, 
 
 ### Courses Assisted
 
-1. **Theory of Computation**  
-   - **Term:** Spring 2024  
-   - **Instructors:** [Dr. Subrahmanyam Kalyanasundaram](https://people.iith.ac.in/subruk/), [Dr. Karteek Sreenivasaiah](https://people.iith.ac.in/karteek/)  
-   - **Highlights:**  
-     - Assisted in lectures, prepared practice problems, and supported student queries during tutorials.  
-     - Coordinated assignments and assessments, ensuring timely and constructive feedback.  
+- **Theory of Computation**  
+  - **Term:** Spring 2024  
+  - **Instructors:** [Dr. Subrahmanyam Kalyanasundaram](https://people.iith.ac.in/subruk/), [Dr. Karteek Sreenivasaiah](https://people.iith.ac.in/karteek/)  
+  - **Highlights:**  
+    - Assisted in lectures, prepared practice problems, and supported student queries during tutorials.  
+    - Coordinated assignments and assessments, ensuring timely and constructive feedback.  
 
----
+<!-- --- -->
 
-2. **Database Management System**  
-   - **Term:** Fall 2023  
-   - **Instructor:** [Dr. Manish Singh](https://people.iith.ac.in/msingh/)  
-   - **Highlights:**  
-     - Guided lab sessions and clarified core database concepts for students.  
-     - Contributed to assignment design, grading, and provided individual guidance during office hours.  
+- **Database Management System**  
+  - **Term:** Fall 2023  
+  - **Instructor:** [Dr. Manish Singh](https://people.iith.ac.in/msingh/)  
+  - **Highlights:**  
+    - Guided lab sessions and clarified core database concepts for students.  
+    - Contributed to assignment design, grading, and provided individual guidance during office hours.  
 
----
+<!-- --- -->
 
-3. **Operating Systems**  
-   - **Term:** Spring 2022  
-   - **Instructor:** [Dr. Sathya Peri](https://people.iith.ac.in/sathya_p/)  
-   - **Highlights:**  
-     - Supported lectures by managing and supervising lab exercises on OS concepts.  
-     - Assisted in assignment evaluation and offered hands-on programming project support.  
+- **Operating Systems**  
+  - **Term:** Spring 2022  
+  - **Instructor:** [Dr. Sathya Peri](https://people.iith.ac.in/sathya_p/)  
+  - **Highlights:**  
+    - Supported lectures by managing and supervising lab exercises on OS concepts.  
+    - Assisted in assignment evaluation and offered hands-on programming project support.  
 
----
+<!-- --- -->
 
-4. **Discrete Mathematics**  
-   - **Term:** Spring 2021  
-   - **Instructor:** [Dr. Rakesh Venkat](https://people.iith.ac.in/rakeshvenkat/)  
-   - **Highlights:**  
-     - Led discussion sections and facilitated additional problem-solving sessions.  
-     - Assisted with quiz design and grading to support student learning.  
+- **Discrete Mathematics**  
+  - **Term:** Spring 2021  
+  - **Instructor:** [Dr. Rakesh Venkat](https://people.iith.ac.in/rakeshvenkat/)  
+  - **Highlights:**  
+    - Led discussion sections and facilitated additional problem-solving sessions.  
+    - Assisted with quiz design and grading to support student learning.  
 
 ---
 
