@@ -4,28 +4,20 @@ title: Others
 permalink: /others/
 order: 7
 ---
-In this page I list down some useful resources including slides for my talks/presentations, other useful material for helping others in their graduate application process, etc.  
+<!-- In this page I list down some useful resources including slides for my talks/presentations, other useful material for helping others in their graduate application process, etc.   -->
 
-<!-- ### **Links to some useful resources**  
+In this section, I share additional experiences and contributions that complement my primary academic and research work. These include leadership roles, extracurricular activities, community contributions, and professional services that reflect my engagement beyond the classroom and lab.  
 
-[Slides Link](https://docs.google.com/presentation/d/1v6hsiUAVchvhOZ8-T9v-WGOxtLFZgNN7/edit?usp=sharing&ouid=106741382757375410342&rtpof=true&sd=true) to my opening talk at SALMA 2025 Workshop co-located with ICASSP 2025.       
+### **Leadership & Extracurricular**  
+- During my undergraduate studies, I was actively involved with the [Office of Career Services](https://ocs.iith.ac.in/) at IIT Hyderabad, serving as an **Internship & Placement Coordinator**.  
+- Facilitated end-to-end coordination between companies and students, ensuring smooth campus hiring drives and enabling students to secure valuable industrial opportunities.  
 
-[Slides Link](https://docs.google.com/presentation/d/1fEzDKrx4m-P12Jjp10nEtlk8bWi6WShw/edit?usp=sharing&ouid=106741382757375410342&rtpof=true&sd=true) to my Ph.D. proposal.  
-
-[Link](https://docs.google.com/presentation/d/1KzmSR5CKSyYPqQizPDTOQFsaELXg6JHx/edit?usp=sharing&ouid=111957209895724121113&rtpof=true&sd=true) to slides for my (invited) presentation at the ACM chapter at UMD.  
-
-[Link](https://docs.google.com/presentation/d/1FDbzoAlcUK2igwxBzr7L8D_RfOSlI_EX/edit?usp=sharing&ouid=111957209895724121113&rtpof=true&sd=true) to slides for my presentation at the University of Buffalo, New York.  
-
-[Link](https://drive.google.com/file/d/1JNoxO0Zyk8SViLRUYLHDsXT4kn83h2U_/view?usp=sharing) to my GSoC 2022 proposal.   -->
-
-
-### **Services**  
-
-Served as a reviewer at: 
-* NeurIPS 2025 Workshops
-* ICML 2025 Workshops
-* Scipy 2025 Proceddings
-* ACL 2025 Workshops
+### **Professional Services**  
+Served as a reviewer for:  
+- **NeurIPS 2025** – Workshops  
+- **ICML 2025** – Workshops  
+- **SciPy 2025** – Proceedings  
+- **ACL 2025** – Workshops
 
 <!-- Co-organized:  
 * [Workshop on Speech and Audio Language Models (SALMA)](https://salmaworkshop.github.io/), co-located with [ICASSP 2025](https://2025.ieeeicassp.org/)

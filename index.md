@@ -13,6 +13,8 @@ I completed my bachelors in 2024 in Computer Science at [IIT Hyderabad](https://
 
 I maintain a list of my publications under the [Research]({{ site.url }}/research) tab. I also [blog]({{ site.url }}/archive) every now and then compiling my personal experiences. I am always open to collaborations, and please feel free to drop me a mail!
 
+When I’m not working, I enjoy diving into movies and web series from all over the world—exploring different languages and genres keeps things exciting. Aside from that, I like playing badminton to unwind and stay active.
+
 [CV / Resume]({{ site.url }}/assets/Sravanth_Kodavanti_CV.pdf), [Google Scholar](https://scholar.google.com/citations?user=SiOQawIAAAAJ&hl=en)  
 Email ID: [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.com), [k.sravanth@samsung.com](mailto:k.sravanth@samsung.com)  
 
