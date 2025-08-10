@@ -24,12 +24,17 @@ Brief highlights of selected projects undertaken during my undergraduate studies
   - **Resources:** [Report]({{ site.url }}/assets/GraphIT_Report.pdf)  
 
 
+<!-- --- -->
+
+
 - **Website for Publication Management System**  
   - *Course:* Software Engineering (CS4443)  
   - Designed and developed a web-based system to manage conferences and research publications, enabling streamlined submission, review, and tracking processes.  
   - Implemented features for author, reviewer, and admin roles to improve usability and workflow efficiency.  
   - Supervised by *[Dr. Manish Singh](https://people.iith.ac.in/msingh/)*.  
   - **Resources:** [Report]({{ site.url }}/assets/SW_Final_Report.pdf)  
+
+<!-- --- -->
 
 
 - **Optimizing B-Spline Curves for Robot Navigation**  
