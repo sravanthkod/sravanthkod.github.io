@@ -6,13 +6,28 @@ order: 4
 ---
 I am broadly interested in Natural Language Processing (especially Text Generation) and Machine Learning Security & Privacy.
 
-[Google Scholar](https://scholar.google.com/citations?hl=en&user=9g2BsMUAAAAJ), [Semantic Scholar](https://www.semanticscholar.org/author/Kalpesh-Krishna/26161085)
+<!-- [Google Scholar](https://scholar.google.com/citations?hl=en&user=9g2BsMUAAAAJ), [Semantic Scholar](https://www.semanticscholar.org/author/Kalpesh-Krishna/26161085) -->
 
-### Selected Papers
+[Google Scholar](https://scholar.google.com/citations?user=SiOQawIAAAAJ&hl=en)
+
+### Publications
 
 \* denotes equal contributions / lead authors.
 
-* [Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation](https://arxiv.org/abs/2409.12941)  
+* [Unlocking the Edge Deployment and On-Device Acceleration of Multi-LoRA Enabled
+One-for-All Foundational LLM]()   
+___Sravanth Kodavanti___\*, Sowmya Vajrala\*, Srinivas Soumitri Miriyala\*, Utsav Tiwari\*, Uttam Kumar, Utkarsh Kumar Mahawar, Achal Pratap Singh, Arya D, Narendra Mutyala, Vikram Nelvoy Rajendiran, Sharan Kumar Allur, Euntaik Lee, Dohyoung Kim, HyeonSu Lee, Gyusung Cho, JungBae Kim, Jimi Lee  
+Under Review at **EMNLP 2025**
+
+* [On Distillation of Transformers into State-Space Models for Efficient Image Restoration]()   
+___Sravanth Kodavanti___\*, Srinivas Miriyala\*, Sowmya Vajrala\*, Vikram N R   
+Under Review at **NeurIPS 2025**
+
+* [Mobile-friendly Image de-noising: Hardware Conscious Optimization for Edge Application](https://ieeexplore.ieee.org/document/10888855)   
+Srinivas Miriyala\*, Sowmya Vajrala\*, Hitesh Kumar, ___Sravanth Kodavanti___, Vikram N R   
+**ICASSP 2025**
+
+<!-- * [Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation](https://arxiv.org/abs/2409.12941)  
 Satyapriya Krishna, <i>Kalpesh Krishna</i>\*, Anhad Mohananey\*, Steven Schwarcz, Adam Stambler, Shyam Upadhyay, Manaal Faruqui  
  **NAACL 2025**  
 [arXiv](https://arxiv.org/abs/2409.12941) // [dataset](https://huggingface.co/datasets/google/frames-benchmark)  
@@ -169,8 +184,8 @@ arXiv 2018
 
 <!-- **Main Collaborators** (in order of publication date): [Karen Livescu](https://ttic.uchicago.edu/~klivescu), [Kevin Gimpel](https://ttic.uchicago.edu/~kgimpel), [Liang Lu](https://ttic.uchicago.edu/~llu), [Shubham Toshniwal](https://ttic.uchicago.edu/~shtoshni), [Preethi Jyothi](https://www.cse.iitb.ac.in/~pjyothi), [Mohit Iyyer](https://people.cs.umass.edu/~miyyer/), [Purva Tendulkar](http://purvaten.github.io/), [Ramprasaath R. Selvaraju](https://ramprs.github.io/), [Devi Parikh](https://www.cc.gatech.edu/~parikh/), [Nader Akoury](https://people.cs.umass.edu/~nsa/), [Gaurav Singh Tomar](https://scholar.google.com/citations?user=p1SDN0oAAAAJ&hl=en), [Ankur P. Parikh](https://www.cs.cmu.edu/~apparikh/publications.html), [Nicolas Papernot](https://www.papernot.fr/), [John Wieting](https://www.cs.cmu.edu/~jwieting), [Aurko Roy](https://sites.google.com/site/royaurko/), [Simeng Sun](https://people.cs.umass.edu/~simengsun/), [Deepak Nathani](https://deepakn97.github.io/), [Xavier Garcia](https://scholar.google.com/citations?user=Y2Hio6MAAAAJ&hl=en), [Bidisha Samanta](https://sites.google.com/view/bidisha-samanta), [Partha Talukdar](https://talukdar.net/), [Yapei Chang](https://lilakk.github.io/), [Katherine Thai](https://katherinethai.github.io/), [Ankita Gupta](https://ankitaiisc.github.io/), [Welong Zhao](https://www.linkedin.com/in/wenlong-zhao/), [Jack Merullo](https://www.linkedin.com/in/jack-merullo-5215a4193), [Marzena Karpinska](https://marzenakrp.github.io), [Yixiao Song](https://yixiao-song.github.io), [Pradeep Dasigi](https://pdasigi.github.io/), [Arman Cohan](https://armancohan.com/), [Kyle Lo](https://kyleclo.github.io/) -->
 
-## Thesis
+<!-- ## Thesis
 
 [Undergraduate Thesis - Constraint Driven Learning]({{ site.url }}/assets/bachelor_thesis_final.pdf)  
 *(under guidance of [Prof. Preethi Jyothi](https://www.cse.iitb.ac.in/~pjyothi/))*  
-IIT Bombay *(2017-2018)*  
+IIT Bombay *(2017-2018)*    -->
