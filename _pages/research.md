@@ -36,9 +36,9 @@ improve efficiency and reduce latency in LLM inference.
 
 ### Thesis
 
-[Undergraduate Thesis - Constraint Driven Learning]({{ site.url }}/assets/Continual_Learning_underGrad.pdf)  
+[Undergraduate Thesis - Continual Learning for 3D Point Cloud]({{ site.url }}/assets/Continual_Learning_UnderGrad.pdf)  
 *(under guidance of [Dr. P K Srijith](https://sites.google.com/site/pksrijith/home))*  
-IIT Bombay *(2023-2024)*   
+IIT Hyderabad *(2023-2024)*   
 
 <!-- * [Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation](https://arxiv.org/abs/2409.12941)  
 Satyapriya Krishna, <i>Kalpesh Krishna</i>\*, Anhad Mohananey\*, Steven Schwarcz, Adam Stambler, Shyam Upadhyay, Manaal Faruqui  
