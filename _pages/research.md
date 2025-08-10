@@ -27,6 +27,13 @@ Under Review at **NeurIPS 2025**
 Srinivas Miriyala\*, Sowmya Vajrala\*, Hitesh Kumar, ___Sravanth Kodavanti___, Vikram N R   
 **ICASSP 2025**
 
+
+### Patents
+[System and Method for Accelerating On-Device Large Language Model Inference]()   
+___Sravanth Kodavanti___\*, Srinivas Miriyala\*, Sowmya Vajrala\*   
+Provisional Specification Filed. Proposes a novel self-speculative decoding technique to significantly
+improve efficiency and reduce latency in LLM inference.
+
 <!-- * [Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation](https://arxiv.org/abs/2409.12941)  
 Satyapriya Krishna, <i>Kalpesh Krishna</i>\*, Anhad Mohananey\*, Steven Schwarcz, Adam Stambler, Shyam Upadhyay, Manaal Faruqui  
  **NAACL 2025**  
