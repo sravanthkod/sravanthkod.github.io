@@ -8,16 +8,16 @@ order: 7
 
 In this section, I share additional experiences and contributions that complement my primary academic and research work. These include leadership roles, extracurricular activities, community contributions, and professional services that reflect my engagement beyond the classroom and lab.  
 
-### **Leadership & Extracurricular**  
-- During my undergraduate studies, I was actively involved with the [Office of Career Services](https://ocs.iith.ac.in/) at IIT Hyderabad, serving as an **Internship & Placement Coordinator**.  
-- Facilitated end-to-end coordination between companies and students, ensuring smooth campus hiring drives and enabling students to secure valuable industrial opportunities.  
-
 ### **Professional Services**  
 Served as a reviewer for:  
 - **NeurIPS 2025** – Workshops  
 - **ICML 2025** – Workshops  
 - **SciPy 2025** – Proceedings  
 - **ACL 2025** – Workshops
+
+### **Leadership & Extracurricular**  
+- During my undergraduate studies, I was actively involved with the [Office of Career Services](https://ocs.iith.ac.in/) at IIT Hyderabad, serving as an **Internship & Placement Coordinator**.  
+- Facilitated end-to-end coordination between companies and students, ensuring smooth campus hiring drives and enabling students to secure valuable industrial opportunities.  
 
 <!-- Co-organized:  
 * [Workshop on Speech and Audio Language Models (SALMA)](https://salmaworkshop.github.io/), co-located with [ICASSP 2025](https://2025.ieeeicassp.org/)
