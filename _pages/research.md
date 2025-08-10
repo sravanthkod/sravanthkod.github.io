@@ -2,7 +2,7 @@
 layout: page
 title: Research
 permalink: /research/
-order: 4
+order: 2
 ---
 <!-- I am broadly interested in Natural Language Processing (especially Text Generation) and Machine Learning Security & Privacy. -->
 

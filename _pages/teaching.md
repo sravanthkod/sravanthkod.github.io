@@ -2,7 +2,7 @@
 layout: page
 title: Teaching
 permalink: /Teaching/
-order: 2
+order: 4
 ---
 
 As a Teaching Assistant in the [Department of Computer Science and Engineering, IIT Hyderabad](https://cse.iith.ac.in/), I have played a key role in supporting instructors, mentoring students, and fostering a collaborative learning environment. My TA assignments gave me the opportunity to facilitate discussions, organize labs and tutorials, and help deliver challenging course content with clarity and engagement.
