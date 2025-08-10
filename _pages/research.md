@@ -6,13 +6,11 @@ order: 4
 ---
 I am broadly interested in Natural Language Processing (especially Text Generation) and Machine Learning Security & Privacy.
 
-<!-- [Google Scholar](https://scholar.google.com/citations?hl=en&user=9g2BsMUAAAAJ), [Semantic Scholar](https://www.semanticscholar.org/author/Kalpesh-Krishna/26161085) -->
-
 [Google Scholar](https://scholar.google.com/citations?user=SiOQawIAAAAJ&hl=en)
 
 ### Publications
 
-\* denotes equal contributions / lead authors.
+<!-- \* denotes equal contributions / lead authors. -->
 
 * [Unlocking the Edge Deployment and On-Device Acceleration of Multi-LoRA Enabled
 One-for-All Foundational LLM]()   
@@ -25,7 +23,8 @@ Under Review at **NeurIPS 2025**
 
 * [Mobile-friendly Image de-noising: Hardware Conscious Optimization for Edge Application](https://ieeexplore.ieee.org/document/10888855)   
 Srinivas Miriyala\*, Sowmya Vajrala\*, Hitesh Kumar, ___Sravanth Kodavanti___, Vikram N R   
-**ICASSP 2025**
+**ICASSP 2025**   
+
 
 
 ### Patents
@@ -33,6 +32,13 @@ Srinivas Miriyala\*, Sowmya Vajrala\*, Hitesh Kumar, ___Sravanth Kodavanti___, V
 ___Sravanth Kodavanti___\*, Srinivas Miriyala\*, Sowmya Vajrala\*   
 Provisional Specification Filed. Proposes a novel self-speculative decoding technique to significantly
 improve efficiency and reduce latency in LLM inference.
+
+
+### Thesis
+
+[Undergraduate Thesis - Constraint Driven Learning]({{ site.url }}/assets/Continual_Learning_underGrad.pdf)  
+*(under guidance of [Dr. P K Srijith](https://sites.google.com/site/pksrijith/home))*  
+IIT Bombay *(2023-2024)*   
 
 <!-- * [Fact, Fetch, and Reason: A Unified Evaluation of Retrieval-Augmented Generation](https://arxiv.org/abs/2409.12941)  
 Satyapriya Krishna, <i>Kalpesh Krishna</i>\*, Anhad Mohananey\*, Steven Schwarcz, Adam Stambler, Shyam Upadhyay, Manaal Faruqui  
