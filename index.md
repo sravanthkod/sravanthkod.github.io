@@ -25,7 +25,13 @@ Email ID: [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.c
 <col width="100px">
 <col width="630px">
   <tr><td><b>Sep 2025:</b></td><td>Serving as a reviewer for NeurIPS 2025  LatinX in AI, BERT2S & DynaFront Workshops!</td></tr>
-  <tr><td><b>Aug 2025:</b></td><td>**Commercialization**: Model Optmized through NAS resulted in **2.2X** inference speedup will be going for deployment in upcoming Samsung Galaxy S26.</td></tr>
+<tr>
+  <td><b>Aug 2025:</b></td>
+  <td>
+    <strong>Commercialization:</strong> The demoire artifact removal model, optimized through NAS, achieved a <strong>2.2X</strong> inference speedup and is slated for deployment in the forthcoming <strong>Samsung Galaxy S26</strong>.
+  </td>
+</tr>
+
   <tr><td><b>Jul 2025:</b></td><td>Awarded Spot award at Samsung for signifcant contributions to novel speculative decoding algorithm. More details about algorithm will be out soon!</td></tr>
   <tr><td><b>Jul 2025:</b></td><td>1 Paper submitted to EMNLP 2025 Industry Track!</td></tr>
   <tr><td><b>Jul 2025:</b></td><td>Served as reviewer for ICML 2025 AI4MATH Workshop, Scipy 2025 Proceddings!</td></tr>
