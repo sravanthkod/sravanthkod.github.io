@@ -23,7 +23,9 @@ Under Review at **EMNLP 2025 Industry Track**
 ___Sravanth Kodavanti___\*, Srinivas Miriyala\*, Sowmya Vajrala\*, Vikram N R   
 Under Review at **NeurIPS 2025**
 
-* [Mobile-friendly Image de-noising: Hardware Conscious Optimization for Edge Application](https://ieeexplore.ieee.org/document/10888855)   
+* [Mobile-friendly Image de-noising: Hardware Conscious Optimization for Edge Application]
+<!-- (https://ieeexplore.ieee.org/document/10888855)    -->
+(https://openreview.net/forum?id=xBbVviiDDL)
 Srinivas Miriyala\*, Sowmya Vajrala\*, Hitesh Kumar, ___Sravanth Kodavanti___, Vikram N R   
 **ICASSP 2025**   
 
