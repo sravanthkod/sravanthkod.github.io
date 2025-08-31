@@ -24,7 +24,7 @@ Email ID: [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.c
 <table>
 <col width="100px">
 <col width="630px">
-  <tr><td><b>Aug 2025:</b></td><td>Serving as a reviewer for NeurIPS 2025 BERT2S Workshop!</td></tr>
+  <tr><td><b>Sep 2025:</b></td><td>Serving as a reviewer for NeurIPS 2025 BERT2S, DynaFront, LatinX in AI Workshops!</td></tr>
   <tr><td><b>Jul 2025:</b></td><td>Awarded Spot award at Samsung for signifcant contributions to novel speculative decoding algorithm. More details about algorithm will be out soon!</td></tr>
   <tr><td><b>Jul 2025:</b></td><td>1 Paper submitted to EMNLP 2025 Industry Track!</td></tr>
   <tr><td><b>Jul 2025:</b></td><td>Served as reviewer for ICML 2025 AI4MATH Workshop, Scipy 2025 Proceddings!</td></tr>

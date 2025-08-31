@@ -12,8 +12,11 @@ In this section, I share additional experiences and contributions that complemen
 Served as a reviewer for:  
 - **NeurIPS 2025** – Workshops  
 - **ICML 2025** – Workshops  
-- **SciPy 2025** – Proceedings  
 - **ACL 2025** – Workshops
+- **SciPy 2025** – Proceedings  
+
+### **Achievements**
+- 
 
 ### **Leadership & Extracurricular**  
 - During my undergraduate studies, I was actively involved with the [Office of Career Services](https://ocs.iith.ac.in/) at IIT Hyderabad, serving as an **Internship & Placement Coordinator**.  
