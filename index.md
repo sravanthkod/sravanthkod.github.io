@@ -24,7 +24,9 @@ Email ID: [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.c
 <table>
 <col width="100px">
 <col width="630px">
-  <tr><td><b>Sep 2025:</b></td><td>Serving as a reviewer for NeurIPS 2025  LatinX in AI, BERT2S & DynaFront Workshops!</td></tr>
+  <tr><td><b>Sep 2025:</b></td><td>1 Paper submitted to ICASSP 2026!</td></tr>
+<tr>
+  <tr><td><b>Sep 2025:</b></td><td>Served as a reviewer for NeurIPS 2025  LatinX in AI, BERT2S & DynaFront Workshops!</td></tr>
 <tr>
   <td><b>Aug 2025:</b></td>
   <td>
