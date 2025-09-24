@@ -15,7 +15,7 @@ I have a broad interest in training and inference optimization techniques, with 
 <!-- \* denotes equal contributions / lead authors. -->
 
 * [Towards Efficient Image Deblurring for Edge Deployment]()    
- Sowmya Vajrala\*, Srinivas Miriyala\*,___Sravanth Kodavanti___  
+ Sowmya Vajrala\*, Srinivas Miriyala\*, ___Sravanth Kodavanti___  
  Under Review at **ICASSP 2026**    
 
 
