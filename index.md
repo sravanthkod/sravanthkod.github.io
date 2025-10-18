@@ -43,7 +43,7 @@ Email ID: [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.c
   <!-- <tr><td><b>Jun 2025:</b></td><td>2 Papers submitted to Samsung Best Paper Award!</td></tr> -->
   <tr><td><b>Jun 2025:</b></td><td>Served as a reviewer for ACL 2025 Student Research Workshop!</td></tr>
   <tr><td><b>May 2025:</b></td><td>1 Paper submitted to NeurIPS 2025!</td></tr>
-  <tr><td><b>May 2025:</b></td><td>Served as a reviewer for ACL 2025 REALM workshop. Media - [Here](https://aclanthology.org/anthology-files/pdf/realm/2025.realm-1.0.pdf)!</td></tr>
+  <tr><td><b>May 2025:</b></td><td>Served as a reviewer for ACL 2025 REALM workshop. Media - <a href="https://aclanthology.org/anthology-files/pdf/realm/2025.realm-1.0.pdf" target="_blank">Here</a>!</td></tr>
   <tr><td><b>Feb 2025:</b></td><td>Awarded MD Project Incentive award at Samsung for significant contribution towards AI model acceleration!</td></tr>
   <tr><td><b>Jan 2025:</b></td><td>Awarded Team Awesome award for Samsung Gauss - L model commercialization into Galaxy S25 series! </td></tr>
   <tr><td><b>Dec 2024:</b></td><td>1 <a href="https://ieeexplore.ieee.org/document/10888855" target="_blank">Paper</a> accepted to IEEE ICASSP 2025!</td></tr>
