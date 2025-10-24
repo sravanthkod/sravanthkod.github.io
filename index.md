@@ -25,7 +25,7 @@ Email ID: [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.c
 <table>
 <col width="100px">
 <col width="630px">
- <tr><td><b>Oct 2025:</b></td><td>Served as reviewer for ICASSP 2026 & AAAI 2026 Responsible Synthetic Data workshop!</td></tr>
+ <tr><td><b>Nov 2025:</b></td><td>Serving as reviewer for ICASSP 2026 ML4SP Track & AAAI 2026 Responsible Synthetic Data workshop!</td></tr>
 <tr>
   <tr><td><b>Sep 2025:</b></td><td>1 Paper submitted to ICASSP 2026!</td></tr>
 <tr>
