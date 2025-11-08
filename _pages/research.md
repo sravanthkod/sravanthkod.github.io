@@ -14,6 +14,15 @@ I have a broad interest in training and inference optimization techniques, with 
 
 <!-- \* denotes equal contributions / lead authors. -->
 
+* [NanoSD: Edge Efficient Foundation Model for Real Time Image Restoration]()   
+Subhajit Sanyal\*, Srinivas Miriyala\*, Akshay  Bankar, Manjunath Arveti, Sowmya Vajrala, Shreyas Pandith, ___Sravanth Kodavanti___
+, Abhishek Ameta, Harshit, Amit Unde   
+Under Review at **CVPR 2026**
+
+* [On Distillation of Transformers into State-Space Models for Efficient Image Restoration]()   
+___Sravanth Kodavanti___\*, Srinivas Miriyala\*, Sowmya Vajrala\*, Vikram N R, Sharan Allur   
+Under Review at **CVPR 2026**
+
 * [Towards Efficient Image Deblurring for Edge Deployment]()    
  Sowmya Vajrala\*, Srinivas Miriyala\*, ___Sravanth Kodavanti___  
  Under Review at **ICASSP 2026**    
@@ -23,10 +32,6 @@ I have a broad interest in training and inference optimization techniques, with 
 One-for-All Foundational LLM]()   
 ___Sravanth Kodavanti___\*, Sowmya Vajrala\*, Srinivas Miriyala\*, Utsav Tiwari\*, Uttam Kumar, Utkarsh Kumar Mahawar, Achal Pratap Singh, Arya D, Narendra Mutyala, Vikram Nelvoy Rajendiran, Sharan Kumar Allur, Euntaik Lee, Dohyoung Kim, HyeonSu Lee, Gyusung Cho, JungBae Kim, Jimi Lee  
 Under Review at **EMNLP 2025 Industry Track**
-
-* [On Distillation of Transformers into State-Space Models for Efficient Image Restoration]()   
-___Sravanth Kodavanti___\*, Srinivas Miriyala\*, Sowmya Vajrala\*, Vikram N R   
-Under Review at **NeurIPS 2025**
 
 * [Mobile-friendly Image de-noising: Hardware Conscious Optimization for Edge Application](https://openreview.net/forum?id=xBbVviiDDL)   
 <!-- (https://ieeexplore.ieee.org/document/10888855)    -->
