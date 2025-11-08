@@ -30,9 +30,7 @@ Email ID: [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.c
  <tr><td><b>Nov 2025:</b></td><td>Serving as reviewer for ICASSP 2026 ML4SP Track & AAAI 2026 Responsible Synthetic Data workshop!</td></tr>
 <tr>
   <tr><td><b>Sep 2025:</b></td><td>1 Paper submitted to ICASSP 2026!</td></tr>
-<tr>
-  <tr><td><b>Sep 2025:</b></td><td>Served as a reviewer for NeurIPS 2025  LatinX in AI, BERT2S & DynaFront Workshops. Media - <a href="https://sites.google.com/view/dynafrontneurips25/reviewers" target="_blank">Here</td></tr>
-<tr>
+  <tr><td><b>Sep 2025:</b></td><td>Served as a reviewer for NeurIPS 2025  LatinX in AI, BERT2S & DynaFront Workshops. Media - <a href="https://sites.google.com/view/dynafrontneurips25/reviewers" target="_blank">Here</a></td></tr>
   <td><b>Aug 2025:</b></td>
   <td>
     <strong>Commercialization:</strong> The demoire artifact removal model, optimized through NAS, achieved a <strong>2.2X</strong> inference speedup and is slated for deployment in the forthcoming <strong>Samsung Galaxy S26</strong>.
