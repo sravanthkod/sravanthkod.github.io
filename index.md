@@ -25,7 +25,7 @@ Email ID: [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.c
 <table>
 <col width="100px">
 <col width="630px">
- <tr><td><b>Nov 2025:</b></td><td>Serving __ICASSP 2026__ as __Area Chair__ & __Reviewer__!!</td></tr>
+ <tr><td><b>Nov 2025:</b></td><td>Serving <strong>ICASSP 2026</strong> as <strong>Area Chair</strong> & <strong>Reviewer</strong>!!</td></tr>
  <tr><td><b>Nov 2025:</b></td><td>2 Papers submitted to CVPR 2026!</td></tr>
 <tr>
  <tr><td><b>Nov 2025:</b></td><td>Serving as reviewer for AAAI 2026 Responsible Synthetic Data workshop!</td></tr>
