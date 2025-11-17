@@ -19,7 +19,7 @@ Subhajit Sanyal\*, Srinivas Miriyala\*, Akshay  Bankar, Manjunath Arveti, Sowmya
 , Abhishek Ameta, Harshit, Amit Unde   
 Under Review at **CVPR 2026**
 
-* [On Distillation of Transformers into State-Space Models for Efficient Image Restoration]()   
+* [Edge-Efficient Image Restoration: Transformer Distillation into State-Space Models,]()   
 ___Sravanth Kodavanti___\*, Srinivas Miriyala\*, Sowmya Vajrala\*, Vikram N R, Sharan Allur   
 Under Review at **CVPR 2026**
 
