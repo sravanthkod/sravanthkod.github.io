@@ -28,7 +28,7 @@ Email ID: [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.c
  <tr><td><b>Nov 2025:</b></td><td>Serving __ICASSP 2026__ as __Area Chair__ & __Reviewer__!!</td></tr>
  <tr><td><b>Nov 2025:</b></td><td>2 Papers submitted to CVPR 2026!</td></tr>
 <tr>
- <tr><td><b>Nov 2025:</b></td><td>Serving as reviewer for ICASSP 2026 ML4SP Track & AAAI 2026 Responsible Synthetic Data workshop!</td></tr>
+ <tr><td><b>Nov 2025:</b></td><td>Serving as reviewer for AAAI 2026 Responsible Synthetic Data workshop!</td></tr>
 <tr>
   <tr><td><b>Sep 2025:</b></td><td>1 Paper submitted to ICASSP 2026!</td></tr>
   <tr><td><b>Sep 2025:</b></td><td>Served as a reviewer for NeurIPS 2025  LatinX in AI, BERT2S & DynaFront Workshops. Media - <a href="https://sites.google.com/view/dynafrontneurips25/reviewers" target="_blank">Here</a></td></tr>
