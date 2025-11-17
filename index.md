@@ -26,12 +26,12 @@ Email ID: [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.c
 <col width="100px">
 <col width="630px">
  <tr><td><b>Nov 2025:</b></td><td>Serving <strong>ICASSP 2026</strong> as <strong>Area Chair</strong> & <strong>Reviewer</strong>!!</td></tr>
- <tr><td><b>Nov 2025:</b></td><td>2 Papers submitted to CVPR 2026!</td></tr>
+ <tr><td><b>Nov 2025:</b></td><td>2 Papers submitted to <strong>CVPR 2026</strong>!</td></tr>
 <tr>
- <tr><td><b>Nov 2025:</b></td><td>Serving as reviewer for AAAI 2026 Responsible Synthetic Data workshop!</td></tr>
+ <tr><td><b>Nov 2025:</b></td><td>Serving as reviewer for <strong>AAAI 2026</strong> Responsible Synthetic Data workshop!</td></tr>
 <tr>
-  <tr><td><b>Sep 2025:</b></td><td>1 Paper submitted to ICASSP 2026!</td></tr>
-  <tr><td><b>Sep 2025:</b></td><td>Served as a reviewer for NeurIPS 2025  LatinX in AI, BERT2S & DynaFront Workshops. Media - <a href="https://sites.google.com/view/dynafrontneurips25/reviewers" target="_blank">Here</a></td></tr>
+  <tr><td><b>Sep 2025:</b></td><td>1 Paper submitted to <strong>ICASSP 2026</strong>!</td></tr>
+  <tr><td><b>Sep 2025:</b></td><td>Served as a reviewer for <strong>NeurIPS 2025</strong>  LatinX in AI, BERT2S & DynaFront Workshops. Media - <a href="https://sites.google.com/view/dynafrontneurips25/reviewers" target="_blank">Here</a></td></tr>
   <td><b>Aug 2025:</b></td>
   <td>
     <strong>Commercialization:</strong> The demoire artifact removal model, optimized through NAS, achieved a <strong>2.2X</strong> inference speedup and is slated for deployment in the forthcoming <strong>Samsung Galaxy S26</strong>.
@@ -40,14 +40,13 @@ Email ID: [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.c
 
   <tr><td><b>Jul 2025:</b></td><td>Awarded Spot award at Samsung for signifcant contributions to novel speculative decoding algorithm. More details about algorithm will be out soon!</td></tr>
   <tr><td><b>Jul 2025:</b></td><td>1 Paper submitted to EMNLP 2025 Industry Track!</td></tr>
-  <tr><td><b>Jul 2025:</b></td><td>Served as reviewer for ICML 2025 AI4MATH Workshop, Scipy 2025 Proceddings!</td></tr>
+  <tr><td><b>Jul 2025:</b></td><td>Served as reviewer for <strong>ICML 2025</strong> AI4MATH Workshop, <strong>Scipy 2025</strong> Proceddings!</td></tr>
   <!-- <tr><td><b>Jun 2025:</b></td><td>2 Papers submitted to Samsung Best Paper Award!</td></tr> -->
-  <tr><td><b>Jun 2025:</b></td><td>Served as a reviewer for ACL 2025 Student Research Workshop!</td></tr>
-  <tr><td><b>May 2025:</b></td><td>1 Paper submitted to NeurIPS 2025!</td></tr>
-  <tr><td><b>May 2025:</b></td><td>Served as a reviewer for ACL 2025 REALM workshop. Media - <a href="https://aclanthology.org/anthology-files/pdf/realm/2025.realm-1.0.pdf" target="_blank">Here</a></td></tr>
+  <tr><td><b>Jun 2025:</b></td><td>Served as a reviewer for <strong>ACL 2025</strong> Student Research Workshop!</td></tr>
+  <tr><td><b>May 2025:</b></td><td>Served as a reviewer for <strong>ACL 2025</strong> REALM workshop. Media - <a href="https://aclanthology.org/anthology-files/pdf/realm/2025.realm-1.0.pdf" target="_blank">Here</a></td></tr>
   <tr><td><b>Feb 2025:</b></td><td>Awarded MD Project Incentive award at Samsung for significant contribution towards AI model acceleration!</td></tr>
   <tr><td><b>Jan 2025:</b></td><td>Awarded Team Awesome award for Samsung Gauss - L model commercialization into Galaxy S25 series! </td></tr>
-  <tr><td><b>Dec 2024:</b></td><td>1 <a href="https://ieeexplore.ieee.org/document/10888855" target="_blank">Paper</a> accepted to IEEE ICASSP 2025!</td></tr>
+  <tr><td><b>Dec 2024:</b></td><td>1 <a href="https://ieeexplore.ieee.org/document/10888855" target="_blank">Paper</a> accepted to <strong>ICASSP 2025</strong>!</td></tr>
   <!-- <tr><td><b>Sept 2024:</b></td><td>2 Papers submitted to IEEE ICASSP 2025!</td></tr> -->
   <tr><td><b>Aug 2024:</b></td><td>Started working as a Research Engineer at Samsung Research!</td></tr>
   <tr><td><b>Jul 2024:</b></td><td>Graduated from IIT Hyderabad with major in CS & minor in Entrepreneurship!</td></tr>
