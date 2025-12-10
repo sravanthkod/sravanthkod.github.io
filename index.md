@@ -25,6 +25,7 @@ Email ID: [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.c
 <table>
 <col width="100px">
 <col width="630px">
+ <tr><td><b>Dec 2025:</b></td><td>Awarded Spot Award for contributions in NAS Commericialization & Research Projects !!</td></tr>
  <tr><td><b>Nov 2025:</b></td><td>Serving <strong>ICASSP 2026</strong> as <strong>Area Chair</strong> & <strong>Reviewer</strong>!!</td></tr>
  <tr><td><b>Nov 2025:</b></td><td>2 Papers submitted to <strong>CVPR 2026</strong>!</td></tr>
 <tr>
