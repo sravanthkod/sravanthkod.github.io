@@ -7,10 +7,11 @@
 
 # Site settings
 title: Sravanth Kodavanti
+description: Research Engineer at Samsung Research | AI Optimization, NAS, Quantization | IIT Hyderabad CS '24
 full_name: Sravanth Kodavanti
 email: ramasravanthkodavanti@gmail.com
 email2: k.sravanth@samsung.com
-description: > # this means to ignore newlines until "baseurl:"
+# description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sravanthkod.github.io" # the base hostname & protocol for your site
 github_username:  sravanthkod
