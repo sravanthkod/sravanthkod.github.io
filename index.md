@@ -1,52 +1,36 @@
 ---
 layout: page
+title: Sravanth Kodavanti
+tags: ["AI Optimization", "NAS", "Quantization", "Samsung Research", "Edge AI"]
+permalink: /
 ---
-{% include JB/setup %}
 
-<img style="float: right; width: 35%; padding: 6px;" src=" {{ site.url }}/assets/sravanth_profile_3.jpeg">
+<img src="{{ site.url }}/assets/sravanth_profile_3.jpeg" style="float: right; width: 35%; padding: 6px; border-radius: 8px;">
 
-I am Sravanth Kodavanti, working as a Research Engineer at [Samsung Research](https://research.samsung.com/sri-b) under the guidance of [Dr. Srinivas Soumitri](https://www.linkedin.com/in/srinivas-s-miriyala/). I work on optimizing AI models for edge device deployment, leveraging techniques like Neural Architecture Search, Quantization and Pruning to improve performance and efficiency. My focus is on both traditional and generative AI models.
+# Sravanth Kodavanti
 
-<!-- I completed my PhD in 2023 in Computer Science at [UMass Amherst](http://cs.umass.edu/) advised by Prof. [Mohit Iyyer](https://people.cs.umass.edu/~miyyer/) in the [UMass NLP](http://nlp.cs.umass.edu/) lab. My research at UMass was supported by the [Google PhD Fellowship](https://research.google/outreach/phd-fellowship/). Before UMass, I received my undergraduate degree at [IIT Bombay](http://iitb.ac.in). During my PhD and undergrad, I also did some fun internships at [Google DeepMind](https://research.google) (Summer 2019 - Spring 2022), [Allen AI](https://allenai.org/) (Summer 2022), [Toyota Technological Institute at Chicago](https://www.ttic.edu/) (Summer 2017) and [Mozilla](https://www.mozilla.org/en-US/) (Summer 2016). -->
+**Research Engineer @ [Samsung Research](https://research.samsung.com/sri-b)**  
+*AI Model Optimization | Neural Architecture Search | Quantization | Pruning | Edge Deployment*  
+*Under Dr. [Srinivas Soumitri](https://www.linkedin.com/in/srinivas-s-miriyala/)*
 
-I completed my bachelors in 2024 in Computer Science at [IIT Hyderabad](https://iith.ac.in/). During my bachelors, I did some internships at [Gika Graph](https://www.gikagraph.ai/) (July - Sept, 2024) , [Hexagon Research](https://hexagon.com/about/research-development) (Jan - Jun, 2024) and  [OnePlus Research](https://www.oneplus.in/brand) (Jan - Jun, 2023).
+I optimize AI models for edge devices, achieving **2.2x inference speedup** for [Galaxy S26]({{ site.url }}/research/#demoire) commercialization. Focus: NAS, Quantization, Pruning for traditional + generative AI.
 
-I maintain a list of my publications under the [Research]({{ site.url }}/research) tab. I also [blog]({{ site.url }}/archive) every now and then compiling my personal experiences. I am always open to collaborations, and please feel free to drop me a mail!
+**IIT Hyderabad CS '24** | Internships: [Gika Graph](https://www.gikagraph.ai/), [Hexagon R&D](https://hexagon.com/about/research-development), [OnePlus Research](https://www.oneplus.in/brand)
 
-When I’m not working, I enjoy diving into movies and web series from all over the world—exploring different languages and genres keeps things exciting. Catch my reviews at [Letterboxd](https://letterboxd.com/sravanthkod/).
-Aside from that, I like playing badminton to unwind and stay active.
+## 📈 Recent Highlights
+| Date | Achievement |
+|------|-------------|
+| **Nov 2025** | Area Chair + Reviewer: [ICASSP 2026]({{ site.url }}/research/#icasSP) \| 2 Papers → CVPR 2026 |
+| **Sep 2025** | Paper → [ICASSP 2026]({{ site.url }}/research/#icasSP) \| NeurIPS 2025 Workshops Reviewer |
+| **Aug 2025** | **Galaxy S26**: DeMoire NAS model → **2.2x speedup** |
+| **Jul 2025** | **Spot Award**: Speculative decoding algorithm \| EMNLP 2025 submission |
+| **Jan 2025** | **Team Award**: Samsung Gauss-L → Galaxy S25 |
+| **Dec 2024** | Paper accepted: [ICASSP 2025](https://ieeexplore.ieee.org/document/10888855) |
 
-[CV / Resume]({{ site.url }}/assets/Sravanth_Kodavanti_CV.pdf), [Google Scholar](https://scholar.google.com/citations?user=SiOQawIAAAAJ&hl=en)  
-Email ID: [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.com), [k.sravanth@samsung.com](mailto:k.sravanth@samsung.com)  
+**[Research & Publications →](/research/)** | **[Teaching →](/teaching/)** | **[Blog →](/archive/)**
 
-#### Updates
+## 🎬 Outside Work
+Global cinema enthusiast ([Letterboxd](https://letterboxd.com/sravanthkod/)) | Badminton player
 
-<div style="height:275px;overflow:auto;">
-<table>
-<col width="100px">
-<col width="630px">
- <tr><td><b>Nov 2025:</b></td><td>Serving <strong>ICASSP 2026</strong> as <strong>Area Chair</strong> & <strong>Reviewer</strong>!!</td></tr>
- <tr><td><b>Nov 2025:</b></td><td>2 Papers submitted to <strong>CVPR 2026</strong>!</td></tr>
-<tr>
- <tr><td><b>Nov 2025:</b></td><td>Serving as reviewer for <strong>AAAI 2026</strong> Responsible Synthetic Data workshop!</td></tr>
-<tr>
-  <tr><td><b>Sep 2025:</b></td><td>1 Paper submitted to <strong>ICASSP 2026</strong>!</td></tr>
-  <tr><td><b>Sep 2025:</b></td><td>Served as a reviewer for <strong>NeurIPS 2025</strong>  LatinX in AI, BERT2S & DynaFront Workshops. Media - <a href="https://sites.google.com/view/dynafrontneurips25/reviewers" target="_blank">Here</a></td></tr>
-  <td><b>Aug 2025:</b></td>
-  <td>
-    <strong>Commercialization:</strong> The demoire artifact removal model, optimized through NAS, achieved a <strong>2.2X</strong> inference speedup and is slated for deployment in the forthcoming <strong>Samsung Galaxy S26</strong>.
-  </td>
-</tr>
-
-  <tr><td><b>Jul 2025:</b></td><td>Awarded Spot award at Samsung for signifcant contributions to novel speculative decoding algorithm. More details about algorithm will be out soon!</td></tr>
-  <tr><td><b>Jul 2025:</b></td><td>1 Paper submitted to EMNLP 2025 Industry Track!</td></tr>
-  <tr><td><b>Jul 2025:</b></td><td>Served as reviewer for <strong>ICML 2025</strong> AI4MATH Workshop, <strong>Scipy 2025</strong> Proceddings!</td></tr>
-  <!-- <tr><td><b>Jun 2025:</b></td><td>2 Papers submitted to Samsung Best Paper Award!</td></tr> -->
-  <tr><td><b>Jun 2025:</b></td><td>Served as a reviewer for <strong>ACL 2025</strong> Student Research Workshop!</td></tr>
-  <tr><td><b>May 2025:</b></td><td>Served as a reviewer for <strong>ACL 2025</strong> REALM workshop. Media - <a href="https://aclanthology.org/anthology-files/pdf/realm/2025.realm-1.0.pdf" target="_blank">Here</a></td></tr>
-  <tr><td><b>Feb 2025:</b></td><td>Awarded MD Project Incentive award at Samsung for significant contribution towards AI model acceleration!</td></tr>
-  <tr><td><b>Jan 2025:</b></td><td>Awarded Team Awesome award for Samsung Gauss - L model commercialization into Galaxy S25 series! </td></tr>
-  <tr><td><b>Dec 2024:</b></td><td>1 <a href="https://ieeexplore.ieee.org/document/10888855" target="_blank">Paper</a> accepted to <strong>ICASSP 2025</strong>!</td></tr>
-  <!-- <tr><td><b>Sept 2024:</b></td><td>2 Papers submitted to IEEE ICASSP 2025!</td></tr> -->
-  <tr><td><b>Aug 2024:</b></td><td>Started working as a Research Engineer at Samsung Research!</td></tr>
-  <tr><td><b>Jul 2024:</b></td><td>Graduated from IIT Hyderabad with major in CS & minor in Entrepreneurship!</td></tr>
+**[CV]({{ site.url }}/assets/Sravanth_Kodavanti_CV.pdf)** | **[Google Scholar](https://scholar.google.com/citations?user=SiOQawIAAAAJ&hl=en)**  
+📧 [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.com) | [k.sravanth@samsung.com](mailto:k.sravanth@samsung.com)
