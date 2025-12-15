@@ -31,7 +31,8 @@ Under Review at **CVPR 2026**
 * [Unlocking the Edge Deployment and On-Device Acceleration of Multi-LoRA Enabled
 One-for-All Foundational LLM]()   
 ___Sravanth Kodavanti___\*, Sowmya Vajrala\*, Srinivas Miriyala\*, Utsav Tiwari\*, Uttam Kumar, Utkarsh Kumar Mahawar, Achal Pratap Singh, Arya D, Narendra Mutyala, Vikram Nelvoy Rajendiran, Sharan Kumar Allur, Euntaik Lee, Dohyoung Kim, HyeonSu Lee, Gyusung Cho, JungBae Kim, Jimi Lee  
-Under Review at **EMNLP 2025 Industry Track**
+<!-- Under Review at **EMNLP 2025 Industry Track** -->
+Preprint    
 
 * [Mobile-friendly Image de-noising: Hardware Conscious Optimization for Edge Application](https://openreview.net/forum?id=xBbVviiDDL)   
 <!-- (https://ieeexplore.ieee.org/document/10888855)    -->
