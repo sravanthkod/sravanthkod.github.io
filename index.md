@@ -1,5 +1,7 @@
 ---
 layout: page
+title: Sravanth Kodavanti
+tags: ["AI Optimization", "NAS", "Quantization", "Samsung Research", "Edge AI"]
 ---
 {% include JB/setup %}
 
