@@ -14,6 +14,7 @@ email2: k.sravanth@samsung.com
 # description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sravanthkod.github.io" # the base hostname & protocol for your site
+favicon: /favicon.png
 github_username:  sravanthkod
 twitter_username: sravanthkod
 linkedin_username: sravanthk27
