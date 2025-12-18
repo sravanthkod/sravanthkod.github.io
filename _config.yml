@@ -1,30 +1,57 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# # Welcome to Jekyll!
+# #
+# # This config file is meant for settings that affect your whole blog, values
+# # which you are expected to set up once and rarely need to edit after that.
+# # For technical reasons, this file is *NOT* reloaded automatically when you use
+# # 'jekyll serve'. If you change this file, please restart the server process.
 
-# Site settings
-title: Sravanth Kodavanti
-description: Research Engineer at Samsung Research | AI Optimization, NAS, Quantization | IIT Hyderabad CS '24
-full_name: Sravanth Kodavanti
-email: ramasravanthkodavanti@gmail.com
-email2: k.sravanth@samsung.com
-# description: > # this means to ignore newlines until "baseurl:"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://sravanthkod.github.io" # the base hostname & protocol for your site
-favicon: /favicon.png
-github_username:  sravanthkod
-twitter_username: sravanthkod
-linkedin_username: sravanthk27
-# stackoverflow: 5080995/martianwars
-include: ['_pages']
+# # Site settings
+# title: Sravanth Kodavanti
+# description: Research Engineer at Samsung Research | AI Optimization, NAS, Quantization | IIT Hyderabad CS '24
+# full_name: Sravanth Kodavanti
+# email: ramasravanthkodavanti@gmail.com
+# email2: k.sravanth@samsung.com
+# # description: > # this means to ignore newlines until "baseurl:"
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "https://sravanthkod.github.io" # the base hostname & protocol for your site
+# favicon: /favicon.png
+# github_username:  sravanthkod
+# twitter_username: sravanthkod
+# linkedin_username: sravanthk27
+# # stackoverflow: 5080995/martianwars
+# include: ['_pages']
+# footer-links-active:
+#   stackoverflow: False
+
+# # Build settings
+# markdown: kramdown
+# gems:
+#   - jekyll-seo-tag
+#   - jekyll-redirect-from
+
+title: "Sravanth Kodavanti"
+description: "Research Engineer at Samsung Research | AI Optimization, NAS, Quantization | IIT Hyderabad CS '24"
+full_name: "Sravanth Kodavanti"
+
+email: "ramasravanthkodavanti@gmail.com"
+email2: "k.sravanth@samsung.com"
+
+baseurl: ""                    # no trailing slash
+url: "https://sravanthkod.github.io"
+favicon: "/favicon.png"
+
+github_username: "sravanthkod"
+twitter_username: "sravanthkod"
+linkedin_username: "sravanthk27"
+
+include:
+  - "_pages"
+
 footer-links-active:
-  stackoverflow: False
+  stackoverflow: false
 
-# Build settings
 markdown: kramdown
-gems:
+
+plugins:
   - jekyll-seo-tag
   - jekyll-redirect-from
