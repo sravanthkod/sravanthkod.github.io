@@ -2,6 +2,9 @@
 layout: page
 # title: Sravanth Kodavanti
 tags: ["AI Optimization", "NAS", "Quantization", "Samsung Research", "Edge AI"]
+description: "Homepage of Sravanth Kodavanti, Research Engineer at Samsung Research working on edge AI model optimization and generative AI."
+image: "/favicon.png" 
+
 ---
 {% include JB/setup %}
 
