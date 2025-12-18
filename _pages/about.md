@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-# description: "About Sravanth Kodavanti, Research Engineer at Samsung Research working on edge AI model optimization and generative AI."
+description: "About Sravanth Kodavanti, Research Engineer at Samsung Research working on edge AI model optimization and generative AI."
 permalink: /about/
 order: 1
 ---
