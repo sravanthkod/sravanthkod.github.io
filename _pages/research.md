@@ -14,18 +14,18 @@ I have a broad interest in training and inference optimization techniques, with 
 
 <!-- \* denotes equal contributions / lead authors. -->
 
-* [NanoSD: Edge Efficient Foundation Model for Real Time Image Restoration]()   
+* [NanoSD: Edge Efficient Foundation Model for Real Time Image Restoration](https://arxiv.org/abs/2601.09823)   
 Subhajit Sanyal\*, Srinivas Miriyala\*, Akshay  Bankar, Manjunath Arveti, Sowmya Vajrala, Shreyas Pandith, ___Sravanth Kodavanti___
 , Abhishek Ameta, Harshit, Amit Unde   
-Under Review at **CVPR 2026**
+**CVPR 2026**
 
 * [Edge-Efficient Image Restoration: Transformer Distillation into State-Space Models,]()   
 ___Sravanth Kodavanti___\*, Srinivas Miriyala\*, Sowmya Vajrala\*, Vikram N R, Sharan Allur   
-Under Review at **CVPR 2026**
+Preprint
 
-* [Towards Efficient Image Deblurring for Edge Deployment]()    
+* [Towards Efficient Image Deblurring for Edge Deployment](https://arxiv.org/abs/2601.11685)    
  Sowmya Vajrala\*, Srinivas Miriyala\*, ___Sravanth Kodavanti___  
- Under Review at **ICASSP 2026**    
+ Preprint  
 
 
 * [Unlocking the Edge Deployment and On-Device Acceleration of Multi-LoRA Enabled
