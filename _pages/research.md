@@ -12,39 +12,61 @@ I have a broad interest in training and inference optimization techniques, with 
 
 ### Publications
 
+#### Language
+
+* [Unlocking the Edge Deployment and On-Device Acceleration of Multi-LoRA Enabled
+One-for-All Foundational LLM]()   
+___Sravanth Kodavanti___\*, Sowmya Vajrala\*, Srinivas Miriyala\*, Utsav Tiwari, Uttam Kumar, Utkarsh Kumar Mahawar, Achal Pratap Singh, Arya D, Narendra Mutyala, Vikram Nelvoy Rajendiran, Sharan Kumar Allur, Euntaik Lee, Dohyoung Kim, HyeonSu Lee, Gyusung Cho, JungBae Kim, Jimi Lee  
+<!-- Under Review at **EMNLP 2025 Industry Track** -->
+Preprint  
+
+
+#### Vision
+
 <!-- \* denotes equal contributions / lead authors. -->
 
 * [NanoSD: Edge Efficient Foundation Model for Real Time Image Restoration](https://arxiv.org/abs/2601.09823)   
-Subhajit Sanyal\*, Srinivas Miriyala\*, Akshay  Bankar, Manjunath Arveti, Sowmya Vajrala, Shreyas Pandith, ___Sravanth Kodavanti___
+Subhajit Sanyal\*, Srinivas Miriyala\*, Akshay  Bankar\*, Manjunath Arveti, Sowmya Vajrala, Shreyas Pandith, ___Sravanth Kodavanti___
 , Abhishek Ameta, Harshit, Amit Unde   
 **CVPR 2026**
+
+* [EdgeDiT: Hardware-Aware Diffusion Transformers for Efficient On-Device Image Generation](https://arxiv.org/abs/2603.28405)   
+___Sravanth Kodavanti___\*, Manjunath Arveti\*, Sowmya Vajrala, Srinivas Miriyala, Vikram N R   
+**Mobile AI, CVPR 2026**
+
+* [Hardware-aware Low Light Image Enhancement on Edge]()  
+Sowmya Vajrala, ___Sravanth Kodavanti___, Srinivas Miriyala   
+**WiCV, CVPR 2026**
+
+* [Quantization with Unified Adaptive Distillation to enable multi-LoRA based one-for-all Generative Vision Models on edge](https://arxiv.org/abs/2603.29535)    
+Sowmya Vajrala\*, Aakash Parmar\*, Prasanna R\*, ___Sravanth Kodavanti___, Manjunath Arveti, Srinivas Soumitri Miriyala, Ashok Senapati   
+**Mobie AI, CVPR 2026**
 
 * [Edge-Efficient Image Restoration: Transformer Distillation into State-Space Models,]()   
 ___Sravanth Kodavanti___\*, Srinivas Miriyala\*, Sowmya Vajrala\*, Vikram N R, Sharan Allur   
 Preprint
 
+* [TOC-SR: Task-Optimal Compact diffusion for Image Super Resolution]()   
+Sowmya Vajrala, Akshay Bankar, Manjunath Arveti, Shreyas Pandith,___Sravanth Kodavanti___, Subhajit Sanyal, Amit Unde, Srinivas Miriyala   
+Preprint
+
 * [Towards Efficient Image Deblurring for Edge Deployment](https://arxiv.org/abs/2601.11685)    
  Sowmya Vajrala\*, Srinivas Miriyala\*, ___Sravanth Kodavanti___  
- Preprint  
+ Preprint    
 
-
-* [Unlocking the Edge Deployment and On-Device Acceleration of Multi-LoRA Enabled
-One-for-All Foundational LLM]()   
-___Sravanth Kodavanti___\*, Sowmya Vajrala\*, Srinivas Miriyala\*, Utsav Tiwari\*, Uttam Kumar, Utkarsh Kumar Mahawar, Achal Pratap Singh, Arya D, Narendra Mutyala, Vikram Nelvoy Rajendiran, Sharan Kumar Allur, Euntaik Lee, Dohyoung Kim, HyeonSu Lee, Gyusung Cho, JungBae Kim, Jimi Lee  
-<!-- Under Review at **EMNLP 2025 Industry Track** -->
-Preprint    
-
-* [Mobile-friendly Image de-noising: Hardware Conscious Optimization for Edge Application](https://openreview.net/forum?id=xBbVviiDDL)   
+* [Mobile-friendly Image de-noising: Hardware Conscious Optimization for Edge Application](https://arxiv.org/abs/2601.11684)   
 <!-- (https://ieeexplore.ieee.org/document/10888855)    -->
 Srinivas Miriyala\*, Sowmya Vajrala\*, Hitesh Kumar, ___Sravanth Kodavanti___, Vikram N R   
 **ICASSP 2025**   
 
 
-
 ### Patents
-[System and Method for Accelerating On-Device Large Language Model Inference]()   
+* [(Mobile SWA) Multi - objective Optimization for Balanced Inference - time Latency - efficient and Eviction - aware SWA]()  
+___Sravanth Kodavanti___, Srinivas Miriyala, Sowmya Vajrala, Nikita Malik, Vikram N R     
+Provisional Specification Filed. Proposes a dynamic window for generic token eviction algorithms reducing KV Cache without significant drop in accuracy of LLMs
+* [System and Method for Accelerating On-Device Large Language Model Inference]()   
 ___Sravanth Kodavanti___\*, Srinivas Miriyala\*, Sowmya Vajrala\*   
-Provisional Specification Filed. Proposes a novel self-speculative decoding technique to significantly
+Complete Specification Filed. Proposes a novel self-speculative decoding technique to significantly
 improve efficiency and reduce latency in LLM inference.
 
 
