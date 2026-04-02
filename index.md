@@ -30,6 +30,7 @@ Email ID: [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.c
 <table>
 <col width="100px">
 <col width="630px">
+ <tr><td><b>Mar 2026:</b></td><td>3 Papers accepted to CVPR 2026 Workshops!</td></tr>
  <tr><td><b>Feb 2026:</b></td><td>Nano SD Paper accepted at CVPR 2026!</td></tr>
  <tr><td><b>Dec 2025:</b></td><td>Serving as a reviewer for <strong>ICLR 2026</strong> DeLTa workshop!!</td></tr>
  <tr><td><b>Nov 2025:</b></td><td>Serving <strong>ICASSP 2026</strong> as <strong>Area Chair</strong> & <strong>Reviewer</strong>!!</td></tr>
