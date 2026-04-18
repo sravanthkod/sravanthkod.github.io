@@ -86,7 +86,7 @@ I have a broad interest in training and inference optimization techniques, with 
     <p><strong>Sravanth Kodavanti</strong>, Srinivas Miriyala, Sowmya Vajrala, Vikram N R, Sharan Allur</p>
     <p><em>Preprint</em></p>
     <div class="publication-links">
-      <a href="#">Paper</a>
+      <!-- <a href="#">Paper</a> -->
     </div>
   </div>
 </div>
@@ -98,7 +98,7 @@ I have a broad interest in training and inference optimization techniques, with 
     <p>Sowmya Vajrala, Akshay Bankar, Manjunath Arveti, Shreyas Pandith, <strong>Sravanth Kodavanti</strong>, Subhajit Sanyal, Amit Unde, Srinivas Miriyala</p>
     <p><em>Preprint</em></p>
     <div class="publication-links">
-      <a href="#">Paper</a>
+      <!-- <a href="#">Paper</a> -->
     </div>
   </div>
 </div>
