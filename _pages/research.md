@@ -16,6 +16,7 @@ I have a broad interest in training and inference optimization techniques, with 
 <h3 style="margin-top: 40px; color: var(--color-accent); padding-bottom: 10px; border-bottom: 2px solid var(--color-border);">🗣️ Language</h3>
 
 <div class="publication-item">
+    <img src="{{ site.url }}/assets/LLM_Meta_Image.png" alt="LLM" class="publication-image">
   <div class="publication-details">
     <h4>Unlocking the Edge Deployment and On-Device Acceleration of Multi-LoRA Enabled One-for-All Foundational LLM</h4>
     <p><strong>Sravanth Kodavanti</strong>, Sowmya Vajrala, Srinivas Miriyala, Utsav Tiwari, Uttam Kumar, Utkarsh Kumar Mahawar, Achal Pratap Singh, Arya D, Narendra Mutyala, Vikram Nelvoy Rajendiran, Sharan Kumar Allur, Euntaik Lee, Dohyoung Kim, HyeonSu Lee, Gyusung Cho, JungBae Kim</p>
@@ -29,18 +30,19 @@ I have a broad interest in training and inference optimization techniques, with 
 <h3 style="margin-top: 40px; color: var(--color-accent); padding-bottom: 10px; border-bottom: 2px solid var(--color-border);">👁️ Vision</h3>
 
 <div class="publication-item">
+  <img src="{{ site.url }}/assets/NanoSD_Meta_Image.png" alt="NanoSD" class="publication-image">
   <div class="publication-details">
     <h4>NanoSD: Edge Efficient Foundation Model for Real Time Image Restoration</h4>
     <p>Subhajit Sanyal, Srinivas Miriyala, Akshay Bankar, Manjunath Arveti, Sowmya Vajrala, Shreyas Pandith, <strong>Sravanth Kodavanti</strong>, Abhishek Ameta, Harshit, Amit Unde</p>
     <p><strong>CVPR 2026</strong></p>
     <div class="publication-links">
       <a href="https://arxiv.org/abs/2601.09823" target="_blank">Paper</a>
-      <!-- <a href="#">Paper</a> -->
     </div>
   </div>
 </div>
 
 <div class="publication-item">
+  <img src="{{ site.url }}/assets/Edge_DiT_Meta_Image.png" alt="EdgeDiT" class="publication-image">
   <div class="publication-details">
     <h4>EdgeDiT: Hardware-Aware Diffusion Transformers for Efficient On-Device Image Generation</h4>
     <p><strong>Sravanth Kodavanti</strong>, Manjunath Arveti, Sowmya Vajrala, Srinivas Miriyala, Vikram N R</p>
@@ -53,6 +55,7 @@ I have a broad interest in training and inference optimization techniques, with 
 </div>
 
 <div class="publication-item">
+  <img src="{{ site.url }}/assets/LLIE_Meta_Image.png" alt="LLIE" class="publication-image">
   <div class="publication-details">
     <h4>Hardware-aware Low Light Image Enhancement on Edge</h4>
     <p>Sowmya Vajrala, <strong>Sravanth Kodavanti</strong>, Srinivas Miriyala</p>
@@ -64,6 +67,7 @@ I have a broad interest in training and inference optimization techniques, with 
 </div>
 
 <div class="publication-item">
+  <img src="{{ site.url }}/assets/QUAD_Meta_Image.png" alt="QUAD" class="publication-image">
   <div class="publication-details">
     <h4>Quantization with Unified Adaptive Distillation to enable multi-LoRA based one-for-all Generative Vision Models on edge</h4>
     <p>Sowmya Vajrala, Aakash Parmar, Prasanna R, <strong>Sravanth Kodavanti</strong>, Manjunath Arveti, Srinivas Soumitri Miriyala, Ashok Senapati</p>
@@ -76,6 +80,7 @@ I have a broad interest in training and inference optimization techniques, with 
 </div>
 
 <div class="publication-item">
+  <img src="{{ site.url }}/assets/Mamba_Meta_Image.png" alt="Mamba" class="publication-image">
   <div class="publication-details">
     <h4>Edge-Efficient Image Restoration: Transformer Distillation into State-Space Models</h4>
     <p><strong>Sravanth Kodavanti</strong>, Srinivas Miriyala, Sowmya Vajrala, Vikram N R, Sharan Allur</p>
@@ -87,6 +92,7 @@ I have a broad interest in training and inference optimization techniques, with 
 </div>
 
 <div class="publication-item">
+  <img src="{{ site.url }}/assets/ToC_SR_Meta_Image.png" alt="ToC_SR" class="publication-image">
   <div class="publication-details">
     <h4>TOC-SR: Task-Optimal Compact diffusion for Image Super Resolution</h4>
     <p>Sowmya Vajrala, Akshay Bankar, Manjunath Arveti, Shreyas Pandith, <strong>Sravanth Kodavanti</strong>, Subhajit Sanyal, Amit Unde, Srinivas Miriyala</p>
@@ -98,6 +104,7 @@ I have a broad interest in training and inference optimization techniques, with 
 </div>
 
 <div class="publication-item">
+  <img src="{{ site.url }}/assets/Deblur_Meta_Image.png" alt="Deblur" class="publication-image">
   <div class="publication-details">
     <h4>Towards Efficient Image Deblurring for Edge Deployment</h4>
     <p>Sowmya Vajrala, Srinivas Miriyala, <strong>Sravanth Kodavanti</strong></p>
@@ -110,6 +117,7 @@ I have a broad interest in training and inference optimization techniques, with 
 </div>
 
 <div class="publication-item">
+  <img src="{{ site.url }}/assets/Denoise_Meta_Image.png" alt="Denoise" class="publication-image">
   <div class="publication-details">
     <h4>Mobile-friendly Image de-noising: Hardware Conscious Optimization for Edge Application</h4>
     <p>Srinivas Miriyala, Sowmya Vajrala, Hitesh Kumar, <strong>Sravanth Kodavanti</strong>, Vikram N R</p>
