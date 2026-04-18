@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /_site/
+Disallow: /vendor/
+Disallow: /.github/
+
+Sitemap: https://sravanthkod.github.io/sitemap.xml

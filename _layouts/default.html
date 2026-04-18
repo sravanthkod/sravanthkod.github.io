@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   <head>
     {% include head.html %}
@@ -9,21 +9,15 @@
     {% if page.image %}
       <meta content="{{ page.image }}" property="og:image" />
     {% else %}
-      <meta content="https://avatars1.githubusercontent.com/u/8805240" property="og:image" />
+      <meta content="{{ site.url }}/favicon.png" property="og:image" />
     {% endif %}
   </head>
 
   <body>
-
     {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
+    <main class="main-content">
+      {{ content }}
+    </main>
     {% include analytics.html %}
     <script id="dsq-count-scr" src="//http-martiansideofthemoon-github-io.disqus.com/count.js" async></script>
   </body>
