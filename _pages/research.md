@@ -34,8 +34,8 @@ I have a broad interest in training and inference optimization techniques, with 
     <p>Subhajit Sanyal, Srinivas Miriyala, Akshay Bankar, Manjunath Arveti, Sowmya Vajrala, Shreyas Pandith, <strong>Sravanth Kodavanti</strong>, Abhishek Ameta, Harshit, Amit Unde</p>
     <p><strong>CVPR 2026</strong></p>
     <div class="publication-links">
-      <a href="https://arxiv.org/abs/2601.09823" target="_blank">arXiv</a>
-      <a href="#">Paper</a>
+      <a href="https://arxiv.org/abs/2601.09823" target="_blank">Paper</a>
+      <!-- <a href="#">Paper</a> -->
     </div>
   </div>
 </div>
@@ -46,8 +46,8 @@ I have a broad interest in training and inference optimization techniques, with 
     <p><strong>Sravanth Kodavanti</strong>, Manjunath Arveti, Sowmya Vajrala, Srinivas Miriyala, Vikram N R</p>
     <p><strong>Mobile AI, CVPR 2026</strong></p>
     <div class="publication-links">
-      <a href="https://arxiv.org/abs/2603.28405" target="_blank">arXiv</a>
-      <a href="#">Paper</a>
+      <a href="https://arxiv.org/abs/2603.28405" target="_blank">Paper</a>
+      <!-- <a href="#">Paper</a> -->
     </div>
   </div>
 </div>
@@ -69,8 +69,8 @@ I have a broad interest in training and inference optimization techniques, with 
     <p>Sowmya Vajrala, Aakash Parmar, Prasanna R, <strong>Sravanth Kodavanti</strong>, Manjunath Arveti, Srinivas Soumitri Miriyala, Ashok Senapati</p>
     <p><strong>Mobile AI, CVPR 2026</strong></p>
     <div class="publication-links">
-      <a href="https://arxiv.org/abs/2603.29535" target="_blank">arXiv</a>
-      <a href="#">Paper</a>
+      <a href="https://arxiv.org/abs/2603.29535" target="_blank">Paper</a>
+      <!-- <a href="#">Paper</a> -->
     </div>
   </div>
 </div>
@@ -103,8 +103,8 @@ I have a broad interest in training and inference optimization techniques, with 
     <p>Sowmya Vajrala, Srinivas Miriyala, <strong>Sravanth Kodavanti</strong></p>
     <p><em>Preprint</em></p>
     <div class="publication-links">
-      <a href="https://arxiv.org/abs/2601.11685" target="_blank">arXiv</a>
-      <a href="#">Paper</a>
+      <a href="https://arxiv.org/abs/2601.11685" target="_blank">Paper</a>
+      <!-- <a href="#">Paper</a> -->
     </div>
   </div>
 </div>
@@ -115,8 +115,8 @@ I have a broad interest in training and inference optimization techniques, with 
     <p>Srinivas Miriyala, Sowmya Vajrala, Hitesh Kumar, <strong>Sravanth Kodavanti</strong>, Vikram N R</p>
     <p><strong>ICASSP 2025</strong></p>
     <div class="publication-links">
-      <a href="https://arxiv.org/abs/2601.11684" target="_blank">arXiv</a>
-      <a href="#">Paper</a>
+      <a href="https://arxiv.org/abs/2601.11684" target="_blank">Paper</a>
+      <a href="{{ site.url }}/assets/ICASSP_2025_Poster.pdf" target="_blank">Poster</a>
     </div>
   </div>
 </div>
