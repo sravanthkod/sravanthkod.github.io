@@ -23,6 +23,7 @@ In this section, I share additional experiences and contributions that complemen
     <h4>Reviewer</h4>
     <p>Served as a peer reviewer for:</p>
     <ul style="margin-left: 20px; color: var(--color-text-muted);">
+      <li><strong>ACL 2026 Industry Track</strong> – Main Track</li>
       <li><strong>ICASSP 2026</strong> – Main Track</li>
       <li><strong>AAAI 2025</strong> – Workshops</li>
       <li><strong>NeurIPS 2025</strong> – Workshops (LatinX in AI, BERT2S, DynaFront)</li>
