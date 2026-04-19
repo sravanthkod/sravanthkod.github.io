@@ -80,6 +80,19 @@ I have a broad interest in training and inference optimization techniques, with 
 </div>
 
 <div class="publication-item">
+  <img src="{{ site.url }}/assets/Denoise_Meta_Image.png" alt="Denoise" class="publication-image">
+  <div class="publication-details">
+    <h4>Mobile-friendly Image de-noising: Hardware Conscious Optimization for Edge Application</h4>
+    <p>Srinivas Miriyala, Sowmya Vajrala, Hitesh Kumar, <strong>Sravanth Kodavanti</strong>, Vikram N R</p>
+    <p><strong>ICASSP 2025</strong></p>
+    <div class="publication-links">
+      <a href="https://arxiv.org/abs/2601.11684" target="_blank">Paper</a>
+      <a href="{{ site.url }}/assets/ICASSP_2025_Poster.pdf" target="_blank">Poster</a>
+    </div>
+  </div>
+</div>
+
+<div class="publication-item">
   <img src="{{ site.url }}/assets/Mamba_Meta_Image.png" alt="Mamba" class="publication-image">
   <div class="publication-details">
     <h4>Edge-Efficient Image Restoration: Transformer Distillation into State-Space Models</h4>
@@ -112,19 +125,6 @@ I have a broad interest in training and inference optimization techniques, with 
     <div class="publication-links">
       <a href="https://arxiv.org/abs/2601.11685" target="_blank">Paper</a>
       <!-- <a href="#">Paper</a> -->
-    </div>
-  </div>
-</div>
-
-<div class="publication-item">
-  <img src="{{ site.url }}/assets/Denoise_Meta_Image.png" alt="Denoise" class="publication-image">
-  <div class="publication-details">
-    <h4>Mobile-friendly Image de-noising: Hardware Conscious Optimization for Edge Application</h4>
-    <p>Srinivas Miriyala, Sowmya Vajrala, Hitesh Kumar, <strong>Sravanth Kodavanti</strong>, Vikram N R</p>
-    <p><strong>ICASSP 2025</strong></p>
-    <div class="publication-links">
-      <a href="https://arxiv.org/abs/2601.11684" target="_blank">Paper</a>
-      <a href="{{ site.url }}/assets/ICASSP_2025_Poster.pdf" target="_blank">Poster</a>
     </div>
   </div>
 </div>
