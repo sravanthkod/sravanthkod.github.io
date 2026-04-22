@@ -22,7 +22,7 @@ I have a broad interest in training and inference optimization techniques, with 
     <p><strong>Sravanth Kodavanti</strong>, Sowmya Vajrala, Srinivas Miriyala, Utsav Tiwari, Uttam Kumar, Utkarsh Kumar Mahawar, Achal Pratap Singh, Arya D, Narendra Mutyala, Vikram Nelvoy Rajendiran, Sharan Kumar Allur, Euntaik Lee, Dohyoung Kim, HyeonSu Lee, Gyusung Cho, JungBae Kim</p>
     <p><strong>ACL 2026 Findings</strong></p>
     <div class="publication-links">
-      <a href="#">Paper</a>
+      <a href="https://arxiv.org/abs/2604.18655">Paper</a>
     </div>
   </div>
 </div>
