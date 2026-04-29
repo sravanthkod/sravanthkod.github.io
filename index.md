@@ -56,13 +56,9 @@ keywords: "Sravanth Kodavanti, Research Engineer, Samsung Research, AI Optimizat
   <li><span class="date">Nov 2025:</span> <strong>Area Chair</strong> & <strong>Reviewer</strong> for <strong>ICASSP 2026</strong></li>
   <li><span class="date">Nov 2025:</span> Reviewer for <strong>AAAI 2026</strong> Responsible Synthetic Data workshop</li>
   <li><span class="date">Sep 2025:</span> Reviewer for <strong>NeurIPS 2025</strong> LatinX in AI, BERT2S & DynaFront Workshop; <a href="https://sites.google.com/view/dynafrontneurips25/reviewers" target="_blank">Media</a></li>
-  <-- <li><span class="date">Aug 2025:</span> <strong>Commercialization:</strong> The demoire artifact removal model achieved <strong>2.2X</strong> inference speedup and deployment in <strong>Samsung Galaxy S26</strong></li> -->
-  <-- <li><span class="date">Jul 2025:</span> Awarded Spot Award at Samsung for speculative decoding algorithm contribution</li> -->
   <li><span class="date">Jul 2025:</span> Served as reviewer for <strong>ICML 2025</strong> AI4MATH Workshop & <strong>SciPy 2025</strong> Proceedings</li>
   <li><span class="date">Jun 2025:</span> Served as reviewer for <strong>ACL 2025</strong> Student Research Workshop</li>
   <li><span class="date">May 2025:</span> Reviewer for <strong>ACL 2025</strong> REALM workshop <a href="https://aclanthology.org/anthology-files/pdf/realm/2025.realm-1.0.pdf" target="_blank">Media</a></li>
-  <-- <li><span class="date">Feb 2025:</span> Awarded <strong>MD Project Incentive</strong> award at Samsung for AI model acceleration</li> -->
-  <-- <li><span class="date">Jan 2025:</span> Awarded <strong>Team Awesome</strong> award for Samsung Gauss-L commercialization into Galaxy S25</li> -->
   <li><span class="date">Dec 2024:</span> 1 <a href="https://ieeexplore.ieee.org/document/10888855" target="_blank">Paper</a> accepted to <strong>ICASSP 2025</strong></li>
   <li><span class="date">Aug 2024:</span> Started as Research Engineer at Samsung Research</li>
   <li><span class="date">Jul 2024:</span> Graduated from IIT Hyderabad with BS in CS & minor in Entrepreneurship</li>
