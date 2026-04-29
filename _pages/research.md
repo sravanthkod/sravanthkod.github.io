@@ -157,7 +157,7 @@ I have a broad interest in training and inference optimization techniques, with 
     <p><em>Under guidance of <a href="https://sites.google.com/site/pksrijith/home">Dr. P K Srijith</a></em></p>
     <p>IIT Hyderabad (2023–2024)</p>
     <div class="publication-links">
-      <a href="{{ site.url }}/assets/Continual_Learning_UnderGrad.pdf" target="_blank">PDF</a>
+      <a href="{{ site.url }}/assets/Continual_Learning_UnderGrad.pdf" target="_blank">Poster</a>
     </div>
   </div>
 </div>
