@@ -49,7 +49,7 @@ keywords: "Sravanth Kodavanti, Research Engineer, Samsung Research, AI Optimizat
 <div style="margin-top: 50px; margin-bottom: 30px; border-bottom: 3px solid var(--color-accent); padding-bottom: 10px;"><h2 style="margin: 0; display: inline;">📰 Updates</h2></div>
 
 <ul class="news-timeline">
-  <li><span class="date">Apr 2026:</span> 1 Paper accepted at <strong>ACL 2026</strong> Workshops</li>
+  <li><span class="date">Apr 2026:</span> 1 Paper accepted at <strong>ACL 2026</strong></li>
   <li><span class="date">Mar 2026:</span> 3 Papers accepted at <strong>CVPR 2026</strong> Workshops</li>
   <li><span class="date">Feb 2026:</span> <strong>NanoSD</strong> paper accepted at <strong>CVPR 2026</strong></li>
   <li><span class="date">Dec 2025:</span> Reviewer for <strong>ICLR 2026</strong> DeLTa workshop</li>
@@ -59,7 +59,7 @@ keywords: "Sravanth Kodavanti, Research Engineer, Samsung Research, AI Optimizat
   <li><span class="date">Jul 2025:</span> Served as reviewer for <strong>ICML 2025</strong> AI4MATH Workshop & <strong>SciPy 2025</strong> Proceedings</li>
   <li><span class="date">Jun 2025:</span> Served as reviewer for <strong>ACL 2025</strong> Student Research Workshop</li>
   <li><span class="date">May 2025:</span> Reviewer for <strong>ACL 2025</strong> REALM workshop <a href="https://aclanthology.org/anthology-files/pdf/realm/2025.realm-1.0.pdf" target="_blank">Media</a></li>
-  <li><span class="date">Dec 2024:</span> 1 <a href="https://ieeexplore.ieee.org/document/10888855" target="_blank">Paper</a> accepted to <strong>ICASSP 2025</strong></li>
+  <li><span class="date">Dec 2024:</span> 1 Paper accepted to <strong>ICASSP 2025</strong></li>
   <li><span class="date">Aug 2024:</span> Started as Research Engineer at Samsung Research</li>
   <li><span class="date">Jul 2024:</span> Graduated from IIT Hyderabad with BS in CS & minor in Entrepreneurship</li>
 </ul>
