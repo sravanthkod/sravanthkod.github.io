@@ -100,6 +100,7 @@ I have a broad interest in training and inference optimization techniques, with 
     <p><em>Preprint</em></p>
     <div class="publication-links">
       <!-- <a href="#">Paper</a> -->
+      <a href="https://arxiv.org/abs/2605.02794" target="_blank">Paper</a>
     </div>
   </div>
 </div>
@@ -112,6 +113,7 @@ I have a broad interest in training and inference optimization techniques, with 
     <p><em>Preprint</em></p>
     <div class="publication-links">
       <!-- <a href="#">Paper</a> -->
+      <a href="https://arxiv.org/abs/2605.02767" target="_blank">Paper</a>
     </div>
   </div>
 </div>
