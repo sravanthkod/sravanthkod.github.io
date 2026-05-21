@@ -37,6 +37,8 @@ I have a broad interest in training and inference optimization techniques, with 
     <p><strong>CVPR 2026</strong></p>
     <div class="publication-links">
       <a href="https://arxiv.org/abs/2601.09823" target="_blank">Paper</a>
+      <a href="{{ site.url }}/assets/NanoSD_CVPR_2026_Poster.png" target="_blank">Poster</a>
+      <a href="https://youtu.be/vIJ0tOi9MEg?si=OaFy7Dp67axzeyIe" target="_blank">Video</a>
     </div>
   </div>
 </div>
@@ -46,7 +48,7 @@ I have a broad interest in training and inference optimization techniques, with 
   <div class="publication-details">
     <h4>EdgeDiT: Hardware-Aware Diffusion Transformers for Efficient On-Device Image Generation</h4>
     <p><strong>Sravanth Kodavanti</strong>, Manjunath Arveti, Sowmya Vajrala, Srinivas Miriyala, Vikram N R</p>
-    <p><strong>Mobile AI, CVPR 2026</strong></p>
+    <p><strong>Mobile AI, CVPR 2026 (Oral)</strong></p>
     <div class="publication-links">
       <a href="https://arxiv.org/abs/2603.28405" target="_blank">Paper</a>
       <!-- <a href="#">Paper</a> -->
@@ -59,7 +61,7 @@ I have a broad interest in training and inference optimization techniques, with 
   <div class="publication-details">
     <h4>Hardware-aware Low Light Image Enhancement on Edge</h4>
     <p>Sowmya Vajrala, <strong>Sravanth Kodavanti</strong>, Srinivas Miriyala</p>
-    <p><strong>WiCV, CVPR 2026</strong></p>
+    <p><strong>WiCV, CVPR 2026 (Spotlight)</strong></p>
     <div class="publication-links">
       <a href="#">Paper</a>
     </div>
@@ -71,7 +73,7 @@ I have a broad interest in training and inference optimization techniques, with 
   <div class="publication-details">
     <h4>Quantization with Unified Adaptive Distillation to enable multi-LoRA based one-for-all Generative Vision Models on edge</h4>
     <p>Sowmya Vajrala, Aakash Parmar, Prasanna R, <strong>Sravanth Kodavanti</strong>, Manjunath Arveti, Srinivas Soumitri Miriyala, Ashok Senapati</p>
-    <p><strong>Mobile AI, CVPR 2026</strong></p>
+    <p><strong>Mobile AI, CVPR 2026 (Oral)</strong></p>
     <div class="publication-links">
       <a href="https://arxiv.org/abs/2603.29535" target="_blank">Paper</a>
       <!-- <a href="#">Paper</a> -->
