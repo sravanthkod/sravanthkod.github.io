@@ -23,6 +23,9 @@ I have a broad interest in training and inference optimization techniques, with 
     <p><strong>ACL 2026 Findings</strong></p>
     <div class="publication-links">
       <a href="https://arxiv.org/abs/2604.18655">Paper</a>
+      <a href="{{ site.url }}/assets/ACL_2026_Poster.pdf" target="_blank">Poster</a>
+      <a href="{{ site.url }}/assets/ACL_2026_Presentation.pdf" target="_blank">Slides</a>
+      <a href="https://www.youtube.com/watch?v=kljdzM_Dk68" target="_blank">Video</a>
     </div>
   </div>
 </div>
