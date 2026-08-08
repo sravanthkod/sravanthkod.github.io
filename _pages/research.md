@@ -33,6 +33,19 @@ I have a broad interest in training and inference optimization techniques, with 
 <h3 style="margin-top: 40px; color: var(--color-accent); padding-bottom: 10px; border-bottom: 2px solid var(--color-border);">👁️ Vision</h3>
 
 <div class="publication-item">
+  <img src="{{ site.url }}/assets/ToC_SR_Meta_Image.png" alt="ToC_SR" class="publication-image">
+  <div class="publication-details">
+    <h4>TOC-SR: Task-Optimal Compact diffusion for Image Super Resolution</h4>
+    <p>Sowmya Vajrala, Akshay Bankar, Manjunath Arveti, Shreyas Pandith, <strong>Sravanth Kodavanti</strong>, Subhajit Sanyal, Amit Unde, Srinivas Miriyala</p>
+    <p><em>LoViF, ECCV 2026 (Oral)</em></p>
+    <div class="publication-links">
+      <!-- <a href="#">Paper</a> -->
+      <a href="https://arxiv.org/abs/2605.02767" target="_blank">Paper</a>
+    </div>
+  </div>
+</div>
+
+<div class="publication-item">
   <img src="{{ site.url }}/assets/NanoSD_Meta_Image.png" alt="NanoSD" class="publication-image">
   <div class="publication-details">
     <h4>NanoSD: Edge Efficient Foundation Model for Real Time Image Restoration</h4>
@@ -106,19 +119,6 @@ I have a broad interest in training and inference optimization techniques, with 
     <div class="publication-links">
       <!-- <a href="#">Paper</a> -->
       <a href="https://arxiv.org/abs/2605.02794" target="_blank">Paper</a>
-    </div>
-  </div>
-</div>
-
-<div class="publication-item">
-  <img src="{{ site.url }}/assets/ToC_SR_Meta_Image.png" alt="ToC_SR" class="publication-image">
-  <div class="publication-details">
-    <h4>TOC-SR: Task-Optimal Compact diffusion for Image Super Resolution</h4>
-    <p>Sowmya Vajrala, Akshay Bankar, Manjunath Arveti, Shreyas Pandith, <strong>Sravanth Kodavanti</strong>, Subhajit Sanyal, Amit Unde, Srinivas Miriyala</p>
-    <p><em>Preprint</em></p>
-    <div class="publication-links">
-      <!-- <a href="#">Paper</a> -->
-      <a href="https://arxiv.org/abs/2605.02767" target="_blank">Paper</a>
     </div>
   </div>
 </div>
