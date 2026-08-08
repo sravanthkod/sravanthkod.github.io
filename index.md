@@ -49,6 +49,7 @@ keywords: "Sravanth Kodavanti, Research Engineer, Samsung Research, AI Optimizat
 <div style="margin-top: 50px; margin-bottom: 30px; border-bottom: 3px solid var(--color-accent); padding-bottom: 10px;"><h2 style="margin: 0; display: inline;">📰 Updates</h2></div>
 
 <ul class="news-timeline">
+  <li><span class="date">Apr 2026:</span> 1 Paper accepted at <strong>ECCV 2026 LoViF Workshop</strong></li>
   <li><span class="date">Apr 2026:</span> 1 Paper accepted at <strong>ACL 2026</strong></li>
   <li><span class="date">Mar 2026:</span> 3 Papers accepted at <strong>CVPR 2026</strong> Workshops</li>
   <li><span class="date">Feb 2026:</span> <strong>NanoSD</strong> paper accepted at <strong>CVPR 2026</strong></li>
