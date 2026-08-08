@@ -37,7 +37,7 @@ I have a broad interest in training and inference optimization techniques, with 
   <div class="publication-details">
     <h4>TOC-SR: Task-Optimal Compact diffusion for Image Super Resolution</h4>
     <p>Sowmya Vajrala, Akshay Bankar, Manjunath Arveti, Shreyas Pandith, <strong>Sravanth Kodavanti</strong>, Subhajit Sanyal, Amit Unde, Srinivas Miriyala</p>
-    <p><em>LoViF, ECCV 2026 (Oral)</em></p>
+    <p><strong>LoViF, ECCV 2026 (Oral)</strong></p>
     <div class="publication-links">
       <!-- <a href="#">Paper</a> -->
       <a href="https://arxiv.org/abs/2605.02767" target="_blank">Paper</a>
