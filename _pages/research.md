@@ -39,7 +39,6 @@ I have a broad interest in training and inference optimization techniques, with 
     <p>Sowmya Vajrala, Akshay Bankar, Manjunath Arveti, Shreyas Pandith, <strong>Sravanth Kodavanti</strong>, Subhajit Sanyal, Amit Unde, Srinivas Miriyala</p>
     <p><strong>LoViF, ECCV 2026 (Oral)</strong></p>
     <div class="publication-links">
-      <!-- <a href="#">Paper</a> -->
       <a href="https://arxiv.org/abs/2605.02767" target="_blank">Paper</a>
     </div>
   </div>
@@ -67,7 +66,6 @@ I have a broad interest in training and inference optimization techniques, with 
     <p><strong>Mobile AI, CVPR 2026 (Oral)</strong></p>
     <div class="publication-links">
       <a href="https://arxiv.org/abs/2603.28405" target="_blank">Paper</a>
-      <!-- <a href="#">Paper</a> -->
     </div>
   </div>
 </div>
@@ -78,9 +76,6 @@ I have a broad interest in training and inference optimization techniques, with 
     <h4>Hardware-aware Low Light Image Enhancement on Edge</h4>
     <p>Sowmya Vajrala, <strong>Sravanth Kodavanti</strong>, Srinivas Miriyala</p>
     <p><strong>WiCV, CVPR 2026 (Spotlight)</strong></p>
-    <div class="publication-links">
-      <a href="#">Paper</a>
-    </div>
   </div>
 </div>
 
@@ -92,7 +87,6 @@ I have a broad interest in training and inference optimization techniques, with 
     <p><strong>Mobile AI, CVPR 2026 (Oral)</strong></p>
     <div class="publication-links">
       <a href="https://arxiv.org/abs/2603.29535" target="_blank">Paper</a>
-      <!-- <a href="#">Paper</a> -->
     </div>
   </div>
 </div>
@@ -117,7 +111,6 @@ I have a broad interest in training and inference optimization techniques, with 
     <p><strong>Sravanth Kodavanti</strong>, Srinivas Miriyala, Sowmya Vajrala, Vikram N R, Sharan Allur</p>
     <p><em>Preprint</em></p>
     <div class="publication-links">
-      <!-- <a href="#">Paper</a> -->
       <a href="https://arxiv.org/abs/2605.02794" target="_blank">Paper</a>
     </div>
   </div>
@@ -131,7 +124,6 @@ I have a broad interest in training and inference optimization techniques, with 
     <p><em>Preprint</em></p>
     <div class="publication-links">
       <a href="https://arxiv.org/abs/2601.11685" target="_blank">Paper</a>
-      <!-- <a href="#">Paper</a> -->
     </div>
   </div>
 </div>

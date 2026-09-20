@@ -23,10 +23,10 @@ keywords: "Sravanth Kodavanti, Research Engineer, Samsung Research, AI Optimizat
     <p>I maintain a list of my publications under the <a href="{{ site.url }}/research">Research</a> tab and am always open to collaborations. When I'm not working, I enjoy exploring films and web series from around the world — catch my reviews on <a href="https://letterboxd.com/sravanthkod/">Letterboxd</a>. I also enjoy playing badminton to unwind.</p>
 
     <div class="email-info">
-      ramasravanthkodavanti [at] gmail.com &middot; 
-      k.sravanth [at] samsung.com &middot;
-      <-- <a href="{{ site.url }}/assets/Sravanth_Kodavanti_CV.pdf">CV</a> &middot; -->
-      <-- <a href="https://scholar.google.com/citations?user=SiOQawIAAAAJ&hl=en">Google Scholar</a> -->
+      ramasravanthkodavanti [at] gmail.com &middot;
+      k.sravanth [at] samsung.com
+      <!-- <a href="{{ site.url }}/assets/Sravanth_Kodavanti_CV.pdf">CV</a> &middot; -->
+      <!-- <a href="https://scholar.google.com/citations?user=SiOQawIAAAAJ&hl=en">Google Scholar</a> -->
     </div>
 
     <div class="about_links">

@@ -22,7 +22,7 @@ Feel free to fork the website. It's the default Jekyll template with minor CSS m
 ![Profile](https://repository-images.githubusercontent.com/1030788758/5e3a3af9-cf58-492a-a3dd-81e426c4bd94) <!-- Replace with your photo -->
 
 📧 [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.com) | [k.sravanth@samsung.com](mailto:k.sravanth@samsung.com)  
-🌐 [Portfolio](https://sravanthkod.github.io) | [LinkedIn](https://linkedin.com/in/sravanthk27) | [Twitter](https://twitter.com/sravanthkod) | [Google Scholar](https://scholar.google.com/citations?user=YOUR_ID)
+🌐 [Portfolio](https://sravanthkod.github.io) | [LinkedIn](https://linkedin.com/in/sravanthk27) | [Twitter](https://twitter.com/sravanthkod) | [Google Scholar](https://scholar.google.com/citations?user=SiOQawIAAAAJ&hl=en)
 
 ## Recent Highlights
 | Date | Achievement |
