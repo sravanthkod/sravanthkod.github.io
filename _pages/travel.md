@@ -13,7 +13,7 @@ description: "Places I've travelled — United States, Thailand and India — pl
       <canvas id="travel-globe-canvas" role="img" aria-label="Interactive globe showing the places I have travelled"></canvas>
       <div class="globe-tooltip" id="globe-tooltip"></div>
     </div>
-    <div class="globe-hint">drag to spin &middot; hover a marker &middot; click to center</div>
+    <div class="globe-hint">drag to spin &middot; click a place to highlight it on the globe</div>
   </div>
 
   <div class="travel-list">

@@ -41,6 +41,8 @@
   var dragging = false, moved = 0;
   var hovered = -1;
   var highlightCountry = null;
+  var selectedCountry = null;
+  var regions = []; // [{country, polys: [[Float32Array(x,y,z,...) rings...]]}]
   var pulseUntil = {};
   var markerScreen = [];
   var dots = [];
@@ -245,6 +247,9 @@
     ctx.fillStyle = 'rgba(99,102,241,0.55)';
     ctx.fill();
 
+    // visited regions (filled)
+    drawRegions(cy, sy, cx, sx);
+
     // place markers
     markerScreen = [];
     for (var m = 0; m < markerVecs.length; m++) {
@@ -257,7 +262,8 @@
       var px = CX + X * R, py = CY - Y2 * R;
       markerScreen.push({ x: px, y: py });
 
-      var hot = hovered === m || PLACES[m].country === highlightCountry;
+      var hot = hovered === m || PLACES[m].country === highlightCountry ||
+                PLACES[m].country === selectedCountry;
       var pulsing = pulseUntil[m] && time < pulseUntil[m];
       var base = hot ? 5.5 : 3.4;
       var rad = base + ((hot || pulsing) ? Math.abs(Math.sin(time / 300 + m)) * 1.6 : 0);
@@ -277,6 +283,93 @@
       ctx.fillStyle = '#ffffff';
       ctx.fill();
     }
+  }
+
+  /* ---------- visited regions ---------- */
+
+  var scratch = [];
+
+  function addRing(vecs, cy, sy, cx, sx) {
+    var n = vecs.length / 3;
+    var anyFront = false;
+    for (var i = 0; i < n; i++) {
+      var x = vecs[i * 3], y = vecs[i * 3 + 1], z = vecs[i * 3 + 2];
+      var x1 = x * cy + z * sy;
+      var z1 = -x * sy + z * cy;
+      var y2 = y * cx - z1 * sx;
+      var z2 = y * sx + z1 * cx;
+      var px, py;
+      if (z2 >= 0) {
+        anyFront = true;
+        px = CX + x1 * R;
+        py = CY - y2 * R;
+      } else {
+        // back-facing point: clamp onto the horizon rim
+        var ux = x1, uy = -y2;
+        var len = Math.sqrt(ux * ux + uy * uy) || 1;
+        px = CX + ux / len * R;
+        py = CY + uy / len * R;
+      }
+      scratch[i * 2] = px;
+      scratch[i * 2 + 1] = py;
+    }
+    if (!anyFront) return;
+    ctx.moveTo(scratch[0], scratch[1]);
+    for (var k = 1; k < n; k++) {
+      ctx.lineTo(scratch[k * 2], scratch[k * 2 + 1]);
+    }
+    ctx.closePath();
+  }
+
+  function drawRegions(cy, sy, cx, sx) {
+    for (var g = 0; g < regions.length; g++) {
+      var reg = regions[g];
+      var sel = reg.country === selectedCountry;
+      var hot = sel || reg.country === highlightCountry;
+      ctx.beginPath();
+      for (var p = 0; p < reg.polys.length; p++) {
+        var rings = reg.polys[p];
+        for (var r = 0; r < rings.length; r++) {
+          addRing(rings[r], cy, sy, cx, sx);
+        }
+      }
+      ctx.fillStyle = 'rgba(6,182,212,' + (sel ? 0.45 : hot ? 0.32 : 0.20) + ')';
+      ctx.fill();
+      if (sel || hot) {
+        ctx.lineWidth = sel ? 1.4 : 1;
+        ctx.strokeStyle = 'rgba(6,182,212,' + (sel ? 0.9 : 0.55) + ')';
+        ctx.stroke();
+      }
+    }
+  }
+
+  function loadRegions(geo) {
+    var byCountry = {};
+    geo.features.forEach(function (f) {
+      var country = f.properties && f.properties.country;
+      var g = f.geometry;
+      if (!country || !g) return;
+      if (!byCountry[country]) byCountry[country] = [];
+      function addPoly(poly) {
+        byCountry[country].push(poly.map(function (ring) {
+          var v = new Float32Array(ring.length * 3);
+          for (var i = 0; i < ring.length; i++) {
+            var p = toVec(ring[i][1], ring[i][0]); // [lon, lat]
+            v[i * 3] = p.x;
+            v[i * 3 + 1] = p.y;
+            v[i * 3 + 2] = p.z;
+          }
+          return v;
+        }));
+      }
+      if (g.type === 'Polygon') addPoly(g.coordinates);
+      else if (g.type === 'MultiPolygon') {
+        for (var i = 0; i < g.coordinates.length; i++) addPoly(g.coordinates[i]);
+      }
+    });
+    regions = Object.keys(byCountry).map(function (c) {
+      return { country: c, polys: byCountry[c] };
+    });
   }
 
   /* ---------- interaction ---------- */
@@ -332,6 +425,7 @@
     dragging = false;
     if (moved < 5 && hovered >= 0) {
       var p = PLACES[hovered];
+      selectCountry(p.country);
       flyTo(p.lat, p.lon);
       pulseUntil[hovered] = performance.now() + 2500;
     }
@@ -350,12 +444,40 @@
     }
   }
 
+  var placeCountry = {};
+  PLACES.forEach(function (p) { placeCountry[p.name] = p.country; });
+
   var cards = document.querySelectorAll('.travel-country');
+  var chips = document.querySelectorAll('.travel-chip[data-place]');
+
+  function updateSelectionClasses() {
+    for (var k = 0; k < chips.length; k++) {
+      if (placeCountry[chips[k].dataset.place] === selectedCountry) {
+        chips[k].classList.add('active');
+      } else {
+        chips[k].classList.remove('active');
+      }
+    }
+    for (var c = 0; c < cards.length; c++) {
+      if (cards[c].dataset.country === selectedCountry) {
+        cards[c].classList.add('selected');
+      } else {
+        cards[c].classList.remove('selected');
+      }
+    }
+  }
+
+  function selectCountry(name) {
+    selectedCountry = name;
+    updateSelectionClasses();
+  }
+
   for (var c = 0; c < cards.length; c++) {
     (function (card) {
       var head = card.querySelector('.travel-country-header');
       if (head) {
         head.addEventListener('click', function () {
+          selectCountry(card.dataset.country);
           flyTo(parseFloat(card.dataset.lat), parseFloat(card.dataset.lon));
           scrollGlobeIntoView();
         });
@@ -369,11 +491,11 @@
     })(cards[c]);
   }
 
-  var chips = document.querySelectorAll('.travel-chip[data-place]');
   for (var k = 0; k < chips.length; k++) {
     (function (chip) {
       chip.addEventListener('click', function () {
         var name = chip.dataset.place;
+        selectCountry(placeCountry[name]);
         for (var m = 0; m < PLACES.length; m++) {
           if (PLACES[m].name === name) {
             flyTo(PLACES[m].lat, PLACES[m].lon);
@@ -417,6 +539,11 @@
       buildDots();
     })
     .catch(function () { buildDots(); });
+
+  fetch('/assets/travel/regions.geojson')
+    .then(function (r) { return r.json(); })
+    .then(loadRegions)
+    .catch(function () { /* regions are optional decoration */ });
 
   requestAnimationFrame(frame);
 })();

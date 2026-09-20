@@ -648,6 +648,18 @@ p {
     box-shadow: 0 2px 8px rgba(99,102,241,0.3);
 }
 
+.travel-chip.active {
+    color: #fff;
+    background: var(--gradient-accent);
+    border-color: transparent;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.3);
+}
+
+.travel-country.selected {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+
 .travel-chip:focus-visible,
 .travel-country-header:focus-visible {
     outline: 2px solid var(--color-accent);
