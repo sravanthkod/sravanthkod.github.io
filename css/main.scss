@@ -488,6 +488,173 @@ p {
 }
 
 /* ============================================================
+   TRAVEL PAGE
+   ============================================================ */
+.travel-container {
+    display: flex;
+    gap: 44px;
+    align-items: flex-start;
+    max-width: 1080px;
+    animation: fadeInUp 0.6s ease both;
+}
+
+.travel-globe-col {
+    flex: 0 0 44%;
+    max-width: 470px;
+}
+
+.travel-globe {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.travel-globe canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: grab;
+    touch-action: pan-y;
+}
+
+.travel-globe canvas:active {
+    cursor: grabbing;
+}
+
+.globe-tooltip {
+    position: absolute;
+    transform: translate(-50%, -140%);
+    background: var(--color-text);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.78em;
+    font-weight: 600;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+    z-index: 5;
+}
+
+.globe-hint {
+    text-align: center;
+    color: var(--color-text-light);
+    font-size: 0.8em;
+    margin-top: 6px;
+}
+
+.travel-list {
+    flex: 1;
+    min-width: 0;
+}
+
+.travel-country {
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 18px 22px;
+    margin-bottom: 18px;
+    transition: all var(--transition-smooth);
+    animation: fadeInUp 0.5s ease both;
+}
+
+.travel-country:nth-child(2) { animation-delay: 0.08s; }
+.travel-country:nth-child(3) { animation-delay: 0.16s; }
+
+.travel-country:hover {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-md), 0 0 0 1px rgba(99,102,241,0.1);
+    transform: translateY(-2px);
+}
+
+.travel-country-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 0 0 10px 0;
+    margin-bottom: 12px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    text-align: left;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.travel-flag {
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+.travel-country-name {
+    flex: 1;
+    font-size: 1.05em;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.travel-country-header:hover .travel-country-name {
+    color: var(--color-accent);
+}
+
+.travel-count {
+    font-size: 0.78em;
+    font-weight: 600;
+    color: var(--color-accent);
+    background: var(--gradient-accent-soft);
+    border: 1px solid rgba(99,102,241,0.2);
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.travel-region-label {
+    font-size: 0.78em;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 8px 0;
+}
+
+.travel-places {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.travel-chip {
+    display: inline-block;
+    padding: 5px 14px;
+    font-size: 0.85em;
+    font-weight: 600;
+    font-family: inherit;
+    color: var(--color-accent);
+    background: var(--gradient-accent-soft);
+    border: 1px solid rgba(99,102,241,0.2);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all var(--transition-smooth);
+}
+
+.travel-chip:hover {
+    color: #fff;
+    background: var(--gradient-accent);
+    border-color: transparent;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(99,102,241,0.3);
+}
+
+.travel-chip:focus-visible,
+.travel-country-header:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* ============================================================
    RESPONSIVE DESIGN
    ============================================================ */
 @media (max-width: 768px) {
@@ -555,6 +722,19 @@ p {
     .publication-image {
         width: 100%;
         max-width: 300px;
+    }
+
+    /* Travel page */
+    .travel-container {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .travel-globe-col {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
     }
 }
 
