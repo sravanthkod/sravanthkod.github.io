@@ -2,7 +2,7 @@ _site
 .sass-cache
 .jekyll-metadata
 Gemfile.lock
-vendor/
+/vendor/
 *.Zone.Identifier
 .DS_Store
 .env

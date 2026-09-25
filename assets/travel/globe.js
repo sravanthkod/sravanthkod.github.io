@@ -1,549 +1,473 @@
 /*
- * Travel globe — dotted orthographic canvas globe with place markers.
- * Land dots are sampled from Natural Earth 110m land polygons
- * (assets/travel/land.geojson). No external libraries.
+ * Travel globe — D3-geo orthographic projection on canvas.
+ * Behavior ported from a reference implementation: auto-rotation, drag with
+ * momentum, wheel/pinch/button zoom, hover tooltips, and click-to-focus
+ * animations from the legend, country cards, and city pins.
+ * Libraries are vendored locally in assets/travel/vendor/ (no CDN at runtime).
  */
 (function () {
   'use strict';
 
-  var PLACES = [
-    // United States — California
-    { name: 'San Diego', country: 'United States', lat: 32.7157, lon: -117.1611 },
-    { name: 'Los Angeles', country: 'United States', lat: 34.0522, lon: -118.2437 },
-    // Thailand
-    { name: 'Bangkok', country: 'Thailand', lat: 13.7563, lon: 100.5018 },
-    { name: 'Phuket', country: 'Thailand', lat: 7.8804, lon: 98.3923 },
-    { name: 'Krabi', country: 'Thailand', lat: 8.0863, lon: 98.9063 },
-    // India — states
-    { name: 'Andhra Pradesh', country: 'India', lat: 15.9129, lon: 79.7400 },
-    { name: 'Tamil Nadu', country: 'India', lat: 11.1271, lon: 78.6569 },
-    { name: 'Karnataka', country: 'India', lat: 15.3173, lon: 75.7139 },
-    { name: 'Kerala', country: 'India', lat: 10.8505, lon: 76.2711 },
-    { name: 'Maharashtra', country: 'India', lat: 19.7515, lon: 75.7139 },
-    { name: 'Rajasthan', country: 'India', lat: 27.0238, lon: 74.2179 },
-    { name: 'Uttar Pradesh', country: 'India', lat: 26.8467, lon: 80.9462 },
-    { name: 'Odisha', country: 'India', lat: 20.9517, lon: 85.0985 },
-    { name: 'Bihar', country: 'India', lat: 25.0961, lon: 85.3131 },
-    { name: 'Delhi', country: 'India', lat: 28.7041, lon: 77.1025 }
-  ];
-
-  var AUTO_SPEED = 0.0016; // rad / frame at 60fps
-  var TAU = Math.PI * 2;
-
-  var canvas = document.getElementById('travel-globe-canvas');
+  var canvas = document.getElementById('globe-canvas');
   var tooltip = document.getElementById('globe-tooltip');
-  if (!canvas || !canvas.getContext) return;
+  var wrapper = document.getElementById('globe-wrapper');
+  if (!canvas || !wrapper || !window.d3) return;
   var ctx = canvas.getContext('2d');
-  var wrap = canvas.parentElement;
+  if (!ctx) return;
 
-  var rotY = 0, rotX = 0.35, rotVel = AUTO_SPEED;
-  var flying = null;
-  var dragging = false, moved = 0;
-  var hovered = -1;
-  var highlightCountry = null;
-  var selectedCountry = null;
-  var regions = []; // [{country, polys: [[Float32Array(x,y,z,...) rings...]]}]
-  var pulseUntil = {};
-  var markerScreen = [];
-  var dots = [];
-  var landPolys = null;
-  var size = 0, R = 0, CX = 0, CY = 0, dotR = 1.4;
-  var lastT = 0;
+  // --- Country colors (pins, legend, region tints) ---
+  var COLORS = { usa: '#3b82f6', thailand: '#10b981', india: '#f59e0b' };
+  var COUNTRY_NAME = { usa: 'United States', thailand: 'Thailand', india: 'India' };
+  var REGION_KEY = { 'United States': 'usa', 'Thailand': 'thailand', 'India': 'india' };
+
+  // --- Places: [lat, lon, name, country key] ---
+  var CITIES = [
+    { lat: 32.7157, lon: -117.1611, name: 'San Diego', country: 'usa' },
+    { lat: 34.0522, lon: -118.2437, name: 'Los Angeles', country: 'usa' },
+    { lat: 13.7563, lon: 100.5018, name: 'Bangkok', country: 'thailand' },
+    { lat: 7.8804, lon: 98.3923, name: 'Phuket', country: 'thailand' },
+    { lat: 8.0863, lon: 98.9063, name: 'Krabi', country: 'thailand' },
+    { lat: 15.9129, lon: 79.7400, name: 'Andhra Pradesh', country: 'india' },
+    { lat: 11.1271, lon: 78.6569, name: 'Tamil Nadu', country: 'india' },
+    { lat: 15.3173, lon: 75.7139, name: 'Karnataka', country: 'india' },
+    { lat: 10.8505, lon: 76.2711, name: 'Kerala', country: 'india' },
+    { lat: 19.7515, lon: 75.7139, name: 'Maharashtra', country: 'india' },
+    { lat: 27.0238, lon: 74.2179, name: 'Rajasthan', country: 'india' },
+    { lat: 26.8467, lon: 80.9462, name: 'Uttar Pradesh', country: 'india' },
+    { lat: 20.9517, lon: 85.0985, name: 'Odisha', country: 'india' },
+    { lat: 25.0961, lon: 85.3131, name: 'Bihar', country: 'india' },
+    { lat: 28.7041, lon: 77.1025, name: 'Delhi', country: 'india' }
+  ];
+  CITIES.forEach(function (c) { c.color = COLORS[c.country]; });
+
+  var globeRadius, centerX, centerY, dpr = 1;
+  var projection, pathGenerator;
+  var landGeo = null;
+  var regionFeats = [];
+  var sphere = { type: 'Sphere' };
+  var graticule = window.d3.geoGraticule10();
+
+  // --- Zoom & rotation state ---
+  var HOME = [-79, -22.5]; // initial focus: India
+  var BASE_ROTATE = 0.15;  // degrees per frame
   var reduceMotion = window.matchMedia &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) BASE_ROTATE = 0;
 
-  function toVec(lat, lon) {
-    var phi = (90 - lat) * Math.PI / 180;
-    var theta = (lon + 180) * Math.PI / 180;
-    return {
-      x: -Math.sin(phi) * Math.cos(theta),
-      y: Math.cos(phi),
-      z: Math.sin(phi) * Math.sin(theta)
-    };
+  var zoomLevel = 1.0;
+  var minZoom = 0.65, maxZoom = 2.8;
+  var rotate = [HOME[0], HOME[1], 0];
+  var autoRotateSpeed = BASE_ROTATE;
+  var isDragging = false;
+  var dragStartPos, dragStartRotate;
+  var velocity = [0, 0];
+  var lastMoveTime = 0, lastMovePos = null;
+  var friction = 0.94;
+  var hoveredCity = null;
+  var mousePos = null;
+
+  function resumeAutoRotate(delay) {
+    setTimeout(function () { autoRotateSpeed = BASE_ROTATE; }, delay);
   }
-
-  var markerVecs = PLACES.map(function (p) { return toVec(p.lat, p.lon); });
-
-  /* ---------- sizing ---------- */
 
   function resize() {
-    var w = canvas.getBoundingClientRect().width || 420;
-    size = Math.max(220, Math.floor(w));
-    var dpr = Math.max(1, window.devicePixelRatio || 1);
-    canvas.width = Math.floor(size * dpr);
-    canvas.height = Math.floor(size * dpr);
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    R = size * 0.44;
-    CX = size / 2;
-    CY = size / 2;
-    dotR = Math.max(1.1, size * 0.0042);
+    dpr = window.devicePixelRatio || 1;
+    var rect = wrapper.getBoundingClientRect();
+    var size = Math.min(rect.width, 520);
+    canvas.style.width = size + 'px';
+    canvas.style.height = size + 'px';
+    canvas.width = size * dpr;
+    canvas.height = size * dpr;
+    globeRadius = (size / 2) * 0.82;
+    centerX = size / 2;
+    centerY = size / 2;
+
+    projection = window.d3.geoOrthographic()
+      .scale(globeRadius * zoomLevel)
+      .translate([centerX, centerY])
+      .clipAngle(90);
+
+    pathGenerator = window.d3.geoPath(projection, ctx);
   }
 
-  /* ---------- land data & dot lattice ---------- */
-
-  function flattenRing(ring) {
-    var out = new Float64Array(ring.length * 2);
-    for (var i = 0; i < ring.length; i++) {
-      out[i * 2] = ring[i][0];
-      out[i * 2 + 1] = ring[i][1];
-    }
-    return out;
-  }
-
-  function pointOnLand(lon, lat) {
-    if (!landPolys) return true;
-    for (var p = 0; p < landPolys.length; p++) {
-      var rings = landPolys[p];
-      var inside = false;
-      for (var r = 0; r < rings.length; r++) {
-        var ring = rings[r];
-        var x1 = ring[0], y1 = ring[1];
-        for (var i = 2; i < ring.length; i += 2) {
-          var x2 = ring[i], y2 = ring[i + 1];
-          if ((y2 > lat) !== (y1 > lat) &&
-              lon < (x1 - x2) * (lat - y2) / (y1 - y2) + x2) {
-            inside = !inside;
-          }
-          x1 = x2; y1 = y2;
-        }
-      }
-      if (inside) return true;
-    }
-    return false;
-  }
-
-  function buildDots() {
-    var pts = [];
-    if (landPolys) {
-      var N = 7000;
-      var GA = Math.PI * (3 - Math.sqrt(5));
-      for (var i = 0; i < N; i++) {
-        var y = 1 - (i / (N - 1)) * 2;
-        var rad = Math.sqrt(Math.max(0, 1 - y * y));
-        var th = GA * i;
-        var x = Math.cos(th) * rad, z = Math.sin(th) * rad;
-        var lat = 90 - Math.acos(y) * 180 / Math.PI;
-        var lon = Math.atan2(z, -x) * 180 / Math.PI - 180;
-        lon = ((lon % 360) + 540) % 360 - 180;
-        if (pointOnLand(lon, lat)) pts.push({ x: x, y: y, z: z });
-      }
-    } else {
-      // fallback: uniform dot sphere until (or if) land data arrives
-      var M = 2600, GA2 = Math.PI * (3 - Math.sqrt(5));
-      for (var j = 0; j < M; j++) {
-        var y2 = 1 - (j / (M - 1)) * 2;
-        var r2 = Math.sqrt(Math.max(0, 1 - y2 * y2));
-        var t2 = GA2 * j;
-        pts.push({ x: Math.cos(t2) * r2, y: y2, z: Math.sin(t2) * r2 });
-      }
-    }
-    dots = pts;
-  }
-
-  /* ---------- rotation targets ---------- */
-
-  function rotationFor(lat, lon) {
-    var v = toVec(lat, lon);
-    return {
-      y: Math.atan2(-v.x, v.z),
-      x: Math.atan2(v.y, Math.sqrt(v.x * v.x + v.z * v.z))
-    };
-  }
-
-  function flyTo(lat, lon, dur) {
-    if (reduceMotion) {
-      var now = rotationFor(lat, lon);
-      rotY = now.y; rotX = now.x;
-      return;
-    }
-    var to = rotationFor(lat, lon);
-    var fromY = rotY % TAU;
-    var delta = (to.y - fromY) % TAU;
-    if (delta > Math.PI) delta -= TAU;
-    if (delta < -Math.PI) delta += TAU;
-    flying = {
-      t0: performance.now(),
-      dur: dur || 900,
-      fromY: fromY,
-      fromX: rotX,
-      toY: fromY + delta,
-      toX: to.x
-    };
-    rotVel = AUTO_SPEED;
-  }
-
-  /* ---------- render loop ---------- */
-
-  function frame(t) {
-    requestAnimationFrame(frame);
-    var dt = Math.min(50, t - (lastT || t));
-    lastT = t;
-
-    if (flying) {
-      var f = flying;
-      var u = Math.min(1, (t - f.t0) / f.dur);
-      var e = u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2;
-      rotY = f.fromY + (f.toY - f.fromY) * e;
-      rotX = f.fromX + (f.toX - f.fromX) * e;
-      if (u >= 1) flying = null;
-    } else if (!dragging && hovered < 0) {
-      var target = reduceMotion ? 0 : AUTO_SPEED;
-      if (Math.abs(rotVel) > Math.abs(target)) {
-        rotVel *= 0.95;
-        if (Math.abs(rotVel) < Math.abs(target)) rotVel = target;
-      } else {
-        rotVel = target;
-      }
-      rotY += rotVel * (dt / 16.7);
-    }
-
-    if (rotX > 1.1) rotX = 1.1;
-    if (rotX < -1.1) rotX = -1.1;
-
-    render(t);
-  }
-
-  function render(time) {
-    ctx.clearRect(0, 0, size, size);
-    var cy = Math.cos(rotY), sy = Math.sin(rotY);
-    var cx = Math.cos(rotX), sx = Math.sin(rotX);
-
-    // sphere backdrop
-    var bg = ctx.createRadialGradient(CX - R * 0.35, CY - R * 0.4, R * 0.1, CX, CY, R);
-    bg.addColorStop(0, 'rgba(99,102,241,0.10)');
-    bg.addColorStop(1, 'rgba(6,182,212,0.06)');
-    ctx.beginPath();
-    ctx.arc(CX, CY, R, 0, TAU);
-    ctx.fillStyle = bg;
-    ctx.fill();
-    ctx.lineWidth = 1.5;
-    ctx.strokeStyle = 'rgba(99,102,241,0.35)';
-    ctx.stroke();
-
-    // land dots
-    var front = [], back = [];
-    for (var i = 0; i < dots.length; i++) {
-      var d = dots[i];
-      var x1 = d.x * cy + d.z * sy;
-      var z1 = -d.x * sy + d.z * cy;
-      var y2 = d.y * cx - z1 * sx;
-      var z2 = d.y * sx + z1 * cx;
-      var pt = { x: CX + x1 * R, y: CY - y2 * R };
-      if (z2 > 0) front.push(pt); else back.push(pt);
-    }
-    ctx.beginPath();
-    for (var b = 0; b < back.length; b++) {
-      ctx.moveTo(back[b].x + dotR * 0.7, back[b].y);
-      ctx.arc(back[b].x, back[b].y, dotR * 0.7, 0, TAU);
-    }
-    ctx.fillStyle = 'rgba(100,116,139,0.10)';
-    ctx.fill();
-
-    ctx.beginPath();
-    for (var q = 0; q < front.length; q++) {
-      ctx.moveTo(front[q].x + dotR, front[q].y);
-      ctx.arc(front[q].x, front[q].y, dotR, 0, TAU);
-    }
-    ctx.fillStyle = 'rgba(99,102,241,0.55)';
-    ctx.fill();
-
-    // visited regions (filled)
-    drawRegions(cy, sy, cx, sx);
-
-    // place markers
-    markerScreen = [];
-    for (var m = 0; m < markerVecs.length; m++) {
-      var v = markerVecs[m];
-      var X = v.x * cy + v.z * sy;
-      var Z = -v.x * sy + v.z * cy;
-      var Y2 = v.y * cx - Z * sx;
-      var Z2 = v.y * sx + Z * cx;
-      if (Z2 <= 0.02) { markerScreen.push(null); continue; }
-      var px = CX + X * R, py = CY - Y2 * R;
-      markerScreen.push({ x: px, y: py });
-
-      var hot = hovered === m || PLACES[m].country === highlightCountry ||
-                PLACES[m].country === selectedCountry;
-      var pulsing = pulseUntil[m] && time < pulseUntil[m];
-      var base = hot ? 5.5 : 3.4;
-      var rad = base + ((hot || pulsing) ? Math.abs(Math.sin(time / 300 + m)) * 1.6 : 0);
-
-      ctx.beginPath();
-      ctx.arc(px, py, rad + 5, 0, TAU);
-      ctx.fillStyle = 'rgba(99,102,241,' + (hot ? 0.28 : 0.16) + ')';
-      ctx.fill();
-
-      ctx.beginPath();
-      ctx.arc(px, py, rad * 0.55, 0, TAU);
-      ctx.fillStyle = '#6366f1';
-      ctx.fill();
-
-      ctx.beginPath();
-      ctx.arc(px, py, rad * 0.24, 0, TAU);
-      ctx.fillStyle = '#ffffff';
-      ctx.fill();
-    }
-  }
-
-  /* ---------- visited regions ---------- */
-
-  var scratch = [];
-
-  function addRing(vecs, cy, sy, cx, sx) {
-    var n = vecs.length / 3;
-    var anyFront = false;
-    for (var i = 0; i < n; i++) {
-      var x = vecs[i * 3], y = vecs[i * 3 + 1], z = vecs[i * 3 + 2];
-      var x1 = x * cy + z * sy;
-      var z1 = -x * sy + z * cy;
-      var y2 = y * cx - z1 * sx;
-      var z2 = y * sx + z1 * cx;
-      var px, py;
-      if (z2 >= 0) {
-        anyFront = true;
-        px = CX + x1 * R;
-        py = CY - y2 * R;
-      } else {
-        // back-facing point: clamp onto the horizon rim
-        var ux = x1, uy = -y2;
-        var len = Math.sqrt(ux * ux + uy * uy) || 1;
-        px = CX + ux / len * R;
-        py = CY + uy / len * R;
-      }
-      scratch[i * 2] = px;
-      scratch[i * 2 + 1] = py;
-    }
-    if (!anyFront) return;
-    ctx.moveTo(scratch[0], scratch[1]);
-    for (var k = 1; k < n; k++) {
-      ctx.lineTo(scratch[k * 2], scratch[k * 2 + 1]);
-    }
-    ctx.closePath();
-  }
-
-  function drawRegions(cy, sy, cx, sx) {
-    for (var g = 0; g < regions.length; g++) {
-      var reg = regions[g];
-      var sel = reg.country === selectedCountry;
-      var hot = sel || reg.country === highlightCountry;
-      ctx.beginPath();
-      for (var p = 0; p < reg.polys.length; p++) {
-        var rings = reg.polys[p];
-        for (var r = 0; r < rings.length; r++) {
-          addRing(rings[r], cy, sy, cx, sx);
-        }
-      }
-      ctx.fillStyle = 'rgba(6,182,212,' + (sel ? 0.45 : hot ? 0.32 : 0.20) + ')';
-      ctx.fill();
-      if (sel || hot) {
-        ctx.lineWidth = sel ? 1.4 : 1;
-        ctx.strokeStyle = 'rgba(6,182,212,' + (sel ? 0.9 : 0.55) + ')';
-        ctx.stroke();
-      }
-    }
-  }
-
-  function loadRegions(geo) {
-    var byCountry = {};
-    geo.features.forEach(function (f) {
-      var country = f.properties && f.properties.country;
-      var g = f.geometry;
-      if (!country || !g) return;
-      if (!byCountry[country]) byCountry[country] = [];
-      function addPoly(poly) {
-        byCountry[country].push(poly.map(function (ring) {
-          var v = new Float32Array(ring.length * 3);
-          for (var i = 0; i < ring.length; i++) {
-            var p = toVec(ring[i][1], ring[i][0]); // [lon, lat]
-            v[i * 3] = p.x;
-            v[i * 3 + 1] = p.y;
-            v[i * 3 + 2] = p.z;
-          }
-          return v;
-        }));
-      }
-      if (g.type === 'Polygon') addPoly(g.coordinates);
-      else if (g.type === 'MultiPolygon') {
-        for (var i = 0; i < g.coordinates.length; i++) addPoly(g.coordinates[i]);
-      }
-    });
-    regions = Object.keys(byCountry).map(function (c) {
-      return { country: c, polys: byCountry[c] };
-    });
-  }
-
-  /* ---------- interaction ---------- */
-
-  function updateTooltip() {
-    if (hovered >= 0 && markerScreen[hovered]) {
-      var p = PLACES[hovered];
-      tooltip.textContent = p.name + ' · ' + p.country;
-      tooltip.style.left = markerScreen[hovered].x + 'px';
-      tooltip.style.top = markerScreen[hovered].y + 'px';
-      tooltip.style.opacity = '1';
-    } else {
-      tooltip.style.opacity = '0';
-    }
-  }
-
-  var lastPX = 0, lastPY = 0;
-
-  canvas.addEventListener('pointerdown', function (e) {
-    dragging = true;
-    moved = 0;
-    flying = null;
-    rotVel = 0;
-    lastPX = e.clientX;
-    lastPY = e.clientY;
-    try { canvas.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }
-  });
-
-  canvas.addEventListener('pointermove', function (e) {
-    if (dragging) {
-      var dx = e.clientX - lastPX, dy = e.clientY - lastPY;
-      lastPX = e.clientX; lastPY = e.clientY;
-      moved += Math.abs(dx) + Math.abs(dy);
-      rotY += dx * 0.006;
-      rotX += dy * 0.005;
-      rotVel = dx * 0.006;
-    } else {
-      var mx = e.offsetX, my = e.offsetY;
-      var best = -1, bestDist = 196; // 14px squared
-      for (var m = 0; m < markerScreen.length; m++) {
-        var s = markerScreen[m];
-        if (!s) continue;
-        var ddx = s.x - mx, ddy = s.y - my;
-        var dd = ddx * ddx + ddy * ddy;
-        if (dd < bestDist) { best = m; bestDist = dd; }
-      }
-      hovered = best;
-      updateTooltip();
-    }
-  });
-
-  canvas.addEventListener('pointerup', function (e) {
-    dragging = false;
-    if (moved < 5 && hovered >= 0) {
-      var p = PLACES[hovered];
-      selectCountry(p.country);
-      flyTo(p.lat, p.lon);
-      pulseUntil[hovered] = performance.now() + 2500;
-    }
-  });
-
-  canvas.addEventListener('pointerleave', function () {
-    hovered = -1;
-    updateTooltip();
-  });
-
-  /* ---------- list <-> globe wiring ---------- */
-
-  function scrollGlobeIntoView() {
-    if (window.innerWidth < 768 && wrap && wrap.scrollIntoView) {
-      wrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-  }
-
-  var placeCountry = {};
-  PLACES.forEach(function (p) { placeCountry[p.name] = p.country; });
-
-  var cards = document.querySelectorAll('.travel-country');
-  var chips = document.querySelectorAll('.travel-chip[data-place]');
-
-  function updateSelectionClasses() {
-    for (var k = 0; k < chips.length; k++) {
-      if (placeCountry[chips[k].dataset.place] === selectedCountry) {
-        chips[k].classList.add('active');
-      } else {
-        chips[k].classList.remove('active');
-      }
-    }
-    for (var c = 0; c < cards.length; c++) {
-      if (cards[c].dataset.country === selectedCountry) {
-        cards[c].classList.add('selected');
-      } else {
-        cards[c].classList.remove('selected');
-      }
-    }
-  }
-
-  function selectCountry(name) {
-    selectedCountry = name;
-    updateSelectionClasses();
-  }
-
-  for (var c = 0; c < cards.length; c++) {
-    (function (card) {
-      var head = card.querySelector('.travel-country-header');
-      if (head) {
-        head.addEventListener('click', function () {
-          selectCountry(card.dataset.country);
-          flyTo(parseFloat(card.dataset.lat), parseFloat(card.dataset.lon));
-          scrollGlobeIntoView();
-        });
-      }
-      card.addEventListener('mouseenter', function () {
-        highlightCountry = card.dataset.country;
-      });
-      card.addEventListener('mouseleave', function () {
-        if (highlightCountry === card.dataset.country) highlightCountry = null;
-      });
-    })(cards[c]);
-  }
-
-  for (var k = 0; k < chips.length; k++) {
-    (function (chip) {
-      chip.addEventListener('click', function () {
-        var name = chip.dataset.place;
-        selectCountry(placeCountry[name]);
-        for (var m = 0; m < PLACES.length; m++) {
-          if (PLACES[m].name === name) {
-            flyTo(PLACES[m].lat, PLACES[m].lon);
-            pulseUntil[m] = performance.now() + 2500;
-            break;
-          }
-        }
-        scrollGlobeIntoView();
-      });
-    })(chips[k]);
-  }
-
-  /* ---------- boot ---------- */
-
-  resize();
-  if (window.ResizeObserver) {
-    new ResizeObserver(resize).observe(canvas);
-  } else {
-    window.addEventListener('resize', resize);
-  }
-
-  var start = rotationFor(22.5, 79); // open on India
-  rotY = start.y;
-  rotX = start.x;
-
-  fetch('/assets/travel/land.geojson')
+  // Load world land + visited-region boundaries (both vendored/local)
+  fetch('/assets/travel/vendor/land-110m.json')
     .then(function (r) { return r.json(); })
-    .then(function (geo) {
-      landPolys = [];
-      geo.features.forEach(function (f) {
-        var g = f.geometry;
-        if (!g) return;
-        function addPoly(poly) {
-          landPolys.push(poly.map(flattenRing));
-        }
-        if (g.type === 'Polygon') addPoly(g.coordinates);
-        else if (g.type === 'MultiPolygon') {
-          for (var i = 0; i < g.coordinates.length; i++) addPoly(g.coordinates[i]);
-        }
-      });
-      buildDots();
+    .then(function (topology) {
+      if (window.topojson) landGeo = window.topojson.feature(topology, topology.objects.land);
     })
-    .catch(function () { buildDots(); });
+    .catch(function () {});
 
   fetch('/assets/travel/regions.geojson')
     .then(function (r) { return r.json(); })
-    .then(loadRegions)
-    .catch(function () { /* regions are optional decoration */ });
+    .then(function (geo) { regionFeats = geo.features || []; })
+    .catch(function () {});
 
-  requestAnimationFrame(frame);
+  function draw() {
+    ctx.save();
+    ctx.scale(dpr, dpr);
+    ctx.clearRect(0, 0, canvas.width / dpr, canvas.height / dpr);
+
+    var currentRadius = globeRadius * zoomLevel;
+    projection.scale(currentRadius);
+    projection.rotate(rotate);
+
+    // 1. Ocean background
+    var grad = ctx.createRadialGradient(
+      centerX - currentRadius * 0.25, centerY - currentRadius * 0.25, 0,
+      centerX, centerY, currentRadius
+    );
+    grad.addColorStop(0, '#dbeafe');
+    grad.addColorStop(0.7, '#bfdbfe');
+    grad.addColorStop(1, '#93c5fd');
+
+    ctx.beginPath();
+    pathGenerator(sphere);
+    ctx.fillStyle = grad;
+    ctx.fill();
+
+    // Globe outline
+    ctx.strokeStyle = 'rgba(59,130,246,0.25)';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    // 2. Graticule lines
+    ctx.beginPath();
+    pathGenerator(graticule);
+    ctx.strokeStyle = 'rgba(59,130,246,0.15)';
+    ctx.lineWidth = 0.5;
+    ctx.stroke();
+
+    // 3. Landmasses
+    if (landGeo) {
+      ctx.beginPath();
+      pathGenerator(landGeo);
+      ctx.fillStyle = 'rgba(34,197,94,0.20)';
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(22,163,74,0.35)';
+      ctx.lineWidth = 0.8;
+      ctx.stroke();
+    }
+
+    // 3b. Visited regions (states/provinces), tinted per country
+    for (var r = 0; r < regionFeats.length; r++) {
+      var feat = regionFeats[r];
+      var key = feat.properties && REGION_KEY[feat.properties.country];
+      if (!key) continue;
+      ctx.beginPath();
+      pathGenerator(feat);
+      ctx.fillStyle = COLORS[key] + '33';
+      ctx.fill();
+      ctx.strokeStyle = COLORS[key] + '66';
+      ctx.lineWidth = 0.9;
+      ctx.stroke();
+    }
+
+    // 4. City pins
+    var closestCity = null;
+    var closestDist = Infinity;
+    var centerCoords = [-rotate[0], -rotate[1]];
+
+    for (var i = 0; i < CITIES.length; i++) {
+      var city = CITIES[i];
+      var distRad = window.d3.geoDistance([city.lon, city.lat], centerCoords);
+      if (distRad > Math.PI / 2) continue; // behind the globe
+
+      var pt = projection([city.lon, city.lat]);
+      if (!pt) continue;
+
+      var zFactor = Math.cos(distRad);
+      var pinRadius = (4 + 2.5 * zFactor) * Math.sqrt(zoomLevel);
+
+      // glow
+      ctx.beginPath();
+      var glow = ctx.createRadialGradient(pt[0], pt[1], 0, pt[0], pt[1], pinRadius * 3.5);
+      glow.addColorStop(0, city.color + '60');
+      glow.addColorStop(1, city.color + '00');
+      ctx.fillStyle = glow;
+      ctx.arc(pt[0], pt[1], pinRadius * 3.5, 0, Math.PI * 2);
+      ctx.fill();
+
+      // pin dot
+      ctx.beginPath();
+      ctx.arc(pt[0], pt[1], pinRadius, 0, Math.PI * 2);
+      ctx.fillStyle = city.color;
+      ctx.fill();
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 1.4;
+      ctx.stroke();
+
+      // hover check
+      if (mousePos) {
+        var dx = mousePos.x - pt[0];
+        var dy = mousePos.y - pt[1];
+        var d = Math.sqrt(dx * dx + dy * dy);
+        if (d < pinRadius * 3.5 && d < closestDist) {
+          closestDist = d;
+          closestCity = { city: city, x: pt[0], y: pt[1] };
+        }
+      }
+    }
+
+    hoveredCity = closestCity;
+
+    // 5. Atmosphere glow
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, currentRadius + 2, 0, Math.PI * 2);
+    var atmosphere = ctx.createRadialGradient(
+      centerX, centerY, currentRadius * 0.9,
+      centerX, centerY, currentRadius + 15
+    );
+    atmosphere.addColorStop(0, 'rgba(99,102,241,0)');
+    atmosphere.addColorStop(0.5, 'rgba(99,102,241,0.05)');
+    atmosphere.addColorStop(1, 'rgba(99,102,241,0)');
+    ctx.fillStyle = atmosphere;
+    ctx.fill();
+
+    ctx.restore();
+
+    // Tooltip
+    if (hoveredCity && !isDragging) {
+      tooltip.innerHTML = '<strong>' + hoveredCity.city.name + '</strong><br><span>' +
+        COUNTRY_NAME[hoveredCity.city.country] + '</span>';
+      tooltip.style.opacity = '1';
+      tooltip.style.left = hoveredCity.x + 'px';
+      tooltip.style.top = (hoveredCity.y - 48) + 'px';
+      canvas.style.cursor = 'pointer';
+    } else {
+      tooltip.style.opacity = '0';
+      canvas.style.cursor = isDragging ? 'grabbing' : 'grab';
+    }
+  }
+
+  // --- Mouse wheel zoom ---
+  canvas.addEventListener('wheel', function (e) {
+    e.preventDefault();
+    var factor = e.deltaY < 0 ? 1.12 : 0.89;
+    zoomLevel = Math.max(minZoom, Math.min(maxZoom, zoomLevel * factor));
+  }, { passive: false });
+
+  // --- Drag & momentum ---
+  canvas.addEventListener('mousemove', function (e) {
+    var rect = canvas.getBoundingClientRect();
+    mousePos = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+
+    if (isDragging) {
+      var now = performance.now();
+      var dx = e.clientX - dragStartPos.x;
+      var dy = e.clientY - dragStartPos.y;
+
+      var dt = now - lastMoveTime;
+      if (dt > 0 && dt < 100 && lastMovePos) {
+        velocity = [
+          (e.clientX - lastMovePos.x) / dt * 15,
+          (e.clientY - lastMovePos.y) / dt * 15
+        ];
+      }
+      lastMoveTime = now;
+      lastMovePos = { x: e.clientX, y: e.clientY };
+
+      var sensitivity = 0.35 / zoomLevel;
+      rotate[0] = dragStartRotate[0] + dx * sensitivity;
+      rotate[1] = Math.max(-80, Math.min(80, dragStartRotate[1] - dy * sensitivity));
+    }
+  });
+
+  canvas.addEventListener('mousedown', function (e) {
+    isDragging = true;
+    autoRotateSpeed = 0;
+    velocity = [0, 0];
+    dragStartPos = { x: e.clientX, y: e.clientY };
+    dragStartRotate = [rotate[0], rotate[1]];
+    lastMoveTime = performance.now();
+    lastMovePos = { x: e.clientX, y: e.clientY };
+  });
+
+  window.addEventListener('mouseup', function () {
+    if (isDragging) isDragging = false;
+  });
+
+  canvas.addEventListener('mouseleave', function () {
+    mousePos = null;
+  });
+
+  // --- Touch support & pinch-to-zoom ---
+  var initialPinchDist = null;
+  var initialPinchZoom = 1.0;
+
+  canvas.addEventListener('touchstart', function (e) {
+    if (e.touches.length === 2) {
+      e.preventDefault();
+      isDragging = false;
+      initialPinchDist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      initialPinchZoom = zoomLevel;
+      return;
+    }
+
+    e.preventDefault();
+    isDragging = true;
+    autoRotateSpeed = 0;
+    velocity = [0, 0];
+    var t = e.touches[0];
+    dragStartPos = { x: t.clientX, y: t.clientY };
+    dragStartRotate = [rotate[0], rotate[1]];
+    lastMoveTime = performance.now();
+    lastMovePos = { x: t.clientX, y: t.clientY };
+  }, { passive: false });
+
+  canvas.addEventListener('touchmove', function (e) {
+    if (e.touches.length === 2 && initialPinchDist) {
+      e.preventDefault();
+      var currentDist = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      var scale = currentDist / initialPinchDist;
+      zoomLevel = Math.max(minZoom, Math.min(maxZoom, initialPinchZoom * scale));
+      return;
+    }
+
+    e.preventDefault();
+    if (!isDragging) return;
+    var t = e.touches[0];
+    var now = performance.now();
+    var dx = t.clientX - dragStartPos.x;
+    var dy = t.clientY - dragStartPos.y;
+
+    var dt = now - lastMoveTime;
+    if (dt > 0 && dt < 100 && lastMovePos) {
+      velocity = [
+        (t.clientX - lastMovePos.x) / dt * 15,
+        (t.clientY - lastMovePos.y) / dt * 15
+      ];
+    }
+    lastMoveTime = now;
+    lastMovePos = { x: t.clientX, y: t.clientY };
+
+    var sensitivity = 0.35 / zoomLevel;
+    rotate[0] = dragStartRotate[0] + dx * sensitivity;
+    rotate[1] = Math.max(-80, Math.min(80, dragStartRotate[1] - dy * sensitivity));
+  }, { passive: false });
+
+  canvas.addEventListener('touchend', function (e) {
+    if (e.touches.length < 2) initialPinchDist = null;
+    if (e.touches.length === 0) isDragging = false;
+  });
+
+  // Click on city pin → focus globe
+  canvas.addEventListener('click', function () {
+    if (hoveredCity) {
+      animateFocus([-hoveredCity.city.lon, -hoveredCity.city.lat], Math.max(1.3, zoomLevel));
+    }
+  });
+
+  // Country card or legend click → focus that country
+  var focusables = document.querySelectorAll('.travel-country, .legend-item');
+  for (var f = 0; f < focusables.length; f++) {
+    (function (el) {
+      el.addEventListener('click', function () {
+        var country = el.dataset.country;
+        if (!country) return;
+        var cities = CITIES.filter(function (c) { return c.country === country; });
+        if (cities.length === 0) return;
+        var avgLat = cities.reduce(function (s, c) { return s + c.lat; }, 0) / cities.length;
+        var avgLon = cities.reduce(function (s, c) { return s + c.lon; }, 0) / cities.length;
+        animateFocus([-avgLon, -avgLat], country === 'india' ? 1.5 : 1.3);
+        if (window.innerWidth < 768 && wrapper.scrollIntoView) {
+          wrapper.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    })(focusables[f]);
+  }
+
+  function animateFocus(targetRotate, targetZoom) {
+    autoRotateSpeed = 0;
+    velocity = [0, 0];
+
+    if (reduceMotion) {
+      rotate[0] = targetRotate[0];
+      rotate[1] = Math.max(-80, Math.min(80, targetRotate[1]));
+      if (targetZoom !== null && targetZoom !== undefined) {
+        zoomLevel = Math.max(minZoom, Math.min(maxZoom, targetZoom));
+        projection.scale(globeRadius * zoomLevel);
+      }
+      resumeAutoRotate(3000);
+      return;
+    }
+
+    var start = [rotate[0], rotate[1]];
+    var startZ = zoomLevel;
+    var endZ = (targetZoom !== null && targetZoom !== undefined)
+      ? Math.max(minZoom, Math.min(maxZoom, targetZoom)) : zoomLevel;
+    var duration = 800;
+    var startTime = performance.now();
+
+    var dLon = ((targetRotate[0] - start[0] + 540) % 360) - 180;
+    var endLon = start[0] + dLon;
+    var endLat = Math.max(-80, Math.min(80, targetRotate[1]));
+
+    function step(now) {
+      var t = Math.min(1, (now - startTime) / duration);
+      var ease = 1 - Math.pow(1 - t, 3);
+      rotate[0] = start[0] + (endLon - start[0]) * ease;
+      rotate[1] = start[1] + (endLat - start[1]) * ease;
+      zoomLevel = startZ + (endZ - startZ) * ease;
+      if (t < 1) requestAnimationFrame(step);
+      else resumeAutoRotate(3000);
+    }
+    requestAnimationFrame(step);
+  }
+
+  function animateZoom(targetZoom) {
+    var startZ = zoomLevel;
+    var endZ = Math.max(minZoom, Math.min(maxZoom, targetZoom));
+    var duration = 300;
+    var startTime = performance.now();
+    function step(now) {
+      var t = Math.min(1, (now - startTime) / duration);
+      var ease = 1 - Math.pow(1 - t, 3);
+      zoomLevel = startZ + (endZ - startZ) * ease;
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // Zoom buttons
+  var btnIn = document.getElementById('zoom-in');
+  var btnOut = document.getElementById('zoom-out');
+  var btnReset = document.getElementById('zoom-reset');
+
+  if (btnIn) btnIn.addEventListener('click', function () { animateZoom(zoomLevel * 1.35); });
+  if (btnOut) btnOut.addEventListener('click', function () { animateZoom(zoomLevel / 1.35); });
+  if (btnReset) btnReset.addEventListener('click', function () {
+    animateFocus([HOME[0], HOME[1]], 1.0);
+  });
+
+  // Animation loop
+  function animate() {
+    if (!isDragging) {
+      if (Math.abs(velocity[0]) > 0.05 || Math.abs(velocity[1]) > 0.05) {
+        rotate[0] += velocity[0] * 0.05;
+        rotate[1] = Math.max(-80, Math.min(80, rotate[1] - velocity[1] * 0.05));
+        velocity[0] *= friction;
+        velocity[1] *= friction;
+
+        if (Math.abs(velocity[0]) <= 0.05 && Math.abs(velocity[1]) <= 0.05) {
+          velocity = [0, 0];
+          resumeAutoRotate(1000);
+        }
+      } else {
+        rotate[0] += autoRotateSpeed;
+      }
+    }
+    draw();
+    requestAnimationFrame(animate);
+  }
+
+  window.addEventListener('resize', resize);
+  resize();
+  animate();
 })();
