@@ -38,7 +38,7 @@ email2: "k.sravanth@samsung.com"
 
 baseurl: ""                    # no trailing slash
 url: "https://sravanthkod.github.io"
-favicon: "/favicon.png"
+favicon: "/favicon.svg"
 
 github_username: "sravanthkod"
 twitter_username: "sravanthkod"
