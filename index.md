@@ -2,7 +2,6 @@
 layout: page
 tags: ["AI Optimization", "NAS", "Quantization", "Samsung Research", "Edge AI", "Model Optimization", "Edge Devices"]
 description: "Sravanth Kodavanti - Research Engineer at Samsung Research. Expert in AI model optimization, Neural Architecture Search, Quantization, and Pruning for edge device deployment."
-image: "/favicon.png"
 keywords: "Sravanth Kodavanti, Research Engineer, Samsung Research, AI Optimization, Edge AI, Model Optimization"
 ---
 {% include JB/setup %}

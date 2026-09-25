@@ -7,11 +7,6 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
     {% include mathjax.html %}
     {% seo %}
-    {% if page.image %}
-      <meta content="{{ page.image }}" property="og:image" />
-    {% else %}
-      <meta content="{{ site.url }}/favicon.png" property="og:image" />
-    {% endif %}
   </head>
 
   <body>
