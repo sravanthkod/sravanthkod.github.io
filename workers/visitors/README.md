@@ -1,5 +1,10 @@
 # Visitors counter — Cloudflare Worker
 
+> **Deployed:** https://sravanthkod-visitors.sravanthkod.workers.dev (KV namespace `visits`, id
+> `644d0b0c636340aa9bc978c2965add6e`). The steps below are only needed
+> for a fresh account or redeploying elsewhere.
+
+
 Counts page views with per-country breakdown for the Visitors page.
 Free tier is plenty (100k requests/day). No cookies; the country comes
 from Cloudflare's edge metadata.

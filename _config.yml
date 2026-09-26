@@ -57,7 +57,7 @@ plugins:
   - jekyll-redirect-from
 
 # Cloudflare Worker URL for the Visitors page + beacon (workers/visitors/README.md)
-visitors_api: ""
+visitors_api: "https://sravanthkod-visitors.sravanthkod.workers.dev"
 
 # Dev files that must not ship in the published site. workers/ holds the
 # Cloudflare Worker source (its README was rendering as a nav page) and
