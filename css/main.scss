@@ -784,6 +784,159 @@ p {
 }
 
 /* ============================================================
+   BINGE PAGE — Letterboxd poster wall
+   ============================================================ */
+.binge-container {
+    max-width: 1080px;
+    animation: fadeInUp 0.6s ease both;
+}
+
+.binge-intro {
+    color: var(--color-text-muted);
+    max-width: 640px;
+    margin-bottom: 30px;
+}
+
+.binge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+    gap: 24px 18px;
+}
+
+.film-card {
+    text-decoration: none;
+    color: inherit;
+    animation: fadeInUp 0.4s ease both;
+}
+
+.film-card:nth-child(n+13) { animation-delay: 0.1s; }
+
+.film-poster {
+    position: relative;
+    aspect-ratio: 2 / 3;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: var(--gradient-accent-soft);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.film-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.film-card:hover .film-poster {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.film-card:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+}
+
+/* Review snippet: slides over the poster bottom on hover (desktop) */
+.film-review {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    max-height: 72%;
+    overflow: hidden;
+    padding: 30px 10px 9px;
+    background: linear-gradient(to top, rgba(2, 6, 23, 0.94), rgba(2, 6, 23, 0.65) 60%, transparent);
+    color: #e2e8f0;
+    font-size: 0.72em;
+    line-height: 1.45;
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.film-review p { margin: 0; }
+
+@media (hover: hover) {
+    .film-card:hover .film-review,
+    .film-card:focus-visible .film-review { opacity: 1; }
+}
+
+.film-rewatch {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 0.62em;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 3px 9px;
+    border-radius: 12px;
+    background: rgba(2, 6, 23, 0.75);
+    color: #e2e8f0;
+    backdrop-filter: blur(4px);
+}
+
+.film-meta {
+    margin-top: 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.film-title {
+    font-size: 0.86em;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.film-year {
+    color: var(--color-text-light);
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+.film-stars {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.72em;
+    letter-spacing: 0.08em;
+}
+
+.film-stars .on { color: var(--color-accent); }
+.film-stars .off { color: var(--color-border-hover); }
+.film-stars .half {
+    background: linear-gradient(90deg, var(--color-accent) 50%, var(--color-border-hover) 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.film-heart {
+    color: var(--color-accent-secondary);
+    margin-left: 3px;
+}
+
+.binge-synced {
+    margin-top: 38px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.78em;
+    color: var(--color-text-light);
+}
+
+@media (max-width: 480px) {
+    .binge-grid {
+        grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
+        gap: 18px 12px;
+    }
+}
+
+/* ============================================================
    THEME TOGGLE
    ============================================================ */
 .nav-footer {

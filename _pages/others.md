@@ -2,7 +2,7 @@
 layout: page
 title: Others
 permalink: /others/
-order: 7
+order: 8
 ---
 
 In this section, I share additional experiences and contributions that complement my primary academic and research work. These include leadership roles, extracurricular activities, community contributions, and professional services that reflect my engagement beyond the classroom and lab.
