@@ -732,9 +732,14 @@ p {
     cursor: pointer;
 }
 
+/* Flag images (vendored SVGs — Windows has no flag emoji in system fonts) */
 .travel-flag {
-    font-size: 1.5em;
-    line-height: 1;
+    width: 24px;
+    height: 18px;
+    object-fit: cover;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.10);
+    flex-shrink: 0;
 }
 
 .travel-country-name {
@@ -1126,6 +1131,14 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
         flex-wrap: wrap;
         padding: 12px 8px;
         gap: 0;
+    }
+
+    /* Nav groups sit side by side here, so the divider becomes a
+       small vertical bar between them instead of a wide line */
+    .navblock_text .nav-divider {
+        width: 1px;
+        height: 18px;
+        margin: 4px 3px;
     }
 
     .sidenav a {
