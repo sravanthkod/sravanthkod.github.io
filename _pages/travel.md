@@ -3,19 +3,20 @@ layout: page
 title: Travel
 permalink: /travel/
 order: 7
-description: "Places I've travelled — United States, Thailand and India — plotted on an interactive globe."
+description: "Places I've travelled — the United States, Thailand, India and Qatar — plotted on an interactive globe."
 ---
 
 <div class="travel-container">
   <div class="travel-layout">
 
     <div class="globe-wrapper" id="globe-wrapper">
-      <canvas id="globe-canvas" role="img" aria-label="Interactive globe showing places travelled in the United States, Thailand, and India"></canvas>
+      <canvas id="globe-canvas" role="img" aria-label="Interactive globe showing places travelled in the United States, Thailand, India, and Qatar"></canvas>
       <div class="globe-tooltip" id="globe-tooltip"></div>
       <div class="globe-legend">
         <div class="legend-item" data-country="usa"><span class="legend-dot" style="background: #3b82f6;"></span> USA</div>
         <div class="legend-item" data-country="thailand"><span class="legend-dot" style="background: #10b981;"></span> Thailand</div>
         <div class="legend-item" data-country="india"><span class="legend-dot" style="background: #f59e0b;"></span> India</div>
+        <div class="legend-item" data-country="qatar"><span class="legend-dot" style="background: #f43f5e;"></span> Qatar</div>
       </div>
       <div class="globe-zoom-controls">
         <button class="globe-zoom-btn" id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button>
@@ -71,6 +72,17 @@ description: "Places I've travelled — United States, Thailand and India — pl
           <li>Bihar</li>
           <li>West Bengal</li>
           <li>Delhi</li>
+        </ul>
+      </div>
+
+      <div class="travel-country" data-country="qatar" style="--dot: #f43f5e;">
+        <button class="travel-country-header" type="button">
+          <span class="travel-flag">&#127478;&#127462;</span>
+          <span class="travel-country-name">Qatar</span>
+          <span class="travel-count">1 city</span>
+        </button>
+        <ul class="city-list">
+          <li>Doha</li>
         </ul>
       </div>
 

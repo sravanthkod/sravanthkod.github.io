@@ -16,9 +16,9 @@
   if (!ctx) return;
 
   // --- Country colors (pins, legend, region tints) ---
-  var COLORS = { usa: '#3b82f6', thailand: '#10b981', india: '#f59e0b' };
-  var COUNTRY_NAME = { usa: 'United States', thailand: 'Thailand', india: 'India' };
-  var REGION_KEY = { 'United States': 'usa', 'Thailand': 'thailand', 'India': 'india' };
+  var COLORS = { usa: '#3b82f6', thailand: '#10b981', india: '#f59e0b', qatar: '#f43f5e' };
+  var COUNTRY_NAME = { usa: 'United States', thailand: 'Thailand', india: 'India', qatar: 'Qatar' };
+  var REGION_KEY = { 'United States': 'usa', 'Thailand': 'thailand', 'India': 'india', 'Qatar': 'qatar' };
 
   // --- Theme-aware canvas colors (tokens defined in main.scss; the rAF draw
   //     loop re-reads nothing — we refresh on 'themechange' and the next
@@ -60,7 +60,10 @@
     { lat: 26.8467, lon: 80.9462, name: 'Uttar Pradesh', country: 'india' },
     { lat: 20.9517, lon: 85.0985, name: 'Odisha', country: 'india' },
     { lat: 25.0961, lon: 85.3131, name: 'Bihar', country: 'india' },
-    { lat: 28.7041, lon: 77.1025, name: 'Delhi', country: 'india' }
+    { lat: 17.8006, lon: 79.0083, name: 'Telangana', country: 'india' },
+    { lat: 23.8369, lon: 87.9698, name: 'West Bengal', country: 'india' },
+    { lat: 28.7041, lon: 77.1025, name: 'Delhi', country: 'india' },
+    { lat: 25.2854, lon: 51.5310, name: 'Doha', country: 'qatar' }
   ];
   CITIES.forEach(function (c) { c.color = COLORS[c.country]; });
 
