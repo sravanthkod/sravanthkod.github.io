@@ -943,6 +943,21 @@ p {
     backdrop-filter: blur(4px);
 }
 
+/* Review marker — mirrors the rewatch chip on the opposite corner.
+   Matters most on touch, where the hover overlay never appears. */
+.film-has-review {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 0.72em;
+    line-height: 1;
+    padding: 4px 7px;
+    border-radius: 12px;
+    background: rgba(2, 6, 23, 0.75);
+    color: #e2e8f0;
+    backdrop-filter: blur(4px);
+}
+
 .film-meta {
     margin-top: 9px;
     display: flex;
@@ -1005,9 +1020,24 @@ p {
 }
 
 @media (max-width: 480px) {
+    /* 3 posters per row on phones: 96px min fits 3x + gaps in ~330px */
     .binge-grid {
-        grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
-        gap: 18px 12px;
+        grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+        gap: 16px 10px;
+    }
+
+    .film-title {
+        font-size: 0.78em;
+    }
+
+    .film-stars {
+        gap: 3px;
+        font-size: 0.68em;
+    }
+
+    .journal-header {
+        gap: 8px;
+        padding: 4px 0 6px;
     }
 }
 

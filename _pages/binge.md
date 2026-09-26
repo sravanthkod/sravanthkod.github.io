@@ -32,6 +32,7 @@ description: "Films I've been watching — synced from my Letterboxd diary, newe
         <img src="{{ film.poster | prepend: site.baseurl }}" loading="lazy" alt="{{ film.title | escape }} poster" width="600" height="900">
         {% endif %}
         {% if film.rewatch %}<span class="film-rewatch">rewatched</span>{% endif %}
+        {% if film.review != "" %}<span class="film-has-review" title="reviewed">&#10078;</span>{% endif %}
         {% if film.review != "" %}<div class="film-review"><p>{{ film.review | escape }}</p></div>{% endif %}
       </div>
       <div class="film-meta">
