@@ -56,10 +56,11 @@ description: "Places I've travelled — United States, Thailand and India — pl
         <button class="travel-country-header" type="button">
           <span class="travel-flag">&#127470;&#127475;</span>
           <span class="travel-country-name">India</span>
-          <span class="travel-count">10 states</span>
+          <span class="travel-count">12 states</span>
         </button>
         <ul class="city-list">
           <li>Andhra Pradesh</li>
+          <li>Telangana</li>
           <li>Tamil Nadu</li>
           <li>Karnataka</li>
           <li>Kerala</li>
@@ -68,6 +69,7 @@ description: "Places I've travelled — United States, Thailand and India — pl
           <li>Uttar Pradesh</li>
           <li>Odisha</li>
           <li>Bihar</li>
+          <li>West Bengal</li>
           <li>Delhi</li>
         </ul>
       </div>
