@@ -2,7 +2,7 @@
 layout: page
 title: Binge
 permalink: /binge/
-order: 7
+order: 8
 description: "Films I've been watching — synced from my Letterboxd diary, newest first."
 ---
 

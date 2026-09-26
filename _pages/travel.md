@@ -2,7 +2,7 @@
 layout: page
 title: Travel
 permalink: /travel/
-order: 6
+order: 7
 description: "Places I've travelled — United States, Thailand and India — plotted on an interactive globe."
 ---
 

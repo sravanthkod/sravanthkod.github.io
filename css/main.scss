@@ -194,6 +194,14 @@ img {
     gap: 4px;
 }
 
+// Subtle separator between nav groups (work | personal)
+.navblock_text .nav-divider {
+    width: 45%;
+    height: 1px;
+    margin: 8px 0;
+    background: var(--color-border);
+}
+
 .sidenav a {
     padding: 12px 20px;
     text-decoration: none;
