@@ -55,6 +55,7 @@ markdown: kramdown
 plugins:
   - jekyll-seo-tag
   - jekyll-redirect-from
+  - jekyll-sitemap
 
 # Cloudflare Worker URL for the Visitors page + beacon (workers/visitors/README.md)
 visitors_api: "https://sravanthkod-visitors.sravanthkod.workers.dev"
