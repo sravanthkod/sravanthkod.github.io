@@ -58,3 +58,22 @@ plugins:
 
 # Cloudflare Worker URL for the Visitors page + beacon (workers/visitors/README.md)
 visitors_api: ""
+
+# Dev files that must not ship in the published site. workers/ holds the
+# Cloudflare Worker source (its README was rendering as a nav page) and
+# scripts/ holds the Letterboxd sync tooling + raw CSV exports.
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - Rakefile
+  - build_local.sh
+  - commit.sh
+  - scripts/
+  - workers/

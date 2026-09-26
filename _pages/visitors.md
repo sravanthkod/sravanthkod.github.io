@@ -2,7 +2,7 @@
 layout: page
 title: Visitors
 permalink: /visitors/
-order: 8
+order: 9
 description: "Where readers of this site come from — a live world map."
 ---
 
