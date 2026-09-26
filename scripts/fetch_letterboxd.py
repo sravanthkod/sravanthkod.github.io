@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
 """Sync films from Letterboxd into the site.
 
-Combines two sources into _data/letterboxd.json for the Binge page:
+Combines three sources into _data/letterboxd.json for the Binge page:
 
-1. The RSS feed (letterboxd.com/<username>/rss/) — recent watches with
+1. The existing _data/letterboxd.json — long-term memory. Films never
+   disappear from the page just because they fell out of the feed.
+2. The RSS feed (letterboxd.com/<username>/rss/) — recent watches with
    ratings, likes, reviews and poster URLs. No login needed.
-2. A full data export (optional) — the RSS feed only carries the most
-   recent ~50 entries, so for complete history drop your export CSVs
-   into scripts/letterboxd/:
+3. A full data export (optional, LOCAL ONLY — gitignored) — the feed
+   only carries the most recent ~50 entries, so for complete history
+   drop your export CSVs into scripts/letterboxd/:
      - diary.csv   (every watch: date, rating, rewatch)
      - reviews.csv (review text)
    Export yours at letterboxd.com → Settings → Data Export (emailed zip).
+   Later layers win; the export only needs to exist on the machine where
+   you run a refresh — the GitHub Action relies on 1 + 2, which stay in
+   the repo.
 
 Posters are cached in assets/binge/posters/ by film slug. Films from the
 CSV export that never appeared in the feed get their poster fetched once
@@ -34,6 +39,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parent.parent
 EXPORT_DIR = ROOT / "scripts/letterboxd"
 POSTER_DIR = ROOT / "assets/binge/posters"
+DATA_PATH = ROOT / "_data/letterboxd.json"
 FEED_URL = "https://letterboxd.com/{}/rss/"
 NS = {"lb": "https://letterboxd.com", "tmdb": "https://themoviedb.org"}
 HEADERS = {"User-Agent": "sravanthkod.github.io letterboxd sync"}
@@ -49,6 +55,28 @@ def fetch(url):
 def slug_from_url(url):
     m = re.search(r"/film/([^/]+)/", url or "")
     return m.group(1) if m else None
+
+
+# Export CSVs use boxd.it shortlinks; resolve each once to the canonical
+# letterboxd.com/film/<slug>/ URL (redirect is followed automatically).
+_url_cache = {}
+
+
+def resolve_url(url):
+    if url in _url_cache:
+        return _url_cache[url]
+    slug, canon = slug_from_url(url), url
+    if not slug and url and "boxd.it/" in url:
+        try:
+            req = urllib.request.Request(url, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=30) as r:
+                canon = r.url
+            slug = slug_from_url(canon)
+        except Exception as e:
+            print(f"  shortlink resolve failed for {url}: {e}")
+    result = (slug, canon) if slug else (None, url)
+    _url_cache[url] = result
+    return result
 
 
 def parse_date(text):
@@ -128,8 +156,9 @@ def parse_export():
     if diary.exists():
         # one row per watch — keep the most recent entry per film
         for row in read_csv_rows(diary):
-            slug = slug_from_url(col(row, "letterboxd uri"))
+            slug, canon = resolve_url(col(row, "letterboxd uri"))
             if not slug:
+                print(f"  skipping {col(row, 'name')} ({col(row, 'year')}): dead export link")
                 continue
             rating = col(row, "rating")
             films[slug] = {
@@ -139,13 +168,13 @@ def parse_export():
                 "rating": float(rating) if rating else 0.0,
                 "like": False,  # not in the export; only the feed knows likes
                 "rewatch": col(row, "rewatch").lower() == "yes",
-                "watched": parse_date(col(row, "watched date", "date")),
+                "watched": parse_date(col(row, "watched date") or col(row, "date")),
                 "review": "",
-                "url": col(row, "letterboxd uri"),
+                "url": canon,
             }
     if reviews.exists():
         for row in read_csv_rows(reviews):
-            slug = slug_from_url(col(row, "letterboxd uri"))
+            slug, _ = resolve_url(col(row, "letterboxd uri"))
             if slug in films:
                 films[slug]["review"] = clip(one_line(col(row, "review")))
     return films
@@ -154,34 +183,61 @@ def parse_export():
 # --- Posters: feed URL first, one-time og:image backfill for the rest ---
 
 def poster_for(film):
-    target = POSTER_DIR / f"{film['slug']}.jpg"
-    if target.exists():
-        return target
-    if film.get("poster_url"):
-        target.write_bytes(fetch(film["poster_url"]))
-        return target
-    try:  # one-time backfill from the film's public page
-        page = fetch(film["url"]).decode("utf-8", "replace")
-        m = re.search(r'property="og:image" content="([^"]+)"', page)
-        if m:
-            target.write_bytes(fetch(unescape(m.group(1))))
-            time.sleep(0.4)  # stay polite
+    slug = film.get("slug")
+    if slug:
+        target = POSTER_DIR / f"{slug}.jpg"
+        if target.exists():
             return target
-    except Exception as e:
-        print(f"  poster backfill failed for {film['title']}: {e}")
+        if film.get("poster_url"):
+            target.write_bytes(film["poster_url"])
+            return target
+        try:  # one-time backfill from the film's public page
+            page = fetch(film["url"]).decode("utf-8", "replace")
+            m = re.search(r'property="og:image" content="([^"]+)"', page)
+            if m:
+                target.write_bytes(fetch(unescape(m.group(1))))
+                time.sleep(0.4)  # stay polite
+                return target
+        except Exception as e:
+            print(f"  poster backfill failed for {film['title']}: {e}")
+        return None
+    # carried over from a previous sync (no slug): keep its poster if cached
+    name = Path(film.get("poster") or "").name
+    if name:
+        target = POSTER_DIR / name
+        if target.exists():
+            return target
     return None
+
+
+def film_key(film):
+    return f"{(film.get('title') or '').lower()}|{film.get('year') or 0}"
 
 
 def main():
     username = sys.argv[1] if len(sys.argv) > 1 else "sravanthkod"
     POSTER_DIR.mkdir(parents=True, exist_ok=True)
 
-    films_by_slug = parse_export()
-    export_count = len(films_by_slug)
-    for film in parse_rss(username):
-        films_by_slug[film["slug"]] = film  # feed wins: fresher, has posters/likes
+    films_by_key = {}
+    # 1. memory — films already synced stay on the page forever
+    if DATA_PATH.exists():
+        try:
+            prior = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+            for film in prior.get("films", []):
+                films_by_key[film_key(film)] = film
+        except Exception as e:
+            print(f"  could not read existing data ({e}); starting fresh")
+    memory_count = len(films_by_key)
 
-    films = sorted(films_by_slug.values(), key=lambda f: f["watched"] or "", reverse=True)
+    # 2. export CSVs (local only) — full history refresh, then
+    # 3. feed — freshest data (likes, posters), so it wins
+    for film in parse_export().values():
+        films_by_key[film_key(film)] = film
+    export_count = len(films_by_key) - memory_count
+    for film in parse_rss(username):
+        films_by_key[film_key(film)] = film
+
+    films = sorted(films_by_key.values(), key=lambda f: f["watched"] or "", reverse=True)
     used = set()
     for film in films:
         poster = poster_for(film)
@@ -203,9 +259,10 @@ def main():
         "film_count": len(films),
         "films": films,
     }
-    (ROOT / "_data/letterboxd.json").write_text(json.dumps(out, indent=2, ensure_ascii=False))
-    src = f"{export_count} from export + feed" if export_count else "feed"
-    print(f"{len(films)} films synced ({src}) -> _data/letterboxd.json")
+    DATA_PATH.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"{len(films)} films synced "
+          f"({memory_count} remembered, +{export_count} from export, feed overlay) "
+          f"-> _data/letterboxd.json")
 
 
 if __name__ == "__main__":

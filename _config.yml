@@ -78,3 +78,4 @@ exclude:
   - commit.sh
   - scripts/
   - workers/
+  - letterboxd/ # raw export drop zone — never ship

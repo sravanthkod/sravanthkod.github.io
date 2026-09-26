@@ -2,7 +2,7 @@
   "username": "sravanthkod",
   "profile_url": "https://letterboxd.com/sravanthkod/",
   "fetched_at": "2026-09-26",
-  "film_count": 49,
+  "film_count": 87,
   "films": [
     {
       "title": "Masooda",
@@ -38,17 +38,6 @@
       "poster": "/assets/binge/posters/thalavan.jpg"
     },
     {
-      "title": "Karuppu",
-      "year": 2026,
-      "rating": 2.0,
-      "like": false,
-      "rewatch": false,
-      "watched": "2026-09-17",
-      "review": "Mid. Suriya movie lo suriya ke screen time ledhu entira :(",
-      "url": "https://letterboxd.com/sravanthkod/film/karuppu/",
-      "poster": "/assets/binge/posters/karuppu.jpg"
-    },
-    {
       "title": "Balan - The Boy",
       "year": 2026,
       "rating": 4.0,
@@ -58,6 +47,17 @@
       "review": "Mother & her endlessness bod with children. Beautiful one from chidambaram.",
       "url": "https://letterboxd.com/sravanthkod/film/balan-the-boy/",
       "poster": "/assets/binge/posters/balan-the-boy.jpg"
+    },
+    {
+      "title": "Karuppu",
+      "year": 2026,
+      "rating": 2.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-09-17",
+      "review": "Mid. Suriya movie lo suriya ke screen time ledhu entira :(",
+      "url": "https://letterboxd.com/sravanthkod/film/karuppu/",
+      "poster": "/assets/binge/posters/karuppu.jpg"
     },
     {
       "title": "Mandaadi",
@@ -93,17 +93,6 @@
       "poster": "/assets/binge/posters/vaazha-ii.jpg"
     },
     {
-      "title": "Irumudi",
-      "year": 2026,
-      "rating": 3.5,
-      "like": true,
-      "rewatch": false,
-      "watched": "2026-08-29",
-      "review": "Krack travata nen chusina raviteja movie idhi. Chala disturbing ga undhi. Ee MLA gallu andharu ila lucha panulu ey Enduku chestarooo, Raviteja, Naksthara did a very good job. GV is amazing, Shiva Niravana gave a good comeback for himself & Raviteja.",
-      "url": "https://letterboxd.com/sravanthkod/film/irumudi/",
-      "poster": "/assets/binge/posters/irumudi.jpg"
-    },
-    {
       "title": "Mollywood Times",
       "year": 2026,
       "rating": 4.0,
@@ -113,6 +102,17 @@
       "review": "A proper film with a great story. Must watch",
       "url": "https://letterboxd.com/sravanthkod/film/mollywood-times/",
       "poster": "/assets/binge/posters/mollywood-times.jpg"
+    },
+    {
+      "title": "Irumudi",
+      "year": 2026,
+      "rating": 3.5,
+      "like": true,
+      "rewatch": false,
+      "watched": "2026-08-29",
+      "review": "Krack travata nen chusina raviteja movie idhi. Chala disturbing ga undhi. Ee MLA gallu andharu ila lucha panulu ey Enduku chestarooo, Raviteja, Naksthara did a very good job. GV is amazing, Shiva Niravana gave a good comeback for himself & Raviteja.",
+      "url": "https://letterboxd.com/sravanthkod/film/irumudi/",
+      "poster": "/assets/binge/posters/irumudi.jpg"
     },
     {
       "title": "Blast",
@@ -137,15 +137,15 @@
       "poster": "/assets/binge/posters/maa-inti-bangaram.jpg"
     },
     {
-      "title": "Drishyam 3",
+      "title": "Lenin",
       "year": 2026,
-      "rating": 2.5,
+      "rating": 2.0,
       "like": false,
       "rewatch": false,
       "watched": "2026-08-16",
-      "review": "This should be the end of the trilogy 🙏🙏",
-      "url": "https://letterboxd.com/sravanthkod/film/drishyam-3/",
-      "poster": "/assets/binge/posters/drishyam-3.jpg"
+      "review": "Dasara + Mahabharatam. Emotions ki kuda antha connect avvaledhu. Too many characters, they wanted to draw parallels to bharatam but avasaram leni characters ekkuva unnai. No war is violent than Love anta 😭😭 Ee madhya village rooted movies baaga trend avthunnai.. prathi movie lon…",
+      "url": "https://letterboxd.com/sravanthkod/film/lenin-2026/",
+      "poster": "/assets/binge/posters/lenin-2026.jpg"
     },
     {
       "title": "Rao Bahadur",
@@ -159,15 +159,15 @@
       "poster": "/assets/binge/posters/rao-bahadur.jpg"
     },
     {
-      "title": "Lenin",
+      "title": "Drishyam 3",
       "year": 2026,
-      "rating": 2.0,
+      "rating": 2.5,
       "like": false,
       "rewatch": false,
       "watched": "2026-08-16",
-      "review": "Dasara + Mahabharatam. Emotions ki kuda antha connect avvaledhu. Too many characters, they wanted to draw parallels to bharatam but avasaram leni characters ekkuva unnai. No war is violent than Love anta 😭😭 Ee madhya village rooted movies baaga trend avthunnai.. prathi movie lon…",
-      "url": "https://letterboxd.com/sravanthkod/film/lenin-2026/",
-      "poster": "/assets/binge/posters/lenin-2026.jpg"
+      "review": "This should be the end of the trilogy 🙏🙏",
+      "url": "https://letterboxd.com/sravanthkod/film/drishyam-3/",
+      "poster": "/assets/binge/posters/drishyam-3.jpg"
     },
     {
       "title": "Vishwanath & Sons",
@@ -247,26 +247,15 @@
       "poster": "/assets/binge/posters/evil-dead-burn.jpg"
     },
     {
-      "title": "Argo",
-      "year": 2012,
-      "rating": 4.0,
-      "like": true,
+      "title": "28 Years Later: The Bone Temple",
+      "year": 2026,
+      "rating": 2.0,
+      "like": false,
       "rewatch": false,
       "watched": "2026-06-30",
-      "review": "Thrilling, Superb",
-      "url": "https://letterboxd.com/sravanthkod/film/argo/",
-      "poster": "/assets/binge/posters/argo.jpg"
-    },
-    {
-      "title": "No Country for Old Men",
-      "year": 2007,
-      "rating": 4.0,
-      "like": true,
-      "rewatch": false,
-      "watched": "2026-06-30",
-      "review": "Awesome!!!",
-      "url": "https://letterboxd.com/sravanthkod/film/no-country-for-old-men/",
-      "poster": "/assets/binge/posters/no-country-for-old-men.jpg"
+      "review": "Edho undhi",
+      "url": "https://letterboxd.com/sravanthkod/film/28-years-later-the-bone-temple/",
+      "poster": "/assets/binge/posters/28-years-later-the-bone-temple.jpg"
     },
     {
       "title": "Black Phone 2",
@@ -280,26 +269,26 @@
       "poster": "/assets/binge/posters/black-phone-2.jpg"
     },
     {
-      "title": "28 Years Later: The Bone Temple",
-      "year": 2026,
-      "rating": 2.0,
-      "like": false,
-      "rewatch": false,
-      "watched": "2026-06-30",
-      "review": "Edho undhi",
-      "url": "https://letterboxd.com/sravanthkod/film/28-years-later-the-bone-temple/",
-      "poster": "/assets/binge/posters/28-years-later-the-bone-temple.jpg"
-    },
-    {
-      "title": "Dridam",
-      "year": 2026,
-      "rating": 2.5,
+      "title": "No Country for Old Men",
+      "year": 2007,
+      "rating": 4.0,
       "like": true,
       "rewatch": false,
-      "watched": "2026-06-14",
-      "review": "Story was able to hold suspense till the end. Good try 👍, Seems very similar to Golam",
-      "url": "https://letterboxd.com/sravanthkod/film/dridam/",
-      "poster": "/assets/binge/posters/dridam.jpg"
+      "watched": "2026-06-30",
+      "review": "Awesome!!!",
+      "url": "https://letterboxd.com/sravanthkod/film/no-country-for-old-men/",
+      "poster": "/assets/binge/posters/no-country-for-old-men.jpg"
+    },
+    {
+      "title": "Argo",
+      "year": 2012,
+      "rating": 4.0,
+      "like": true,
+      "rewatch": false,
+      "watched": "2026-06-30",
+      "review": "Thrilling, Superb",
+      "url": "https://letterboxd.com/sravanthkod/film/argo/",
+      "poster": "/assets/binge/posters/argo.jpg"
     },
     {
       "title": "Backrooms",
@@ -311,6 +300,17 @@
       "review": "Peak Peak Waiting for part 2",
       "url": "https://letterboxd.com/sravanthkod/film/backrooms-2026/",
       "poster": "/assets/binge/posters/backrooms-2026.jpg"
+    },
+    {
+      "title": "Dridam",
+      "year": 2026,
+      "rating": 2.5,
+      "like": true,
+      "rewatch": false,
+      "watched": "2026-06-14",
+      "review": "Story was able to hold suspense till the end. Good try 👍, Seems very similar to Golam",
+      "url": "https://letterboxd.com/sravanthkod/film/dridam/",
+      "poster": "/assets/binge/posters/dridam.jpg"
     },
     {
       "title": "Peddi",
@@ -357,17 +357,6 @@
       "poster": "/assets/binge/posters/incantation-2022.jpg"
     },
     {
-      "title": "Donnie Darko",
-      "year": 2001,
-      "rating": 3.0,
-      "like": false,
-      "rewatch": false,
-      "watched": "2026-05-23",
-      "review": "Slow paced one, Didnt understand at once & had to go through Donnie Darko explained posts lol..",
-      "url": "https://letterboxd.com/sravanthkod/film/donnie-darko/",
-      "poster": "/assets/binge/posters/donnie-darko.jpg"
-    },
-    {
       "title": "The Gift",
       "year": 2015,
       "rating": 2.5,
@@ -379,15 +368,15 @@
       "poster": "/assets/binge/posters/the-gift-2015-1.jpg"
     },
     {
-      "title": "mother!",
-      "year": 2017,
-      "rating": 5.0,
-      "like": true,
+      "title": "Donnie Darko",
+      "year": 2001,
+      "rating": 3.0,
+      "like": false,
       "rewatch": false,
-      "watched": "2026-05-16",
-      "review": "10 on 10",
-      "url": "https://letterboxd.com/sravanthkod/film/mother-2017/",
-      "poster": "/assets/binge/posters/mother-2017.jpg"
+      "watched": "2026-05-23",
+      "review": "Slow paced one, Didnt understand at once & had to go through Donnie Darko explained posts lol..",
+      "url": "https://letterboxd.com/sravanthkod/film/donnie-darko/",
+      "poster": "/assets/binge/posters/donnie-darko.jpg"
     },
     {
       "title": "The Medium",
@@ -399,6 +388,17 @@
       "review": "Superb!",
       "url": "https://letterboxd.com/sravanthkod/film/the-medium-2021/",
       "poster": "/assets/binge/posters/the-medium-2021.jpg"
+    },
+    {
+      "title": "mother!",
+      "year": 2017,
+      "rating": 5.0,
+      "like": true,
+      "rewatch": false,
+      "watched": "2026-05-16",
+      "review": "10 on 10",
+      "url": "https://letterboxd.com/sravanthkod/film/mother-2017/",
+      "poster": "/assets/binge/posters/mother-2017.jpg"
     },
     {
       "title": "The Substance",
@@ -467,17 +467,6 @@
       "poster": "/assets/binge/posters/dacoit.jpg"
     },
     {
-      "title": "Biker",
-      "year": 2026,
-      "rating": 2.5,
-      "like": true,
-      "rewatch": false,
-      "watched": "2026-04-05",
-      "review": "F1 with Indian emotional masala. Jersey father son centiments. Konchem SDT winner movie feels kuda vachai.Unncessary scnes ekkuva unnai. Good attempt not like some rotta routine shit done by commercial directors like harish shankar & all. Decent watch, Ee sport India lo evvaru t…",
-      "url": "https://letterboxd.com/sravanthkod/film/biker-2026/",
-      "poster": "/assets/binge/posters/biker-2026.jpg"
-    },
-    {
       "title": "When Evil Lurks",
       "year": 2023,
       "rating": 4.0,
@@ -489,15 +478,26 @@
       "poster": "/assets/binge/posters/when-evil-lurks.jpg"
     },
     {
-      "title": "Strange Darling",
-      "year": 2023,
-      "rating": 3.0,
+      "title": "Biker",
+      "year": 2026,
+      "rating": 2.5,
+      "like": true,
+      "rewatch": false,
+      "watched": "2026-04-05",
+      "review": "F1 with Indian emotional masala. Jersey father son centiments. Konchem SDT winner movie feels kuda vachai.Unncessary scnes ekkuva unnai. Good attempt not like some rotta routine shit done by commercial directors like harish shankar & all. Decent watch, Ee sport India lo evvaru t…",
+      "url": "https://letterboxd.com/sravanthkod/film/biker-2026/",
+      "poster": "/assets/binge/posters/biker-2026.jpg"
+    },
+    {
+      "title": "Us",
+      "year": 2019,
+      "rating": 2.5,
       "like": true,
       "rewatch": false,
       "watched": "2026-04-04",
-      "review": "Maaza vachindi!Editing bagundhi, chapter wise here and there. Worth the watch",
-      "url": "https://letterboxd.com/sravanthkod/film/strange-darling/",
-      "poster": "/assets/binge/posters/strange-darling.jpg"
+      "review": "Final twist was good.Movie was mid",
+      "url": "https://letterboxd.com/sravanthkod/film/us-2019/",
+      "poster": "/assets/binge/posters/us-2019.jpg"
     },
     {
       "title": "Ex Machina",
@@ -511,15 +511,15 @@
       "poster": "/assets/binge/posters/ex-machina-2015.jpg"
     },
     {
-      "title": "Us",
-      "year": 2019,
-      "rating": 2.5,
+      "title": "Strange Darling",
+      "year": 2023,
+      "rating": 3.0,
       "like": true,
       "rewatch": false,
       "watched": "2026-04-04",
-      "review": "Final twist was good.Movie was mid",
-      "url": "https://letterboxd.com/sravanthkod/film/us-2019/",
-      "poster": "/assets/binge/posters/us-2019.jpg"
+      "review": "Maaza vachindi!Editing bagundhi, chapter wise here and there. Worth the watch",
+      "url": "https://letterboxd.com/sravanthkod/film/strange-darling/",
+      "poster": "/assets/binge/posters/strange-darling.jpg"
     },
     {
       "title": "Forgotten",
@@ -542,6 +542,424 @@
       "review": "Rocky, Grace <3Amaze, Amaze, Amaze!!One of the best sci-fi ever made 🫡.Do watch in IMAX for the best experience. Ryan Gosling is back again.",
       "url": "https://letterboxd.com/sravanthkod/film/project-hail-mary/",
       "poster": "/assets/binge/posters/project-hail-mary.jpg"
+    },
+    {
+      "title": "Rorschach",
+      "year": 2022,
+      "rating": 2.5,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-03-28",
+      "review": "Worst Revenge Drama Ever",
+      "url": "https://letterboxd.com/sravanthkod/film/rorschach/",
+      "poster": "/assets/binge/posters/rorschach.jpg"
+    },
+    {
+      "title": "House of Secrets: The Burari Deaths",
+      "year": 2021,
+      "rating": 3.5,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-03-28",
+      "review": "Nice take & Narration!",
+      "url": "https://letterboxd.com/sravanthkod/film/house-of-secrets-the-burari-deaths/",
+      "poster": "/assets/binge/posters/house-of-secrets-the-burari-deaths.jpg"
+    },
+    {
+      "title": "Ronth",
+      "year": 2025,
+      "rating": 3.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-03-27",
+      "review": "Very similar to Nayattu.. One time watch #thriller #crime #malayalam",
+      "url": "https://letterboxd.com/sravanthkod/film/ronth/",
+      "poster": "/assets/binge/posters/ronth.jpg"
+    },
+    {
+      "title": "War Machine",
+      "year": 2026,
+      "rating": 4.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-03-23",
+      "review": "Dont Fucking Quit 🔥",
+      "url": "https://letterboxd.com/sravanthkod/film/war-machine-2026/",
+      "poster": "/assets/binge/posters/war-machine-2026.jpg"
+    },
+    {
+      "title": "American Manhunt: Osama bin Laden",
+      "year": 2025,
+      "rating": 4.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-03-20",
+      "review": "Story Telling was fucking awesome! Bravo to the team 🙌",
+      "url": "https://letterboxd.com/sravanthkod/film/american-manhunt-osama-bin-laden-2025-1/",
+      "poster": "/assets/binge/posters/american-manhunt-osama-bin-laden-2025-1.jpg"
+    },
+    {
+      "title": "Made in Korea",
+      "year": 2026,
+      "rating": 0.5,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-03-19",
+      "review": "SODHI SODHI SODHI",
+      "url": "https://letterboxd.com/sravanthkod/film/made-in-korea/",
+      "poster": "/assets/binge/posters/made-in-korea.jpg"
+    },
+    {
+      "title": "Dhurandhar The Revenge",
+      "year": 2026,
+      "rating": 4.5,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-03-18",
+      "review": "4hrs annattu anipinchadhu, Worth the hype.🔥",
+      "url": "https://letterboxd.com/sravanthkod/film/dhurandhar-the-revenge/",
+      "poster": "/assets/binge/posters/dhurandhar-the-revenge.jpg"
+    },
+    {
+      "title": "Anaganaga Oka Raju",
+      "year": 2026,
+      "rating": 1.5,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-03-14",
+      "review": "Okayish",
+      "url": "https://letterboxd.com/sravanthkod/film/anaganaga-oka-raju/",
+      "poster": "/assets/binge/posters/anaganaga-oka-raju.jpg"
+    },
+    {
+      "title": "Funky",
+      "year": 2026,
+      "rating": 1.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-03-14",
+      "review": "Okayish kanna takkuva",
+      "url": "https://letterboxd.com/sravanthkod/film/funky/",
+      "poster": "/assets/binge/posters/funky.jpg"
+    },
+    {
+      "title": "Bring Her Back",
+      "year": 2025,
+      "rating": 4.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-02-22",
+      "review": "Creepy!",
+      "url": "https://letterboxd.com/sravanthkod/film/bring-her-back/",
+      "poster": "/assets/binge/posters/bring-her-back.jpg"
+    },
+    {
+      "title": "Hereditary",
+      "year": 2018,
+      "rating": 4.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-02-22",
+      "review": "Intresting & lots of questions, and the fan theories at the end.",
+      "url": "https://letterboxd.com/sravanthkod/film/hereditary/",
+      "poster": "/assets/binge/posters/hereditary.jpg"
+    },
+    {
+      "title": "Inglourious Basterds",
+      "year": 2009,
+      "rating": 5.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-02-22",
+      "review": "Maaza vachindi. Must Watch!!",
+      "url": "https://letterboxd.com/sravanthkod/film/inglourious-basterds/",
+      "poster": "/assets/binge/posters/inglourious-basterds.jpg"
+    },
+    {
+      "title": "No Other Choice",
+      "year": 2025,
+      "rating": 2.5,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-02-16",
+      "review": "Boring.. Not upto the mark.",
+      "url": "https://letterboxd.com/sravanthkod/film/no-other-choice-2025/",
+      "poster": "/assets/binge/posters/no-other-choice-2025.jpg"
+    },
+    {
+      "title": "Sinners",
+      "year": 2025,
+      "rating": 2.5,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-02-15",
+      "review": "Late to the party.. Those who watched Tvd & The originals might relate it.. But mari antha ekkuva ledhu anipinchindi..",
+      "url": "https://letterboxd.com/sravanthkod/film/sinners-2025/",
+      "poster": "/assets/binge/posters/sinners-2025.jpg"
+    },
+    {
+      "title": "The Grand Budapest Hotel",
+      "year": 2014,
+      "rating": 2.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-02-15",
+      "review": "",
+      "url": "https://letterboxd.com/sravanthkod/film/the-grand-budapest-hotel/",
+      "poster": "/assets/binge/posters/the-grand-budapest-hotel.jpg"
+    },
+    {
+      "title": "Marty Supreme",
+      "year": 2025,
+      "rating": 4.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-01-26",
+      "review": "Felt refreshing & new Good attempt",
+      "url": "https://letterboxd.com/sravanthkod/film/marty-supreme/",
+      "poster": "/assets/binge/posters/marty-supreme.jpg"
+    },
+    {
+      "title": "Eko",
+      "year": 2025,
+      "rating": 3.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-01-13",
+      "review": "Good Thriller with a unpredicted twist! Mallus never disappoint",
+      "url": "https://letterboxd.com/sravanthkod/film/eko-2025/",
+      "poster": "/assets/binge/posters/eko-2025.jpg"
+    },
+    {
+      "title": "Mana ShankaraVaraPrasad Garu",
+      "year": 2026,
+      "rating": 4.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-01-12",
+      "review": "Sankranthi Winner 🔥 Anil did magic again... Never doubt Ravipudi Eesari comedy chala baaga workout ayyindhi... Chiru timing chala bagundhi... Venky presence is lit.. Songs, Story, Emotion anni baaga kudirayi... Do watch with family!!!",
+      "url": "https://letterboxd.com/sravanthkod/film/mana-shankaravaraprasad-garu/",
+      "poster": "/assets/binge/posters/mana-shankaravaraprasad-garu.jpg"
+    },
+    {
+      "title": "The Rajasaab",
+      "year": 2026,
+      "rating": 2.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-01-09",
+      "review": "Low expectations pettukondi bhayya! Raju garni sarriga vadkoledhu.. Maruthi couldn't even able to create comedy well.. Dhinni kosam inni years teyyadam & Total time waste. Malli prabhas ni ilanti full fun movie lo eppduo chusthamoo, Nasanam chesadu.. Songs Placement aslu baledhu…",
+      "url": "https://letterboxd.com/sravanthkod/film/the-rajasaab/",
+      "poster": "/assets/binge/posters/the-rajasaab.jpg"
+    },
+    {
+      "title": "Taxi Driver",
+      "year": 1976,
+      "rating": 4.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-12-31",
+      "review": "",
+      "url": "https://letterboxd.com/sravanthkod/film/taxi-driver/",
+      "poster": "/assets/binge/posters/taxi-driver.jpg"
+    },
+    {
+      "title": "Diés Iraé",
+      "year": 2025,
+      "rating": 3.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-12-28",
+      "review": "Okayish Movie... Can watch while doing some other parallel activity...",
+      "url": "https://letterboxd.com/sravanthkod/film/dies-irae-2025-1/",
+      "poster": "/assets/binge/posters/dies-irae-2025-1.jpg"
+    },
+    {
+      "title": "Shambhala",
+      "year": 2025,
+      "rating": 3.5,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-12-25",
+      "review": "Well, Well A comeback film for Aadhi!!! Ee scenes ni ekkadooo chusinattu untai, kaani ekkado teledhu annatu untai.. Feels like Virupaksha lite... But story change chesaru abit from that... Overall feels good....",
+      "url": "https://letterboxd.com/sravanthkod/film/shambhala-2025/",
+      "poster": "/assets/binge/posters/shambhala-2025.jpg"
+    },
+    {
+      "title": "Dude",
+      "year": 2025,
+      "rating": 2.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-12-20",
+      "review": "",
+      "url": "https://letterboxd.com/sravanthkod/film/dude-2025/",
+      "poster": "/assets/binge/posters/dude-2025.jpg"
+    },
+    {
+      "title": "Kaantha",
+      "year": 2025,
+      "rating": 3.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-12-20",
+      "review": "",
+      "url": "https://letterboxd.com/sravanthkod/film/kaantha/",
+      "poster": "/assets/binge/posters/kaantha.jpg"
+    },
+    {
+      "title": "Wake Up Dead Man",
+      "year": 2025,
+      "rating": 3.5,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-12-20",
+      "review": "",
+      "url": "https://letterboxd.com/sravanthkod/film/wake-up-dead-man/",
+      "poster": "/assets/binge/posters/wake-up-dead-man.jpg"
+    },
+    {
+      "title": "Dhurandhar",
+      "year": 2025,
+      "rating": 5.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-12-19",
+      "review": "Simply Superb!!!",
+      "url": "https://letterboxd.com/sravanthkod/film/dhurandhar/",
+      "poster": "/assets/binge/posters/dhurandhar.jpg"
+    },
+    {
+      "title": "Akhanda 2: Thaandavam",
+      "year": 2025,
+      "rating": 0.5,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-12-13",
+      "review": "ZanduBalm teskuvellalsindhi.. Appadki chepparu, Manam Vinam kadhaa..",
+      "url": "https://letterboxd.com/sravanthkod/film/akhanda-2-thaandavam/",
+      "poster": "/assets/binge/posters/akhanda-2-thaandavam.jpg"
+    },
+    {
+      "title": "Bullet Train",
+      "year": 2022,
+      "rating": 5.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-11-27",
+      "review": "Fucking good movie. Perfect mix of Action & Comedy with a great gangstar saga. Absolute masterpiece",
+      "url": "https://letterboxd.com/sravanthkod/film/bullet-train/",
+      "poster": "/assets/binge/posters/bullet-train.jpg"
+    },
+    {
+      "title": "Frankenstein",
+      "year": 2025,
+      "rating": 2.5,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-11-25",
+      "review": "",
+      "url": "https://letterboxd.com/sravanthkod/film/frankenstein-2025/",
+      "poster": "/assets/binge/posters/frankenstein-2025.jpg"
+    },
+    {
+      "title": "The Imitation Game",
+      "year": 2014,
+      "rating": 5.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-11-23",
+      "review": "",
+      "url": "https://letterboxd.com/sravanthkod/film/the-imitation-game/",
+      "poster": "/assets/binge/posters/the-imitation-game.jpg"
+    },
+    {
+      "title": "Sympathy for Mr. Vengeance",
+      "year": 2002,
+      "rating": 3.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-11-22",
+      "review": "",
+      "url": "https://letterboxd.com/sravanthkod/film/sympathy-for-mr-vengeance/",
+      "poster": "/assets/binge/posters/sympathy-for-mr-vengeance.jpg"
+    },
+    {
+      "title": "Ustad Hotel",
+      "year": 2012,
+      "rating": 2.5,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-11-21",
+      "review": "",
+      "url": "https://letterboxd.com/sravanthkod/film/ustad-hotel/",
+      "poster": "/assets/binge/posters/ustad-hotel.jpg"
+    },
+    {
+      "title": "F1",
+      "year": 2025,
+      "rating": 5.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-10-25",
+      "review": "",
+      "url": "https://letterboxd.com/sravanthkod/film/f1/",
+      "poster": "/assets/binge/posters/f1.jpg"
+    },
+    {
+      "title": "Drive",
+      "year": 2011,
+      "rating": 3.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-10-20",
+      "review": "Character driven film, Ending could have been better.. He could have taken the money with him & stay with Irene. But director had some other plans..",
+      "url": "https://letterboxd.com/sravanthkod/film/drive-2011/",
+      "poster": "/assets/binge/posters/drive-2011.jpg"
+    },
+    {
+      "title": "The Black Phone",
+      "year": 2021,
+      "rating": 2.5,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-10-19",
+      "review": "The story is quite simple & kept engaging at some points, but mostly it's boring. Climax gives a good feel about brother sister bonding—one-time watch.",
+      "url": "https://letterboxd.com/sravanthkod/film/the-black-phone/",
+      "poster": "/assets/binge/posters/the-black-phone.jpg"
+    },
+    {
+      "title": "The Mist",
+      "year": 2007,
+      "rating": 4.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-10-18",
+      "review": "Movie kept engaging till the end. Climax gives you the guilt feeling.",
+      "url": "https://letterboxd.com/sravanthkod/film/the-mist/",
+      "poster": "/assets/binge/posters/the-mist.jpg"
+    },
+    {
+      "title": "How to Train Your Dragon",
+      "year": 2025,
+      "rating": 3.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-10-18",
+      "review": "",
+      "url": "https://letterboxd.com/sravanthkod/film/how-to-train-your-dragon-2025/",
+      "poster": "/assets/binge/posters/how-to-train-your-dragon-2025.jpg"
+    },
+    {
+      "title": "The Usual Suspects",
+      "year": 1995,
+      "rating": 4.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2025-10-17",
+      "review": "",
+      "url": "https://letterboxd.com/sravanthkod/film/the-usual-suspects/",
+      "poster": "/assets/binge/posters/the-usual-suspects.jpg"
     }
   ]
 }

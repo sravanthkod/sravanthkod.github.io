@@ -6,3 +6,9 @@ Gemfile.lock
 *.Zone.Identifier
 .DS_Store
 .env
+
+# never commit a raw Letterboxd export (watchlist/comments are private)
+letterboxd/
+
+# Letterboxd export CSVs are local-only inputs; never publish raw data
+scripts/letterboxd/*.csv
