@@ -8,9 +8,9 @@ description: "Films I've been watching — synced from my Letterboxd diary, newe
 
 <div class="binge-container">
   <p class="binge-intro">
-    What I've been watching, straight from my
-    <a href="{{ site.data.letterboxd.profile_url }}" target="_blank" rel="noopener">Letterboxd diary</a> —
-    hover a poster for the one-line verdict. Newest first.
+    Films I've been watching — synced from my
+    <a href="{{ site.data.letterboxd.profile_url }}" target="_blank" rel="noopener">Letterboxd diary</a>,
+    newest first.
   </p>
 
   <div class="binge-grid">
