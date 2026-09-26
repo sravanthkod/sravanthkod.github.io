@@ -944,6 +944,13 @@ p {
     margin-left: 3px;
 }
 
+.film-date {
+    font-size: 0.7em;
+    color: var(--color-text-light);
+    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
+}
+
 .binge-synced {
     margin-top: 38px;
     padding-top: 16px;

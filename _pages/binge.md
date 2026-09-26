@@ -37,6 +37,7 @@ description: "Films I've been watching — synced from my Letterboxd diary, newe
           {% endfor %}
           {% if film.like %}<span class="film-heart" title="liked">♥</span>{% endif %}
         </span>
+        {% if film.watched %}<span class="film-date">{{ film.watched | date: "%-d %b %Y" }}</span>{% endif %}
       </div>
     </a>
     {% endfor %}
