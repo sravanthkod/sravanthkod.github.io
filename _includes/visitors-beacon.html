@@ -1,0 +1,13 @@
+{% if site.visitors_api and site.visitors_api != "" %}
+<script>
+  // One page-view ping per browser session; the visitor's country is read
+  // at the network edge, so nothing identifying is sent or stored.
+  (function () {
+    try {
+      if (sessionStorage.getItem('visited-ping')) return;
+      sessionStorage.setItem('visited-ping', '1');
+      navigator.sendBeacon("{{ site.visitors_api }}/ping", "");
+    } catch (e) {}
+  })();
+</script>
+{% endif %}

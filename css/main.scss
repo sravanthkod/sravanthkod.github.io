@@ -52,6 +52,11 @@
     --globe-land-stroke: rgba(22, 163, 74, 0.35);
     --globe-pin-stroke: #ffffff;
 
+    /* Visitors choropleth ramp */
+    --map-idle: rgba(100, 116, 139, 0.20);
+    --map-low: #c7d2fe;
+    --map-high: #6366f1;
+
     color-scheme: light;
 }
 
@@ -87,6 +92,11 @@ html[data-theme="dark"] {
     --globe-land-fill: rgba(52, 211, 153, 0.12);
     --globe-land-stroke: rgba(52, 211, 153, 0.28);
     --globe-pin-stroke: #0f172a;
+
+    /* Visitors choropleth ramp */
+    --map-idle: rgba(148, 163, 184, 0.14);
+    --map-low: #3730a3;
+    --map-high: #818cf8;
 
     color-scheme: dark;
 }
@@ -934,6 +944,96 @@ p {
         grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
         gap: 18px 12px;
     }
+}
+
+/* ============================================================
+   VISITORS PAGE — live choropleth globe
+   ============================================================ */
+.visitors-container {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    animation: fadeInUp 0.6s ease both;
+}
+
+.visitors-stats {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.visitors-count {
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.visitors-count.pulse {
+    animation: pulseGlow 0.8s ease;
+}
+
+.visitors-count-label {
+    font-size: 1.1em;
+    color: var(--color-text-muted);
+}
+
+.visitors-badge {
+    font-size: 0.68em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent-secondary);
+    border: 1px solid currentColor;
+    border-radius: 12px;
+    padding: 2px 10px;
+    opacity: 0;
+    transition: opacity var(--transition-smooth);
+}
+
+.visitors-badge::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    margin-right: 6px;
+    vertical-align: 1px;
+}
+
+.visitors-sub {
+    color: var(--color-text-muted);
+    font-size: 0.92em;
+    margin: 6px 0 30px;
+}
+
+.visitors-globe {
+    margin: 0 auto;
+}
+
+#visitors-canvas {
+    display: block;
+    margin: 0 auto;
+    cursor: grab;
+    touch-action: none;
+    border-radius: var(--radius-md);
+}
+
+.visitors-note {
+    margin-top: 26px;
+    font-size: 0.78em;
+    color: var(--color-text-light);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .visitors-count.pulse { animation: none; }
 }
 
 /* ============================================================
