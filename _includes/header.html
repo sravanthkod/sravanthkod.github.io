@@ -5,7 +5,7 @@
       {% assign sorted_pages = site.pages | sort:"order" %}
       {% for my_page in sorted_pages %}
         {% if my_page.title %}
-        <a href="{{ my_page.url | prepend: site.baseurl }}" {% if page.url == my_page.url %}class="active"{% endif %}>{{ my_page.title }}</a>
+        <a href="{{ my_page.redirect | default: my_page.url | prepend: site.baseurl }}" {% if page.url == my_page.url %}class="active"{% endif %}>{{ my_page.title }}</a>
         {% endif %}
       {% endfor %}
     </div>
