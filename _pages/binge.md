@@ -13,8 +13,16 @@ description: "Films I've been watching — synced from my Letterboxd diary, newe
     newest first.
   </p>
 
-  <div class="binge-grid">
-    {% for film in site.data.letterboxd.films %}
+  {% assign months = site.data.letterboxd.films | group_by: "month" %}
+  {% for m in months %}
+  <section class="journal-month">
+    <header class="journal-header">
+      <span class="journal-title">{{ m.name }}</span>
+      <span class="journal-leader" aria-hidden="true"></span>
+      <span class="journal-count">{{ m.size }} {% if m.size == 1 %}film{% else %}films{% endif %}</span>
+    </header>
+    <div class="binge-grid">
+    {% for film in m.items %}
     {% assign full = film.rating | floor %}
     {% assign rem = film.rating | minus: full %}
     {% assign half_slot = full | plus: 1 %}
@@ -37,11 +45,13 @@ description: "Films I've been watching — synced from my Letterboxd diary, newe
           {% endfor %}
           {% if film.like %}<span class="film-heart" title="liked">♥</span>{% endif %}
         </span>
-        {% if film.watched %}<span class="film-date">{{ film.watched | date: "%-d %b %Y" }}</span>{% endif %}
+        {% if film.watched %}<span class="film-date">{{ film.watched | date: "%-d %b" }}</span>{% endif %}
       </div>
     </a>
     {% endfor %}
-  </div>
+    </div>
+  </section>
+  {% endfor %}
 
   <p class="binge-synced">
     {{ site.data.letterboxd.film_count }} films · last synced {{ site.data.letterboxd.fetched_at }} ·

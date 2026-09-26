@@ -238,6 +238,12 @@ def main():
         films_by_key[film_key(film)] = film
 
     films = sorted(films_by_key.values(), key=lambda f: f["watched"] or "", reverse=True)
+
+    # display month ("September 2026") — the Binge page groups films by it
+    for film in films:
+        if film.get("watched"):
+            d = datetime.strptime(film["watched"], "%Y-%m-%d")
+            film["month"] = d.strftime("%B %Y")
     used = set()
     for film in films:
         poster = poster_for(film)

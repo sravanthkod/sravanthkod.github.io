@@ -826,6 +826,51 @@ p {
     gap: 24px 18px;
 }
 
+/* Journal grouping: one section per month, header sticks while its
+   posters scroll past */
+.journal-month {
+    margin-bottom: 38px;
+}
+
+.journal-month:last-of-type {
+    margin-bottom: 0;
+}
+
+.journal-header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 6px 0 8px;
+    margin-bottom: 8px;
+    background: var(--color-bg);
+}
+
+.journal-title {
+    font-size: 0.82em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+}
+
+.journal-leader {
+    flex: 1;
+    border-bottom: 1px dotted var(--color-border-hover);
+    transform: translateY(-3px);
+}
+
+.journal-count {
+    font-size: 0.75em;
+    font-weight: 600;
+    color: var(--color-accent);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
 .film-card {
     text-decoration: none;
     color: inherit;
