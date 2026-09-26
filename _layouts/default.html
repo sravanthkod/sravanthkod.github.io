@@ -14,6 +14,50 @@
     <main class="main-content">
       {{ content }}
     </main>
+
+    <script>
+      (function () {
+        var btn = document.getElementById('theme-toggle');
+        var meta = document.querySelector('meta[name="theme-color"]');
+        var chromeColor = { light: '#f8fafc', dark: '#0f172a' };
+
+        function apply(theme, persist) {
+          document.documentElement.setAttribute('data-theme', theme);
+          if (meta) meta.setAttribute('content', chromeColor[theme]);
+          if (btn) {
+            var label = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+            btn.setAttribute('aria-label', label);
+            btn.title = label;
+          }
+          if (persist) {
+            try { localStorage.setItem('theme', theme); } catch (e) {}
+          }
+          document.dispatchEvent(new CustomEvent('themechange', { detail: { theme: theme } }));
+        }
+
+        if (btn) {
+          btn.addEventListener('click', function () {
+            var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            apply(next, true);
+          });
+        }
+
+        // Follow OS-level changes only while the visitor hasn't picked explicitly
+        if (window.matchMedia) {
+          var mq = window.matchMedia('(prefers-color-scheme: dark)');
+          var onSystemChange = function (e) {
+            var stored = null;
+            try { stored = localStorage.getItem('theme'); } catch (err) {}
+            if (stored) return;
+            apply(e.matches ? 'dark' : 'light', false);
+          };
+          if (mq.addEventListener) mq.addEventListener('change', onSystemChange);
+          else if (mq.addListener) mq.addListener(onSystemChange);
+        }
+
+        apply(document.documentElement.getAttribute('data-theme') || 'light', false);
+      })();
+    </script>
   </body>
 
 </html>

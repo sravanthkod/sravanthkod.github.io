@@ -20,6 +20,30 @@
   var COUNTRY_NAME = { usa: 'United States', thailand: 'Thailand', india: 'India' };
   var REGION_KEY = { 'United States': 'usa', 'Thailand': 'thailand', 'India': 'india' };
 
+  // --- Theme-aware canvas colors (tokens defined in main.scss; the rAF draw
+  //     loop re-reads nothing — we refresh on 'themechange' and the next
+  //     frame paints with the new palette) ---
+  var GLOBE = {};
+  function readGlobeTheme() {
+    var s = getComputedStyle(document.documentElement);
+    function v(name, fallback) {
+      var val = s.getPropertyValue(name).trim();
+      return val || fallback;
+    }
+    GLOBE.ocean = [
+      v('--globe-ocean-1', '#dbeafe'),
+      v('--globe-ocean-2', '#bfdbfe'),
+      v('--globe-ocean-3', '#93c5fd')
+    ];
+    GLOBE.outline = v('--globe-outline', 'rgba(59,130,246,0.25)');
+    GLOBE.graticule = v('--globe-graticule', 'rgba(59,130,246,0.15)');
+    GLOBE.landFill = v('--globe-land-fill', 'rgba(34,197,94,0.20)');
+    GLOBE.landStroke = v('--globe-land-stroke', 'rgba(22,163,74,0.35)');
+    GLOBE.pinStroke = v('--globe-pin-stroke', '#ffffff');
+  }
+  readGlobeTheme();
+  document.addEventListener('themechange', readGlobeTheme);
+
   // --- Places: [lat, lon, name, country key] ---
   var CITIES = [
     { lat: 32.7157, lon: -117.1611, name: 'San Diego', country: 'usa' },
@@ -117,9 +141,9 @@
       centerX - currentRadius * 0.25, centerY - currentRadius * 0.25, 0,
       centerX, centerY, currentRadius
     );
-    grad.addColorStop(0, '#dbeafe');
-    grad.addColorStop(0.7, '#bfdbfe');
-    grad.addColorStop(1, '#93c5fd');
+    grad.addColorStop(0, GLOBE.ocean[0]);
+    grad.addColorStop(0.7, GLOBE.ocean[1]);
+    grad.addColorStop(1, GLOBE.ocean[2]);
 
     ctx.beginPath();
     pathGenerator(sphere);
@@ -127,14 +151,14 @@
     ctx.fill();
 
     // Globe outline
-    ctx.strokeStyle = 'rgba(59,130,246,0.25)';
+    ctx.strokeStyle = GLOBE.outline;
     ctx.lineWidth = 1.5;
     ctx.stroke();
 
     // 2. Graticule lines
     ctx.beginPath();
     pathGenerator(graticule);
-    ctx.strokeStyle = 'rgba(59,130,246,0.15)';
+    ctx.strokeStyle = GLOBE.graticule;
     ctx.lineWidth = 0.5;
     ctx.stroke();
 
@@ -142,9 +166,9 @@
     if (landGeo) {
       ctx.beginPath();
       pathGenerator(landGeo);
-      ctx.fillStyle = 'rgba(34,197,94,0.20)';
+      ctx.fillStyle = GLOBE.landFill;
       ctx.fill();
-      ctx.strokeStyle = 'rgba(22,163,74,0.35)';
+      ctx.strokeStyle = GLOBE.landStroke;
       ctx.lineWidth = 0.8;
       ctx.stroke();
     }
@@ -193,7 +217,7 @@
       ctx.arc(pt[0], pt[1], pinRadius, 0, Math.PI * 2);
       ctx.fillStyle = city.color;
       ctx.fill();
-      ctx.strokeStyle = '#ffffff';
+      ctx.strokeStyle = GLOBE.pinStroke;
       ctx.lineWidth = 1.4;
       ctx.stroke();
 

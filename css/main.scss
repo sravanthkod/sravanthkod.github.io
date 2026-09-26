@@ -36,6 +36,59 @@
     --sidebar-width: 220px;
     --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Tooltip (kept as an elevated dark chip in both themes) */
+    --color-tooltip-bg: #1e293b;
+    --color-tooltip-text: #ffffff;
+    --color-tooltip-muted: #cbd5e1;
+
+    /* Travel globe canvas colors (read by assets/travel/globe.js) */
+    --globe-ocean-1: #dbeafe;
+    --globe-ocean-2: #bfdbfe;
+    --globe-ocean-3: #93c5fd;
+    --globe-outline: rgba(59, 130, 246, 0.25);
+    --globe-graticule: rgba(59, 130, 246, 0.15);
+    --globe-land-fill: rgba(34, 197, 94, 0.20);
+    --globe-land-stroke: rgba(22, 163, 74, 0.35);
+    --globe-pin-stroke: #ffffff;
+
+    color-scheme: light;
+}
+
+/* --- Dark theme: same slate family, inverted; accents lifted one step
+      (indigo-400 / cyan-400) so text-on-dark keeps AA contrast --- */
+html[data-theme="dark"] {
+    --color-bg: #0f172a;
+    --color-bg-alt: #0b1120;
+    --color-text: #e2e8f0;
+    --color-text-muted: #94a3b8;
+    --color-text-light: #64748b;
+    --color-accent: #818cf8;
+    --color-accent-secondary: #22d3ee;
+    --color-border: #293548;
+    --color-border-hover: #3b4a63;
+    --color-card-bg: #1a2740;
+    --color-sidebar-bg: #0b1120;
+    --gradient-accent-soft: linear-gradient(135deg, rgba(129, 140, 248, 0.14), rgba(34, 211, 238, 0.10));
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.30);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.45);
+    --shadow-glow: 0 0 20px rgba(129, 140, 248, 0.25);
+
+    --color-tooltip-bg: #2c3a52;
+    --color-tooltip-text: #f1f5f9;
+    --color-tooltip-muted: #94a3b8;
+
+    --globe-ocean-1: #233252;
+    --globe-ocean-2: #182442;
+    --globe-ocean-3: #0f1a33;
+    --globe-outline: rgba(129, 140, 248, 0.35);
+    --globe-graticule: rgba(129, 140, 248, 0.12);
+    --globe-land-fill: rgba(52, 211, 153, 0.12);
+    --globe-land-stroke: rgba(52, 211, 153, 0.28);
+    --globe-pin-stroke: #0f172a;
+
+    color-scheme: dark;
 }
 
 /* --- Reset & Base --- */
@@ -58,6 +111,7 @@ body {
     line-height: 1.7;
     display: flex;
     min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -111,6 +165,7 @@ img {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .navblock {
@@ -518,8 +573,8 @@ p {
 .globe-tooltip {
     position: absolute;
     transform: translate(-50%, -100%);
-    background: var(--color-text);
-    color: #fff;
+    background: var(--color-tooltip-bg);
+    color: var(--color-tooltip-text);
     padding: 6px 14px;
     border-radius: 8px;
     font-size: 0.85em;
@@ -536,7 +591,7 @@ p {
 .globe-tooltip span {
     font-size: 0.82em;
     font-weight: 400;
-    color: #cbd5e1;
+    color: var(--color-tooltip-muted);
 }
 
 .globe-legend {
@@ -729,6 +784,61 @@ p {
 }
 
 /* ============================================================
+   THEME TOGGLE
+   ============================================================ */
+.nav-footer {
+    padding: 14px 0 22px;
+    display: flex;
+    justify-content: center;
+}
+
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    background: transparent;
+    border: 1.5px solid var(--color-border);
+    cursor: pointer;
+    transition: all var(--transition-smooth);
+}
+
+.theme-toggle:hover {
+    color: #fff;
+    background: var(--gradient-accent);
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.theme-toggle svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Moon while light (click switches to dark); sun while dark */
+.theme-toggle .icon-sun { display: none; }
+html[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+html[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+    body, .sidenav { transition: none; }
+}
+
+/* ============================================================
    RESPONSIVE DESIGN
    ============================================================ */
 @media (max-width: 768px) {
@@ -769,6 +879,10 @@ p {
 
     .sidenav a.active::before {
         display: none;
+    }
+
+    .nav-footer {
+        padding: 10px 0 14px;
     }
 
     .main-content {
