@@ -1,86 +1,201 @@
 #!/usr/bin/env python3
-"""Sync films from a Letterboxd RSS feed into the site.
+"""Sync films from Letterboxd into the site.
 
-Fetches letterboxd.com/<username>/rss/, downloads each film's poster into
-assets/binge/posters/, and writes _data/letterboxd.json for the Binge page.
-Re-run whenever you want newer films to appear; existing posters are cached.
+Combines two sources into _data/letterboxd.json for the Binge page:
+
+1. The RSS feed (letterboxd.com/<username>/rss/) — recent watches with
+   ratings, likes, reviews and poster URLs. No login needed.
+2. A full data export (optional) — the RSS feed only carries the most
+   recent ~50 entries, so for complete history drop your export CSVs
+   into scripts/letterboxd/:
+     - diary.csv   (every watch: date, rating, rewatch)
+     - reviews.csv (review text)
+   Export yours at letterboxd.com → Settings → Data Export (emailed zip).
+
+Posters are cached in assets/binge/posters/ by film slug. Films from the
+CSV export that never appeared in the feed get their poster fetched once
+from the film's Letterboxd page (og:image). Re-run whenever; existing
+posters are reused.
 
 Usage: python3 scripts/fetch_letterboxd.py [username]
 """
 
+import csv
 import json
 import re
 import sys
+import time
 import urllib.request
-from datetime import date
+from datetime import date, datetime
 from html import unescape
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent.parent
+EXPORT_DIR = ROOT / "scripts/letterboxd"
+POSTER_DIR = ROOT / "assets/binge/posters"
 FEED_URL = "https://letterboxd.com/{}/rss/"
 NS = {"lb": "https://letterboxd.com", "tmdb": "https://themoviedb.org"}
+HEADERS = {"User-Agent": "sravanthkod.github.io letterboxd sync"}
+REVIEW_MAX = 280
 
 
 def fetch(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "sravanthkod.github.io letterboxd sync"})
+    req = urllib.request.Request(url, headers=HEADERS)
     with urllib.request.urlopen(req, timeout=30) as r:
         return r.read()
 
 
-def poster_url(description_html):
-    m = re.search(r'<img src="([^"]+)"', description_html or "")
+def slug_from_url(url):
+    m = re.search(r"/film/([^/]+)/", url or "")
     return m.group(1) if m else None
 
 
-def review_text(description_html):
-    text = re.sub(r"<img[^>]*>", "", description_html or "")
+def parse_date(text):
+    for fmt in ("%b %d, %Y", "%Y-%m-%d", "%d %b %Y"):
+        try:
+            return datetime.strptime((text or "").strip(), fmt).date().isoformat()
+        except ValueError:
+            continue
+    return None
+
+
+def one_line(html_text):
+    text = re.sub(r"<img[^>]*>", "", html_text or "")
     text = re.sub(r"</?p>", " ", text)
     text = re.sub(r"<[^>]+>", "", text)
-    text = unescape(text)
-    return re.sub(r"\s+", " ", text).strip()
+    return re.sub(r"\s+", " ", unescape(text)).strip()
 
 
-def main():
-    username = sys.argv[1] if len(sys.argv) > 1 else "sravanthkod"
-    xml = fetch(FEED_URL.format(username))
-    items = ET.fromstring(xml).findall(".//item")
+def clip(text):
+    return text if len(text) <= REVIEW_MAX else text[:REVIEW_MAX - 1].rstrip() + "…"
 
+
+# --- Source 1: RSS feed (recent watches, with posters and likes) ---
+
+def parse_rss(username):
+    root = ET.fromstring(fetch(FEED_URL.format(username)))
     films, seen = [], set()
-    for item in items:
+    for item in root.findall(".//item"):
         def lb(tag):
             el = item.find(f"lb:{tag}", NS)
             if el is None:
-                el = item.find(f"tmdb:{tag}", NS)
+                el = item.find(f"tmdb:{tag}", NS)  # movieId lives in the tmdb ns
             return el.text.strip() if el is not None and el.text else None
 
-        movie_id = lb("movieId")  # tmdb:movieId in the feed
-        if not movie_id or movie_id in seen:
+        url = (item.findtext("link") or "").strip()
+        slug = slug_from_url(url)
+        if not slug or slug in seen:
             continue
-        seen.add(movie_id)
+        seen.add(slug)
 
         desc = item.findtext("description") or ""
-        poster = poster_url(desc)
-        poster_file = None
-        if poster:
-            target = ROOT / "assets/binge/posters" / f"{movie_id}.jpg"
-            if not target.exists():
-                target.write_bytes(fetch(poster))
-            poster_file = f"/assets/binge/posters/{movie_id}.jpg"
-
+        m = re.search(r'<img src="([^"]+)"', desc)
         films.append({
+            "slug": slug,
             "title": lb("filmTitle"),
             "year": int(lb("filmYear") or 0),
             "rating": float(lb("memberRating") or 0),
             "like": lb("memberLike") == "Yes",
             "rewatch": lb("rewatch") == "Yes",
-            "watched": lb("watchedDate"),
-            "review": review_text(desc),
-            "url": item.findtext("link").strip(),
-            "poster": poster_file,
+            "watched": parse_date(lb("watchedDate")),
+            "review": clip(one_line(desc)),
+            "url": url,
+            "poster_url": m.group(1) if m else None,
         })
+    return films
 
-    films.sort(key=lambda f: f["watched"] or "", reverse=True)
+
+# --- Source 2: full export CSVs (all films; drop into scripts/letterboxd/) ---
+
+def read_csv_rows(path):
+    with open(path, newline="", encoding="utf-8-sig") as f:
+        return [dict(row) for row in csv.DictReader(f)]
+
+
+def col(row, *names):
+    for n in names:
+        for key in row:
+            if key.strip().lower() == n:
+                return (row[key] or "").strip()
+    return ""
+
+
+def parse_export():
+    diary = EXPORT_DIR / "diary.csv"
+    reviews = EXPORT_DIR / "reviews.csv"
+    films = {}
+    if diary.exists():
+        # one row per watch — keep the most recent entry per film
+        for row in read_csv_rows(diary):
+            slug = slug_from_url(col(row, "letterboxd uri"))
+            if not slug:
+                continue
+            rating = col(row, "rating")
+            films[slug] = {
+                "slug": slug,
+                "title": col(row, "name"),
+                "year": int(col(row, "year") or 0),
+                "rating": float(rating) if rating else 0.0,
+                "like": False,  # not in the export; only the feed knows likes
+                "rewatch": col(row, "rewatch").lower() == "yes",
+                "watched": parse_date(col(row, "watched date", "date")),
+                "review": "",
+                "url": col(row, "letterboxd uri"),
+            }
+    if reviews.exists():
+        for row in read_csv_rows(reviews):
+            slug = slug_from_url(col(row, "letterboxd uri"))
+            if slug in films:
+                films[slug]["review"] = clip(one_line(col(row, "review")))
+    return films
+
+
+# --- Posters: feed URL first, one-time og:image backfill for the rest ---
+
+def poster_for(film):
+    target = POSTER_DIR / f"{film['slug']}.jpg"
+    if target.exists():
+        return target
+    if film.get("poster_url"):
+        target.write_bytes(fetch(film["poster_url"]))
+        return target
+    try:  # one-time backfill from the film's public page
+        page = fetch(film["url"]).decode("utf-8", "replace")
+        m = re.search(r'property="og:image" content="([^"]+)"', page)
+        if m:
+            target.write_bytes(fetch(unescape(m.group(1))))
+            time.sleep(0.4)  # stay polite
+            return target
+    except Exception as e:
+        print(f"  poster backfill failed for {film['title']}: {e}")
+    return None
+
+
+def main():
+    username = sys.argv[1] if len(sys.argv) > 1 else "sravanthkod"
+    POSTER_DIR.mkdir(parents=True, exist_ok=True)
+
+    films_by_slug = parse_export()
+    export_count = len(films_by_slug)
+    for film in parse_rss(username):
+        films_by_slug[film["slug"]] = film  # feed wins: fresher, has posters/likes
+
+    films = sorted(films_by_slug.values(), key=lambda f: f["watched"] or "", reverse=True)
+    used = set()
+    for film in films:
+        poster = poster_for(film)
+        film["poster"] = f"/assets/binge/posters/{poster.name}" if poster else None
+        if poster:
+            used.add(poster.name)
+        film.pop("poster_url", None)
+        film.pop("slug", None)
+
+    # drop posters no longer referenced (old ids, removed entries)
+    for stale in POSTER_DIR.glob("*.jpg"):
+        if stale.name not in used:
+            stale.unlink()
+
     out = {
         "username": username,
         "profile_url": f"https://letterboxd.com/{username}/",
@@ -89,7 +204,8 @@ def main():
         "films": films,
     }
     (ROOT / "_data/letterboxd.json").write_text(json.dumps(out, indent=2, ensure_ascii=False))
-    print(f"{len(films)} films synced -> _data/letterboxd.json")
+    src = f"{export_count} from export + feed" if export_count else "feed"
+    print(f"{len(films)} films synced ({src}) -> _data/letterboxd.json")
 
 
 if __name__ == "__main__":
