@@ -189,8 +189,11 @@ def poster_for(film):
         if target.exists():
             return target
         if film.get("poster_url"):
-            target.write_bytes(film["poster_url"])
-            return target
+            try:
+                target.write_bytes(fetch(film["poster_url"]))
+                return target
+            except Exception as e:
+                print(f"  poster download failed for {film['title']}: {e}")
         try:  # one-time backfill from the film's public page
             page = fetch(film["url"]).decode("utf-8", "replace")
             m = re.search(r'property="og:image" content="([^"]+)"', page)
