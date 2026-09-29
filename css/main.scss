@@ -52,10 +52,16 @@
     --globe-land-stroke: rgba(22, 163, 74, 0.35);
     --globe-pin-stroke: #ffffff;
 
-    /* Visitors choropleth ramp */
-    --map-idle: rgba(100, 116, 139, 0.20);
-    --map-low: #c7d2fe;
-    --map-high: #6366f1;
+    /* Visitors globe — choropleth ramp + lit-planet shading
+       (read by assets/visitors/visitors.js) */
+    --map-idle: rgba(71, 85, 105, 0.16);
+    --map-low: #b9c4fa;
+    --map-high: #4f46e5;
+    --visitors-ocean-1: #f4f8ff;
+    --visitors-ocean-2: #d9e6f8;
+    --visitors-ocean-3: #a9c6e8;
+    --visitors-atmosphere: rgba(99, 102, 241, 0.18);
+    --visitors-limb: rgba(30, 41, 99, 0.14);
 
     color-scheme: light;
 }
@@ -93,10 +99,16 @@ html[data-theme="dark"] {
     --globe-land-stroke: rgba(52, 211, 153, 0.28);
     --globe-pin-stroke: #0f172a;
 
-    /* Visitors choropleth ramp */
+    /* Visitors globe — choropleth ramp + lit-planet shading
+       (read by assets/visitors/visitors.js) */
     --map-idle: rgba(148, 163, 184, 0.14);
-    --map-low: #3730a3;
-    --map-high: #818cf8;
+    --map-low: #4338ca;
+    --map-high: #c7d2fe;
+    --visitors-ocean-1: #33436e;
+    --visitors-ocean-2: #223255;
+    --visitors-ocean-3: #0f1b37;
+    --visitors-atmosphere: rgba(129, 140, 248, 0.25);
+    --visitors-limb: rgba(2, 6, 23, 0.40);
 
     color-scheme: dark;
 }
@@ -1125,6 +1137,19 @@ p {
     margin-top: 26px;
     font-size: 0.78em;
     color: var(--color-text-light);
+}
+
+/* Touch hint under the globe — phones only; on desktop the grab cursor
+   and auto-rotation already invite exploration */
+.visitors-hint {
+    display: none;
+    margin-top: 14px;
+    font-size: 0.78em;
+    color: var(--color-text-light);
+}
+
+@media (pointer: coarse) {
+    .visitors-hint { display: block; }
 }
 
 @media (prefers-reduced-motion: reduce) {

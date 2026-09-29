@@ -19,9 +19,11 @@ description: "Where readers of this site come from — a live world map."
   <div class="globe-wrapper visitors-globe" id="visitors-wrapper">
     <canvas id="visitors-canvas"
       {% if site.visitors_api and site.visitors_api != "" %}data-api="{{ site.visitors_api }}"{% endif %}
-      aria-label="World map shaded by visit counts; drag to rotate"></canvas>
+      aria-label="World map shaded by visit counts; drag to spin, pinch or double-tap to zoom, tap a country for its count"></canvas>
     <div class="globe-tooltip" id="visitors-tooltip"><strong></strong></div>
   </div>
+
+  <p class="visitors-hint">Drag to spin · pinch or double-tap to zoom · tap a country for its count</p>
 
   <p class="visitors-note">
     Country comes from the network edge — no cookies, no personal data.
