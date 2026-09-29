@@ -1,9 +1,21 @@
 {
   "username": "sravanthkod",
   "profile_url": "https://letterboxd.com/sravanthkod/",
-  "fetched_at": "2026-09-26",
-  "film_count": 87,
+  "fetched_at": "2026-09-29",
+  "film_count": 88,
   "films": [
+    {
+      "title": "Agadha",
+      "year": 2026,
+      "rating": 1.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-09-27",
+      "review": "First half undhi, second half poyindi",
+      "url": "https://letterboxd.com/sravanthkod/film/agadha/",
+      "month": "September 2026",
+      "poster": "/assets/binge/posters/agadha.jpg"
+    },
     {
       "title": "Masooda",
       "year": 2022,
