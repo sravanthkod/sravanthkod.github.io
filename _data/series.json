@@ -1,0 +1,4 @@
+{
+  "_format": "Add shows to 'shows' — fields: title (required), year, rating (0-5, halves; e.g. 4.5 — omit if unrated), url (optional link, e.g. the Serializd show page), poster (optional, /assets/binge/series-posters/<name>.jpg). The list order is the display order — keep newest first. Cards render fine without year/rating/url/poster.",
+  "shows": []
+}
