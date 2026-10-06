@@ -1,9 +1,21 @@
 {
   "username": "sravanthkod",
   "profile_url": "https://letterboxd.com/sravanthkod/",
-  "fetched_at": "2026-09-29",
-  "film_count": 88,
+  "fetched_at": "2026-10-06",
+  "film_count": 89,
   "films": [
+    {
+      "title": "Ala Vaikunthapurramuloo",
+      "year": 2020,
+      "rating": 4.0,
+      "like": true,
+      "rewatch": true,
+      "watched": "2026-10-04",
+      "review": "Goated 2020 Sankranthi winnerEppdu chusina bore kottadu AA swag next levelMusic & dialogues 💥💥Expecting this range of movie from AK47 aswell, lets see",
+      "url": "https://letterboxd.com/sravanthkod/film/ala-vaikunthapurramuloo/",
+      "month": "October 2026",
+      "poster": "/assets/binge/posters/ala-vaikunthapurramuloo.jpg"
+    },
     {
       "title": "Agadha",
       "year": 2026,
