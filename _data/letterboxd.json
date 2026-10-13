@@ -1,9 +1,21 @@
 {
   "username": "sravanthkod",
   "profile_url": "https://letterboxd.com/sravanthkod/",
-  "fetched_at": "2026-10-06",
-  "film_count": 89,
+  "fetched_at": "2026-10-13",
+  "film_count": 90,
   "films": [
+    {
+      "title": "Pradhama Drishtiya Kuttakkar",
+      "year": 2026,
+      "rating": 4.0,
+      "like": true,
+      "rewatch": false,
+      "watched": "2026-10-10",
+      "review": "Starting lo lag undhi kani, travata ramp undhi, climax 💥, Drishyam ni minchina telivi. Nice watch",
+      "url": "https://letterboxd.com/sravanthkod/film/pradhama-drishtiya-kuttakkar/",
+      "month": "October 2026",
+      "poster": "/assets/binge/posters/pradhama-drishtiya-kuttakkar.jpg"
+    },
     {
       "title": "Ala Vaikunthapurramuloo",
       "year": 2020,
