@@ -17,9 +17,6 @@ news_visible: 5
       <h1 class="hero-name">Sravanth Kodavanti</h1>
       <p class="hero-role">
         Research Engineer at <a href="https://nava.com/" target="_blank" rel="noopener">Nava</a>
-        <span class="sep">·</span>
-        MS CS <span class="muted">(Computational Perception &amp; Robotics)</span> at
-        <a href="https://www.gatech.edu/" target="_blank" rel="noopener">Georgia Tech</a>
       </p>
 
       <p class="hero-bio">

@@ -20,12 +20,6 @@ order: 2
 <section class="section" id="publications">
   <div class="section-head">
     <h2>Publications</h2>
-    <div class="filterbar" role="group" aria-label="Filter publications">
-      <button type="button" class="filter is-active" data-filter="all">All</button>
-      <button type="button" class="filter" data-filter="vision">Vision</button>
-      <button type="button" class="filter" data-filter="language">Language</button>
-      <button type="button" class="filter" data-filter="first">First-author</button>
-    </div>
   </div>
 
   <div class="pub-list" id="pub-list">
@@ -33,7 +27,6 @@ order: 2
       {% include publication.html pub=pub %}
     {% endfor %}
   </div>
-  <p class="filter-empty is-hidden" id="filter-empty">No publications match this filter.</p>
 </section>
 
 <!-- ---------- Patents ---------- -->
@@ -66,29 +59,3 @@ order: 2
     </article>
   </div>
 </section>
-
-<script>
-  (function () {
-    var bar = document.querySelector('.filterbar');
-    if (!bar) return;
-    var pubs = Array.prototype.slice.call(document.querySelectorAll('#pub-list .pub'));
-    var empty = document.getElementById('filter-empty');
-
-    bar.addEventListener('click', function (e) {
-      var btn = e.target.closest('.filter');
-      if (!btn) return;
-      var f = btn.getAttribute('data-filter');
-      bar.querySelectorAll('.filter').forEach(function (b) { b.classList.toggle('is-active', b === btn); });
-
-      var shown = 0;
-      pubs.forEach(function (p) {
-        var match = f === 'all'
-          || (f === 'first' && p.getAttribute('data-first') === 'true')
-          || p.getAttribute('data-topic') === f;
-        p.classList.toggle('is-hidden', !match);
-        if (match) shown++;
-      });
-      if (empty) empty.classList.toggle('is-hidden', shown !== 0);
-    });
-  })();
-</script>
