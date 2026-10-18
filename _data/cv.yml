@@ -1,0 +1,47 @@
+# Experience and education shown on the Home page. Newest first.
+
+experience:
+  - org: Nava
+    url: "https://nava.com/"
+    role: Research Engineer
+    dates: "Oct 2026 – Present"
+    current: true
+    summary: "AI model inference optimization on GPUs."
+
+  - org: Samsung Research
+    url: "https://research.samsung.com/sri-b"
+    role: Research Engineer
+    dates: "Aug 2024 – Sep 2026"
+    summary: 'On-device optimization of LLMs, diffusion and image-restoration models via NAS, quantization, pruning and distillation. Mentor: <a href="https://www.linkedin.com/in/srinivas-s-miriyala/" target="_blank" rel="noopener">Dr. Srinivas Soumitri Miriyala</a>.'
+
+  - org: Gika Graph
+    url: "https://www.gikagraph.ai/"
+    role: AI Research Intern
+    dates: "Summer 2024"
+    summary: 'Domain-specific enterprise search with knowledge graphs &amp; RAG. Mentor: <a href="https://www.linkedin.com/in/manoj-agarwal-48b12a1/" target="_blank" rel="noopener">Dr. Manoj Agarwal</a>.'
+
+  - org: Hexagon R&amp;D
+    url: "https://hexagon.com/about/research-development"
+    role: Research Intern
+    dates: "Spring 2024"
+    summary: 'OCR models for text identification in pipeline-plant drawings. Mentor: <a href="https://www.linkedin.com/in/ankan-sengupta-a599b910/" target="_blank" rel="noopener">Ankan Sengupta</a>.'
+
+  - org: OnePlus Research
+    url: "https://www.oneplus.in/brand"
+    role: Research Intern
+    dates: "Spring 2023"
+    summary: 'Quantization and pruning of traditional and generative DL models. Mentor: <a href="https://www.linkedin.com/in/dr-c-shyam-anand-a9252039/" target="_blank" rel="noopener">Dr. C Shyam Anand</a>.'
+
+education:
+  - org: Georgia Institute of Technology
+    url: "https://www.gatech.edu/"
+    role: "MS in Computer Science"
+    detail: "Specialization: Computational Perception &amp; Robotics"
+    dates: "Aug 2026 – Present"
+    current: true
+
+  - org: Indian Institute of Technology Hyderabad
+    url: "https://iith.ac.in/"
+    role: "Bachelor's in Computer Science"
+    detail: 'Minor in Entrepreneurship · Thesis on continual learning for 3D point clouds with <a href="https://sites.google.com/site/pksrijith/home" target="_blank" rel="noopener">Dr. P K Srijith</a>'
+    dates: "Graduated 2024"

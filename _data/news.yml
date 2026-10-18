@@ -1,0 +1,36 @@
+# News items for the Home page — newest first. `text` is inline HTML.
+# The first `news_visible` items (see index.md) are shown; the rest fold
+# under "Show all".
+
+- date: 2026-10-01
+  text: 'Joined <a href="https://nava.com/" target="_blank" rel="noopener">Nava</a> as a <strong>Research Engineer</strong>, working on AI model inference optimization on GPUs.'
+- date: 2026-08-01
+  text: 'Started my <strong>MS in Computer Science</strong> (Computational Perception &amp; Robotics) at <strong>Georgia Tech</strong>.'
+- date: 2026-08-01
+  text: '<a href="https://arxiv.org/abs/2605.02767" target="_blank" rel="noopener">TOC-SR</a> accepted as an <strong>Oral</strong> at the ECCV 2026 LoViF Workshop.'
+- date: 2026-04-01
+  text: 'Our <a href="https://arxiv.org/abs/2604.18655" target="_blank" rel="noopener">multi-LoRA on-device LLM</a> paper accepted to <strong>ACL 2026 Findings</strong>.'
+- date: 2026-03-01
+  text: '3 papers accepted at <strong>CVPR 2026 Workshops</strong> — 2 Orals at Mobile AI, 1 Spotlight at WiCV.'
+- date: 2026-02-01
+  text: '<a href="https://arxiv.org/abs/2601.09823" target="_blank" rel="noopener">NanoSD</a> accepted to <strong>CVPR 2026</strong>.'
+- date: 2025-12-01
+  text: 'Reviewer for the <strong>ICLR 2026</strong> DeLTa Workshop.'
+- date: 2025-11-01
+  text: 'Serving as <strong>Area Chair</strong> and Reviewer for <strong>ICASSP 2026</strong>.'
+- date: 2025-11-01
+  text: 'Reviewer for the <strong>AAAI 2026</strong> Responsible Synthetic Data Workshop.'
+- date: 2025-09-01
+  text: 'Reviewer for <strong>NeurIPS 2025</strong> workshops (LatinX in AI, BERT2S, DynaFront) — <a href="https://sites.google.com/view/dynafrontneurips25/reviewers" target="_blank" rel="noopener">list</a>.'
+- date: 2025-07-01
+  text: 'Reviewer for the <strong>ICML 2025</strong> AI4MATH Workshop and <strong>SciPy 2025</strong> Proceedings.'
+- date: 2025-06-01
+  text: 'Reviewer for the <strong>ACL 2025</strong> Student Research Workshop.'
+- date: 2025-05-01
+  text: 'Reviewer for the <strong>ACL 2025</strong> REALM Workshop — <a href="https://aclanthology.org/anthology-files/pdf/realm/2025.realm-1.0.pdf" target="_blank" rel="noopener">proceedings</a>.'
+- date: 2024-12-01
+  text: '<a href="https://arxiv.org/abs/2601.11684" target="_blank" rel="noopener">Mobile-friendly image de-noising</a> accepted to <strong>ICASSP 2025</strong>.'
+- date: 2024-08-01
+  text: 'Joined <strong>Samsung Research</strong> (SRI-Bangalore) as a Research Engineer.'
+- date: 2024-07-01
+  text: 'Graduated from <strong>IIT Hyderabad</strong> with a Bachelor''s in CS and a minor in Entrepreneurship.'

@@ -1,0 +1,38 @@
+{%- comment -%}
+  One publication entry. Usage: {% include publication.html pub=pub %}
+  Pass compact=true to drop the long venue description (Home page).
+{%- endcomment -%}
+{%- assign pub = include.pub -%}
+{%- assign me = "Sravanth Kodavanti" -%}
+{%- assign me_bold = '<strong class="me">Sravanth Kodavanti</strong>' -%}
+<article class="pub" data-topic="{{ pub.topic }}"{% if pub.first_author %} data-first="true"{% endif %}>
+  {% if pub.image %}
+  <div class="pub-thumb">
+    <img src="{{ pub.image | prepend: site.baseurl }}" alt="" loading="lazy" decoding="async">
+  </div>
+  {% endif %}
+  <div class="pub-body">
+    <h3 class="pub-title">
+      {%- assign primary = pub.links | first -%}
+      {%- if primary and primary.name == "Paper" -%}
+        <a href="{{ primary.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+      {%- else -%}
+        {{ pub.title }}
+      {%- endif -%}
+    </h3>
+    <p class="pub-authors">{{ pub.authors | replace: me, me_bold }}</p>
+    <p class="pub-venue">
+      <span class="venue-badge">{{ pub.venue }}</span>
+      {% if pub.note %}<span class="venue-note">{{ pub.note }}</span>{% endif %}
+      {% unless include.compact %}{% if pub.venue_full %}<span class="venue-full">{{ pub.venue_full }}</span>{% endif %}{% endunless %}
+    </p>
+    {% if pub.links and pub.links.size > 0 %}
+    <div class="pub-links">
+      {% for l in pub.links %}
+        {%- assign first_char = l.url | slice: 0 -%}
+        <a class="chip" href="{% if first_char == '/' %}{{ l.url | prepend: site.baseurl }}{% else %}{{ l.url }}{% endif %}" target="_blank" rel="noopener">{{ l.name }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</article>

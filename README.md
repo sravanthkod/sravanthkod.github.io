@@ -16,23 +16,42 @@ Here is a list of the more popular blogs -
 Feel free to fork the website. It's the default Jekyll template with minor CSS modification. However, make sure you edit the analytics ID in [`_includes/analytics.html`](_includes/analytics.html) so that your website's views are not logged into my account. -->
 
 # Sravanth Kodavanti
-**Research Engineer @ Samsung Research**  
-*AI Model Optimization | Neural Architecture Search | Quantization | IIT Hyderabad CS '24*
+**Research Engineer @ Nava · MS CS @ Georgia Tech**  
+*AI Model Inference Optimization on GPUs | Ex-Samsung Research (NAS, Quantization, Pruning) | IIT Hyderabad CS '24*
 
 ![Profile](https://repository-images.githubusercontent.com/1030788758/5e3a3af9-cf58-492a-a3dd-81e426c4bd94) <!-- Replace with your photo -->
 
-📧 [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.com) | [k.sravanth@samsung.com](mailto:k.sravanth@samsung.com)  
+📧 [ramasravanthkodavanti@gmail.com](mailto:ramasravanthkodavanti@gmail.com)  
 🌐 [Portfolio](https://sravanthkod.github.io) | [LinkedIn](https://linkedin.com/in/sravanthk27) | [Twitter](https://twitter.com/sravanthkod) | [Google Scholar](https://scholar.google.com/citations?user=SiOQawIAAAAJ&hl=en)
 
 ## Recent Highlights
 | Date | Achievement |
 |------|-------------|
-| Nov 2025 | Reviewer: ICASSP 2026 ML4SP, AAAI 2026 Responsible Synthetic Data |
-| Sep 2025 | Paper submitted to ICASSP 2026 |
-| Aug 2025 | DeMoire model (NAS-optimized) → 2.2x speedup for Galaxy S26 |
-| Jul 2025 | Spot Award: Novel speculative decoding algorithm |
+| Oct 2026 | Joined Nava as Research Engineer (AI model inference optimization on GPUs) |
+| Aug 2026 | Started MS in Computer Science at Georgia Tech |
+| Aug 2026 | Paper accepted at ECCV 2026 LoViF Workshop (Oral) |
+| Apr 2026 | Paper accepted at ACL 2026 Findings |
+| Feb 2026 | NanoSD accepted at CVPR 2026 |
 
-**🔬 [View Publications & Projects →](https://sravanthkod.github.io/research/)**
+**🔬 [View Publications & Projects →](https://sravanthkod.github.io/research/)** · **📰 [News →](https://sravanthkod.github.io/#news)**
+
+---
+
+## Site structure
+
+This is a Jekyll site. Content is data-driven where it repeats:
+
+| File | Drives |
+|------|--------|
+| `_data/publications.yml` | Home "Selected research" + Research page (topic/first-author filters) |
+| `_data/news.yml` | Home "News" timeline |
+| `_data/cv.yml` | Home Experience + Education |
+| `_data/service.yml` | Service page (area chair / reviewer) |
+| `_data/navigation.yml` | Top navigation (the `life` group renders after a divider) |
+
+`index.md` is the single landing page (hero + news + selected research + experience/education). `/about/` and `/updates/` are kept only as redirects to the home page. Pages use the `page` layout, which renders `title` + `subtitle` front matter as the header.
+
+Build locally with `bundle exec jekyll serve`.
 
 ---
 *Deployed with [GitHub Pages](https://pages.github.com) & [Jekyll](https://jekyllrb.com)*

@@ -1,0 +1,14 @@
+# Professional service — used by the Home page summary and the Service page.
+
+area_chair:
+  - { venue: "ICASSP 2026", detail: "Main Track" }
+
+reviewer:
+  - { venue: "ACL 2026", detail: "Industry Track" }
+  - { venue: "ICASSP 2026", detail: "Main Track" }
+  - { venue: "ICLR 2026", detail: "DeLTa Workshop" }
+  - { venue: "AAAI 2026", detail: "Responsible Synthetic Data Workshop" }
+  - { venue: "NeurIPS 2025", detail: "LatinX in AI, BERT2S & DynaFront Workshops" }
+  - { venue: "ICML 2025", detail: "AI4MATH Workshop" }
+  - { venue: "ACL 2025", detail: "Student Research Workshop & REALM Workshop" }
+  - { venue: "SciPy 2025", detail: "Proceedings" }

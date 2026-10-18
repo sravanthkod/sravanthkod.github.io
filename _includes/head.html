@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8fafc">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- Theme resolved before first paint so there's no flash of the wrong mode -->
   <script>
@@ -14,25 +14,29 @@
       }
       document.documentElement.setAttribute('data-theme', t);
       var m = document.querySelector('meta[name="theme-color"]');
-      if (m) m.setAttribute('content', t === 'dark' ? '#0f172a' : '#f8fafc');
+      if (m) m.setAttribute('content', t === 'dark' ? '#0d1117' : '#ffffff');
     })();
   </script>
 
-  <title>{% if page.title %}Sravanth Kodavanti - {{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {% if page.description %}{% assign meta_desc = page.description %}{% elsif page.excerpt %}{% assign meta_desc = page.excerpt | strip_html | strip_newlines | truncate: 160 %}{% else %}{% assign meta_desc = site.description %}{% endif %}
+  <title>{% if page.title %}{{ page.title | escape }} · {{ site.title | escape }}{% else %}{{ site.title | escape }} · Research Engineer, Nava{% endif %}</title>
+  <meta name="description" content="{{ meta_desc | escape }}">
+  {% if page.keywords %}<meta name="keywords" content="{{ page.keywords | escape }}">{% endif %}
 
   <!-- Open Graph meta tags for social sharing and search results -->
   <meta property="og:title" content="{% if page.title %}Sravanth Kodavanti - {{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+  <meta property="og:description" content="{{ meta_desc | escape }}" />
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="{% if page.title %}Sravanth Kodavanti - {{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="twitter:description" content="{{ meta_desc | escape }}" />
   <meta name="twitter:image" content="{% if page.image %}{{ page.image | prepend: site.url }}{% else %}{{ site.url }}/assets/sravanth_profile_3.jpeg{% endif %}" />
   <meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.url }}{% else %}{{ site.url }}/assets/sravanth_profile_3.jpeg{% endif %}" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
@@ -48,9 +52,15 @@
     "jobTitle": "Research Engineer",
     "worksFor": {
       "@type": "Organization",
-      "name": "Samsung Research"
+      "name": "Nava",
+      "url": "https://nava.com/"
     },
-    "description": "Research Engineer at Samsung Research working on AI model optimization, Neural Architecture Search, Quantization, and Pruning for edge device deployment.",
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Georgia Institute of Technology", "url": "https://www.gatech.edu/" },
+      { "@type": "CollegeOrUniversity", "name": "Indian Institute of Technology Hyderabad", "url": "https://iith.ac.in/" }
+    ],
+    "knowsAbout": ["AI Inference Optimization", "GPU Inference", "Neural Architecture Search", "Quantization", "Pruning", "Edge AI"],
+    "description": "Research Engineer at Nava working on AI model inference optimization on GPUs, and MS CS student at Georgia Tech. Previously a Research Engineer at Samsung Research working on NAS, Quantization, and Pruning for edge AI.",
     "sameAs": [
       "https://www.linkedin.com/in/sravanthk27/",
       "https://github.com/sravanthkod",

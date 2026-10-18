@@ -14,3 +14,12 @@ letterboxd/
 scripts/letterboxd/*.csv
 
 __pycache__/
+
+# LaTeX build artifacts (keep only resume/*.tex; the PDF lives in assets/)
+resume/*.aux
+resume/*.log
+resume/*.out
+resume/*.fls
+resume/*.fdb_latexmk
+resume/*.synctex.gz
+resume/Sravanth_Kodavanti_CV.pdf

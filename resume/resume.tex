@@ -1,0 +1,535 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\usepackage{amsmath}
+\usepackage[dvipsnames]{xcolor}
+
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \text{\small#3} & \text{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingDouble}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
+      \textbf{\Large #1} & \textbf{\Large \small #2} \\
+      \text{\small#3} & \text{\small #4} \\
+      \textbf{#5} & \textbf{\small #6} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    % {\Huge \scshape kodavanti rama sravanth} \\ 
+    % {\Huge \scshape Rama Sravanth Kodavanti} \\ 
+    {\Huge \scshape Sravanth Kodavanti} \\ 
+    % \vspace{1pt}
+    \bigskip
+    Bengaluru, Karnataka, 560048, India  \\ \vspace{1pt}
+    \bigskip
+    
+    \small \raisebox{-0.1\height}\faPhone\ +91-9550173710 ~ \href{mailto:ramasravanthkodavanti@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{ramasravanthkodavanti@gmail.com}} ~ 
+    \href{https://linkedin.com/in/sravanthk27/}{\raisebox{-0.2\height}\faLinkedin\ \underline{sravanthk27}}  ~
+    % \href{https://github.com/Sravanth-k27}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/Sravanth-k27}}
+    \href{https://scholar.google.com/citations?user=SiOQawIAAAAJ&hl=en}{\raisebox{-0.2\height}\faGraduationCap\ \underline{Google Scholar}} ~
+    \href{https://openreview.net/profile?id=~Sravanth_Kodavanti1}{\faPenNib \ \underline{OpenReview}} ~
+    \href{https://sravanthkod.github.io/}{\raisebox{-0.2\height}\faGlobe\ \underline{Website}}
+
+    \vspace{-8pt}
+\end{center}
+\vspace{-1pt}
+\section{About}
+% Research Engineer specializing in \textbf{post-training optimization} and \textbf{efficient AI} for real-world impact. Skilled in advanced \textbf{inference optimization}, \textbf{model compression} (quantization), and \textbf{Neural Architecture Search}, delivering performance improvements in both industrial and research projects. Passionate about bridging cutting-edge AI methods with scalable solutions to address practical business needs.
+% Research Engineer specializing in \textbf{pre/post-training optimization} and \textbf{efficient AI} for real-world impact across \textbf{language} and \textbf{vision} models. Skilled in advanced \textbf{inference optimization}, \textbf{model compression} (quantization), and \textbf{Neural Architecture Search}, delivering performance improvements in both industrial and research projects. Passionate about bridging cutting-edge AI methods with scalable solutions to address practical business needs.
+
+Research Engineer specializing in \textbf{AI model inference optimization on GPUs} and \textbf{efficient AI} for \textbf{language} and \textbf{vision} models. Experienced across the full efficiency stack --- from \textbf{GPU-scale inference optimization} to \textbf{on-device model compression} via \textbf{quantization}, \textbf{pruning}, \textbf{distillation}, and \textbf{Neural Architecture Search} --- delivering measurable speedups in both industrial deployments and research. Passionate about bridging cutting-edge AI methods with scalable, practical solutions.
+
+
+
+% -----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+        {Georgia Institute of Technology} {2026 - 2028}
+      {Master of Science, \textbf{Major} - Computer Science, \textbf{Specilization} - Computational Perception and Robotics}{}
+    \resumeSubheading
+      {Indian Institute of Technology, Hyderabad}{2020 - 2024}
+      {Bachelor of Technology, \textbf{Major} - Computer Science and Engineering, \textbf{Minor} - Entrepreneurship}{CGPA - 8.58}
+  \resumeSubHeadingListEnd
+
+\section{Research Publications}
+
+\subsection*{Language:}
+
+\begin{enumerate}
+    \item \textit{\textbf{Sravanth Kodavanti}}, Sowmya Vajrala, Srinivas Miriyala \textit{et al}\\
+    \href{https://arxiv.org/abs/2604.18655}{\textcolor{Blue}{\textbf{Unlocking the Edge Deployment and On-Device Acceleration of Multi-LoRA Enabled One-for-All Foundational LLM}}},
+    \textit{ACL 2026}
+\end{enumerate}
+
+\subsection*{Vision:}
+
+\begin{enumerate}
+
+    \item Sowmya Vajrala, Akshay Bankar, Manjunath Arveti, Shreyas Pandith, \textit{\textbf{Sravanth Kodavanti}}, Subhajit Sanyal, Amit Unde, Srinivas Miriyala \\
+    \href{https://arxiv.org/abs/2605.02767}{\textcolor{Blue}{\textbf{TOC-SR: Task-Optimal Compact diffusion for Image Super Resolution}}}, \href{https://lovif-eccv2026-workshop.github.io/}{\textit{LoViF@ECCV 2026}}
+
+    \item Subhajit Sanyal*, Srinivas Miriyala*, Akshay Bankar*, Manjunath Arveti, Sowmya Vajrala, Shreyas Pandith, \textit{\textbf{Sravanth Kodavanti}}, Abhishek Ameta, Harshit, Amit Unde \\
+    \href{https://arxiv.org/abs/2601.09823}{\textcolor{Blue}{\textbf{NanoSD: Edge Efficient Foundation Model for Real Time Image Restoration}}},\\
+    \textit{CVPR 2026}
+
+    \item \textit{\textbf{Sravanth Kodavanti}}, Manjunath Arveti, Sowmya Vajrala, Srinivas Miriyala, Vikram N R \\
+    \href{https://arxiv.org/abs/2603.28405}{\textcolor{Blue}{\textbf{EdgeDiT: Hardware-Aware Diffusion Transformers for Efficient On-Device Image Generation}}}, \href{https://ai-benchmark.com/workshops/mai/2026/}{\textit{Mobile AI@CVPR 2026}}
+
+    \item Sowmya Vajrala, \textit{\textbf{Sravanth Kodavanti}}, Srinivas Miriyala, \\
+    \textcolor{Blue}{\textbf{Hardware-aware Low Light Image Enhancement on Edge}}, \href{https://www.wicv.org/}{\textit{WiCV@CVPR 2026}}
+
+    \item Sowmya Vajrala, Akash Parmar, Prasanna R, \textit{\textbf{Sravanth Kodavanti}}, Manjunath Arveti, Srinivas Miriyala, Ashok Kumar \\ 
+    \href{https://arxiv.org/abs/2603.29535}{\textcolor{Blue}{\textbf{Quantization with Unified Adaptive Distillation to enable multi-LoRA based one-for-all Generative Vision Models on edge}}},
+    \href{https://ai-benchmark.com/workshops/mai/2026/}{\textit{Mobile AI@CVPR 2026}}
+
+    \item Srinivas Miriyala*, Sowmya Vajrala*, Hitesh Kumar, \textit{\textbf{Sravanth Kodavanti}}, Vikram N R\\
+    \href{https://arxiv.org/abs/2601.11684}
+    {\textcolor{Blue}{\textbf{Mobile-friendly Image De-noising: Hardware-Conscious Optimization for Edge Application}}},\\
+    \textit{ICASSP 2025}
+    
+\end{enumerate}
+
+\subsection*{Preprints:}
+
+\begin{enumerate}
+        \item \textit{\textbf{Sravanth Kodavanti*}}, Manjunath Arveti \\
+        \textcolor{Blue}{\textbf{MOSAIC: Multi-Objective Search for Allocating Inference Cache Across LLM Decoder Layers}}, \textit{Preprint}
+        \item Sowmya Vajrala, \textit{\textbf{Sravanth Kodavanti}}, Manjunath Arveti, Shreyas Kasture, Utsav Tiwari, Uttam Kumar, Sriharsha, Vikram N R, Sharan Allur, Euntaik Lee, Dohyoung Kim, Rajib Basu \\
+        \textcolor{Blue}{\textbf{Layer-Conditioned Forecast Token Modulation: A Lightweight Framework for On-Device Speculative Decoding}}, \textit{Preprint}
+        \item \textit{\textbf{Sravanth Kodavanti}}, Srinivas Miriyala, Sowmya Vajrala, Vikram N R, Sharan Allur\\
+    \href{https://arxiv.org/abs/2605.02794}{\textcolor{Blue}{\textbf{Edge-Efficient Image Restoration: Transformer Distillation into State-Space Models}}}, \\
+    \textit{Preprint}
+    
+    \item Sowmya Vajrala*, Srinivas Miriyala*, \textit{\textbf{Sravanth Kodavanti}}\\
+    \href{https://arxiv.org/abs/2601.11685}{\textcolor{Blue}{\textbf{Towards Efficient Image Deblurring for Edge Deployment}}},
+    \textit{Preprint}
+\end{enumerate}
+
+% \resumeItemListEnd
+
+\section{Patents}
+% \resumeItemListStart
+\begin{enumerate}
+        \item \textit{\textbf{Sravanth Kodavanti*}}, Sowmya Vajrala, Srinivas Miriyala, Nikita Malik, Vikram N R\\
+    \textcolor{Blue}{\textbf{(Mobile SWA) Multi - objective Optimization for Balanced Inference - time Latency - efficient and Eviction - aware SWA}}.\\
+    \textbf{Provisional Specification Filed}. Proposes a dynamic window for generic token eviction algorithms reducing KV Cache without significant drop in accuracy of LLMs.
+    \item \textit{\textbf{Sravanth Kodavanti*}}, Srinivas Miriyala*, Sowmya Vajrala*\\
+    \textcolor{Blue}{\textbf{System and Method for Accelerating On-Device Large Language Model Inference}}.\\
+    \textbf{Complete Specification Filed}. Proposes a novel self-speculative decoding technique to significantly improve efficiency and reduce latency in LLM inference on edge devices.
+\end{enumerate}
+
+
+% \resumeItemListEnd
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+
+    \resumeSubheading
+      {\href{https://nava.com/}{Nava}}{Oct 2026 -- Present}
+      {\textbf{Research Engineer}}{}
+    
+    \resumeItemListStart
+      \resumeItem{Working on \textbf{AI model inference optimization on GPUs} for large-scale models, spanning post-training optimization and efficient AI serving.}
+    \resumeItemListEnd
+
+        \resumeSubheading
+      {Samsung Research Institute Bangalore}{Aug 2024 - Sep 2026}
+      {\textbf{Machine Learning Research Engineer}}{\textit{\textbf{Mentor:} \href{https://in.linkedin.com/in/srinivas-s-miriyala}{\color{Blue}\textbf{Dr. Srinivas Miriyala}}}}
+      \resumeItemListStart
+      % \resumeItem{Working on \textbf{Samsung Neural Acceleration Platform} for AI Model acceleration \& their deployment in mobile devices. Using Techniques such as \textbf{Neural Architecture Search} (NAS) \& \textbf{Quantization} for model acceleration.}
+      % \resumeItem{Using Techniques such as \textbf{Neural Architecture Search} (NAS) \& \textbf{Quantization} for model acceleration.}
+      \resumeItem{Developing \textbf{Samsung Neural Acceleration Platform} for AI model acceleration and deployment on mobile devices, leveraging \textbf{Neural Architecture Search} (NAS) , \textbf{Quantization} and other techniques for performance optimization.}
+      \resumeItem{\textbf{Commercialization \& Impact: }
+      
+      \begin{enumerate}
+        \item \textbf{Accelerated inference speed} or the \textbf{Samsung LLM Gauss - L, 3B/3.5B Model} by implementing 
+        \begin{itemize}
+
+        \item \textbf{Speculative Decoding}, achieving a \textbf{2X improvement} in tokens per second (toks/sec), Successfully integrated into the \textbf{Samsung S25 series}. 
+        \item Developed \textbf{PULSE}: a novel in-house \textbf{self-speculative decoding} algorithm, achieving a \textbf{5X improvement} in tokens per second (toks/sec). Method targeted for \textbf{Samsung S26 series}.
+        \end{itemize}
+          % \item \textbf{Accelerated on-device inference} for the \textbf{Samsung LLM Gauss - L, 3B Model} by implementing \textbf{Speculative Decoding}, achieving a \textbf{2X improvement} in tokens per second (toks/sec). Successfully integrated into the \textbf{Samsung S25 flagship series}.
+        % \item \textbf{Developed NAS and quantization-based models} for \textbf{low-light video de-noising} (\textbf{2.5}× faster; deployed on \textbf{Samsung A56}), \textbf{demoire artifact removal} (\textbf{2.2}× faster; targeted for \textbf{Galaxy S26}) and \textbf{Text to Image: Stable Diffusion} (\textbf{2.3}× faster; targeted for \textbf{Galaxy S26}) delivering advanced, commercialization-ready imaging solutions.
+          % \item  \textbf{Optimized low-light video de-noising model} using \textbf{NAS}, \textbf{Quantization}, achieving a \textbf{2.5× speedup in inference}. Successfully deployed in the \textbf{Samsung A56 device}.
+
+    \item Developed \textbf{NAS and quantization} driven models delivering advanced, commercialization-ready imaging solutions, including:
+    \begin{itemize}
+        \item UNet-based model for \textbf{low-light video de-noising} (\textbf{2.5}× speedup; deployed on \textbf{Samsung Galaxy A56}),
+        \item UNet-based model for \textbf{demoire artifact removal} (\textbf{2.2}× speedup; targeted for \textbf{Galaxy S26}),
+        \item Stable Diffusion-based model for \textbf{text-to-image generation, motion photo enhancement, and related use-cases} (\textbf{2.3}× speedup; targeted for \textbf{Galaxy S26})
+    \end{itemize}
+      \end{enumerate} }
+    % \resumeItem{\textbf{Research Publications:}
+    % \begin{enumerate}
+    %     \item \href{https://ieeexplore.ieee.org/document/10888855}{\color{Blue}\textbf{Mobile-friendly Image De-noising: Hardware Conscious Optimization for Edge Application}}, % \textbf{Mobile-friendly Image De-noising: Hardware Conscious Optimization for Edge Application}, 
+    %     % \textit{IEEE ICASSP, } 2025.
+    %     \textit{Proc. IEEE Int. Conf. Acoust., Speech, Signal Process. (ICASSP), }2025.
+    % \end{enumerate}
+    %     } 
+% \resumeItem{\textbf{Patents:}
+%     \begin{enumerate}
+%         \item {\color{Blue}\textbf{System and Method for Accelerating On-Device Large Language Model Inference}}. \textbf{Provisional specification filed}. Proposes a novel self-speculative decoding technique to significantly optimize the efficiency and latency of LLM inference on edge devices.
+%     \end{enumerate}
+% }
+
+
+\resumeItem{\textbf{Awards \& Recognition:}
+% \resumeItem{\textbf{Awards \& Recognition:}
+\begin{enumerate}
+
+    % \item \textbf{Spot Award (Q4 2025)} – For contributions towards NAS commericilization \& Research Projects.
+    
+    \item \textbf{Advance Development(Q2 2026) \& Spot Award (Q2 2025)} – For novel speculative decoding algorithm enhancing LLM acceleration.
+    
+    \item \textbf{MD Project Incentive Award (2024–25)} – For AI model optimizations and deployment on edge devices.
+    
+    \item \textbf{Team Awesome Award (Q4 2024)} – For on-device optimization of \textbf{Samsung Gauss - L} in \textbf{S25} mobile series.
+\end{enumerate}
+}
+
+% }
+
+      % \resumeItem{Been part of AI Model Commercialization }
+      \resumeItemListEnd
+% \resumeSubheading
+%   {Research Reviewer}{2025 -- Present}
+%   {Peer-Reviewed Conferences and Workshops}{}
+%   \resumeItemListStart
+%     \resumeItem{Reviewed research submissions for \href{https://icml.cc/}{\color{Blue}\textbf{ICML}}, \href{https://neurips.cc/}{\color{Blue}\textbf{NeurIPS}},
+%     \href{https://www.aclweb.org/portal/}{\color{Blue}\textbf{ACL}}
+%     workshops \& conferences.}
+%     \resumeItem{Provided thorough and constructive feedback to help ensure high standards of academic quality and rigor.}
+%   \resumeItemListEnd
+
+
+
+        \resumeSubheading   
+      {Stealth Startup - \href{https://gikagraph.ai/}{\color{Blue}\textbf{Gika Graph.AI}}}{June 2024 - Aug 2024}
+      {\textbf{AI Researcher}}{\textit{\textbf{Mentor:} \href{https://www.linkedin.com/in/manoj-agarwal-48b12a1/}{\color{Blue}\textbf{Dr. Manoj Agarwal}}}}
+      \resumeItemListStart
+      % \resumeItem{Worked on a thesis for proving \textbf{Knowledge Graphs} (KG) are better than \textbf{Vector Databases} in \textbf{Retrieval Augmented Generation} (RAG).}
+      \resumeItem{Developed domain-specific search engines leveraging \textbf{Knowledge Graphs} (KG) to enhance semantic accuracy. Improved \textbf{Retrieval Augmented Generation} by using KG over vector databases for more precise, context-aware retrieval.}
+      \resumeItem{Handled \textbf{Coreference} and \textbf{Entity Resolution} for fine-tuning data using LLMs such as \textbf{GPT-4, GPT-4o}, \textbf{LLAMA3}, \textbf{SpanBERT}, and \textbf{LingMess} with the \textbf{SpaCy} AI framework.}
+      \resumeItemListEnd
+       \vspace{5pt}
+      \resumeSubheading
+      {Hexagon R \& D India}{Jan 2024 - June 2024}
+      {\textbf{Machine Learning Intern}}{\textit{\textbf{Mentor:} \href{https://in.linkedin.com/in/ankan-sengupta-a599b910}{\color{Blue}\textbf{Ankan Sengupta}}}}
+      \resumeItemListStart
+      \resumeItem{Developed a website for implementing segmentation $\&$ classification based on tags of various manufacturing plant sketches.Used various segmentation algorithms such as \textbf{RANSAC}, \textbf{DBSCAN}, \textbf{K-Means}.}
+      \resumeItem{Used \textbf{Azure form recognizer} models \& other OCR models for tag identification.}
+      \resumeItem{Developed a \textbf{flask website} for text recognition on manufacturing plant sketches using \textbf{Form, Doc Recognizer} \& also used OCR models for tag identification.}
+      \resumeItem{ Involved in an \textbf{LLM }research project. Compared the results for text generation between \textbf{Mixtral}, \textbf{Mistral}, \textbf{LLAMA2}.}
+      \resumeItemListEnd
+% `    \vspace{5pt}
+% \\
+    \resumeSubheading
+      {OnePlus / Oppo (OPLUS) Mobiles India R \& D}{Jan 2023 - June 2023}
+      % {\textbf{Deep Learning Intern - Device AI}}{}
+      {\textbf{Research Intern - Device AI}}{\textit{\textbf{Mentor:} \href{https://www.linkedin.com/in/dr-c-shyam-anand-a9252039/}{\color{Blue}\textbf{Dr. C Shyam Anand}}}}
+      \resumeItemListStart
+        \resumeItem{Implemented model compression techniques called \textbf{Quantization} , \textbf{Pruning }\& \textbf{Distillation} on various deep learning models such as \textbf{ResNet} , \textbf{Yolo} , \textbf{ViTs} , \textbf{ConvNeXt} , \textbf{Stable Diffusion Models} \& \textbf{Large Language Models} (LLAMA) . \textbf{Compressed all these models for deploying in mobile devices.}}
+        \resumeItem{ Involved in research work on \textbf{Neural Style Transfer} (NST).}
+        \resumeItem{Impemented a DL model for \textbf{LaTeX - OCR} task . The model's aim is to detect \& recognize the mathematical equations present in a research paper. Compressed the model for the integration with edge devices.}
+      \resumeItemListEnd
+         \vspace{5pt}
+    % \resumeSubheading
+    %   {Department of Computer Science , IIT Hyderabad}{Nov 2021 - Apr 2024}
+    %   {\textbf{Teaching Assistant}}{}
+    %   \resumeItemListStart
+    %      \resumeItem{I have worked as a \textbf{TA} for the courses \textbf{Operating Systems} (CS3510) under \textit{Prof.} Sathya Peri , \textbf{Discrete Maths} (CS1010) under \textit{Prof.} Rakesh Venkat , \textbf{DBMS} (CS3550) under \textit{Prof.} Manish Singh \& \textbf{Theory of Computation} (CS2030) under \textit{Prof.} Subramanyam Kalyanasundaram. }
+    % \resumeItemListEnd
+ 
+    
+  \resumeSubHeadingListEnd
+% \vspace{-10pt}
+\section{Teaching Experience}
+    \resumeSubHeadingListStart
+    \resumeSubheading
+      {Department of Computer Science , IIT Hyderabad}{Nov 2021 - Apr 2024}
+      {\textbf{Teaching Assistant}}{}
+      \resumeItemListStart
+         % \resumeItem{I have worked as a \textbf{TA} for the courses \textbf{Operating Systems} (CS3510) under \textit{Prof.} Sathya Peri , \textbf{Discrete Maths} (CS1010) under \textit{Prof.} Rakesh Venkat , \textbf{DBMS} (CS3550) under \textit{Prof.} Manish Singh \& \textbf{Theory of Computation} (CS2030) under \textit{Prof.} Subramanyam Kalyanasundaram. }
+         \resumeItem{Served as a \textbf{Teaching Assistant} for multiple courses, including:
+\begin{enumerate}
+\item \textbf{Operating Systems} (CS3510) under \textit{\href{https://people.iith.ac.in/sathya_p/}{\color{Blue}\textbf{Dr. Sathya Peri}}}
+\item \textbf{Discrete Mathematics} (CS1010) under \textit{\href{https://people.iith.ac.in/rakeshvenkat/}{\color{Blue}\textbf{Dr. Rakesh Venkat}}}
+\item \textbf{Database Management Systems} (CS3550) under \textit{\href{https://people.iith.ac.in/msingh/}{\color{Blue}\textbf{Dr. Manish Singh}}}
+\item \textbf{Theory of Computation} (CS2030) under \textit{\href{https://people.iith.ac.in/subruk/}{\color{Blue}\textbf{Dr. Subrahmanyam Kalyanasundaram}}}
+\end{enumerate}
+}
+    \resumeItemListEnd
+    \resumeSubHeadingListEnd
+    \vspace{-10pt}
+\section{Research Community Service}
+
+\resumeSubHeadingListStart
+\resumeSubheading
+  {Research Reviewer}{2025 -- Present}
+  % {Peer-Reviewed Conferences and Workshops}{}
+  {}{}
+  \resumeItemListStart
+    \resumeItem{\textbf{Reviewer}:  
+    \href{https://icml.cc/}{\color{Blue}\textbf{ICML}}, 
+    \href{https://neurips.cc/}{\color{Blue}\textbf{NeurIPS}},
+    \href{https://iclr.cc/}{\color{Blue}\textbf{ICLR}},
+    \href{https://www.aclweb.org/portal/}{\color{Blue}\textbf{ACL}},
+    \href{https://aaai.org/conference/aaai/}{\color{Blue}\textbf{AAAI}} \&
+    \href{https://2026.ieeeicassp.org/}{\color{Blue}\textbf{ICASSP}}
+    workshops and main tracks.}
+    % \resumeItem{Provided constructive feedback to maintain academic rigor and contribute to the research community.}
+    \resumeItem{\textbf{Area Chair}: \href{https://2026.ieeeicassp.org/}{\color{Blue}\textbf{ICASSP'26}}}
+  \resumeItemListEnd
+  \resumeSubHeadingListEnd
+% \section{Research Community Service}
+% \resumeSubheading
+% {Research Reviewer}{2025 -- Present}
+% {}{}
+% \vspace{-10pt}
+% \resumeItemListStart
+% \resumeItem{Reviewed submissions for \href{https://icml.cc/}{\color{Blue}\textbf{ICML}}, \href{https://neurips.cc/}{\color{Blue}\textbf{NeurIPS}}, and \href{https://www.aclweb.org/portal/}{\color{Blue}\textbf{ACL}} workshops.}
+% \resumeItem{Provided constructive feedback to ensure quality and rigor.}
+% \resumeItemListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+%     \vspace{-5pt}
+    \resumeSubHeadingListStart
+          \resumeProjectHeading
+      {\textbf{Continual Learning for 3D Point Cloud}}{\textit{\textbf{Guide:} \href{https://sites.google.com/site/pksrijith/home}{\color{Blue}\textbf{Dr. P K Srijith}}}}
+      \resumeItemListStart
+        \resumeItem{Implemented Continual Learning on \textbf{Pointnet} architecture by addressing the challenge of catastrophic forgetting.}
+        \resumeItem{Implemented \textbf{Knowledge Distillation} approach for the Continual Learning \& Model was trained on \textbf{ModelNet10} dataset.}
+          \resumeItemListEnd
+          \vspace{-15pt}
+      \resumeProjectHeading 
+        {\textbf{Computer Vision \& NLP} $|$ Personal Projects}{}
+        \resumeItemListStart
+         \resumeItem{Image denoising using \textbf{Auto - Encoders }. Model trained on \textbf{MNIST} dataset.}
+         \resumeItem{Human Face generation using \textbf{GANs} . Model trained on \textbf{celeba} dataset.}
+         \resumeItem{Underwater Object Detection and Classification using \textbf{DGYOLO}. Model trained on \textbf{URPC 2019} dataset.}
+          \resumeItemListEnd
+%            \vspace{-15pt}
+%         \newpage
+%         \resumeProjectHeading
+%        {\textbf{Optimizing B - Spline curves for robot navigation - IoT} $|$\textit{ Prof.} P.Rajyalakshmi} {}
+%        \resumeItemListStart
+%      \resumeItem{Developed path planning algorithm for robot navigation using B - Spline curves.}
+%      \resumeItem{Optimized the algorithm by changing the parameters using RoS \& Gazebo.}
+%      \resumeItemListEnd
+%         \vspace{-15pt}
+%        \resumeProjectHeading
+%       {\textbf{Reliable Data Transfer (RDT) over UDP with various protocols} $|$ \textit{Prof.}  Praveen Tamanna }{}
+%       \resumeItemListStart
+%         \resumeItem{Simulated file transfer between UDP sockets in sender \& receiver using \textbf{Stop and Wait} \& \textbf{Go back N}  protocols.}
+%         \resumeItem{Compared the average throughput by varying the retransmission timeout \& window size.}
+%          \resumeItemListEnd
+%          \vspace{-15pt}
+%          \resumeProjectHeading
+%       {\textbf{Ray Striker 2D} $|$ \textit{Prof.} Saurabh Joshi }{}
+%       \resumeItemListStart
+%         \resumeItem{Designed a 2D game naming \textbf{Ray Stricker 2D} in cpp using OOPs concepts.}
+%         \resumeItem{Gained some fundamental knowledge of writing text-based user interface in a terminal independent manner.
+% }
+%          \resumeItemListEnd
+        %   \vspace{-15pt}
+        %          \resumeProjectHeading 
+        % {\textbf{Database Model for Scientific Research Papers} $|$ \textit{Prof.} Manahor Kaul} {}
+        % \resumeItemListStart
+        % \resumeItem{Designed a Relational Database from scratch for Scientifc Research Papers.}
+        % \resumeItem{Populated Database with the entries from the Research Paper Datasets using PostgreSQL.}
+        % \resumeItemListEnd
+        %   \vspace{-15pt}
+        % \resumeProjectHeading 
+        % {\textbf{Web Development - Publication Management System }$|$ \textit{Prof.} Manish Singh} {}
+        % \resumeItemListStart
+        % \resumeItem{Developed a website for managing the publications submitted to the conferences.}
+        % \resumeItem{Used \textbf{Python}, \textbf{SQL} for developing the website.}
+        % \resumeItemListEnd
+%           \vspace{-15pt}
+%         \resumeProjectHeading 
+%         {\textbf{GraphIT - Compiler for custom language} $|$ \textit{Prof.} Ramakrishna Upadrasta} {}
+%         \resumeItemListStart
+%         \resumeItem{Developed a compiler for new langauge GraphIT , which uses graph as basic inbuilt data type \& has syntax for graph operations.
+%         \resumeItem{Used \textbf{Flex}, \textbf{Bison}, \textbf{LLVM backend} for developing the compiler.}}
+%         \resumeItemListEnd
+%          \vspace{-5pt}
+
+
+
+ 
+          % \vspace{-20pt}
+  
+% \vspace{-15pt}
+
+% 
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    % \small{
+    \item{
+     \textbf{Languages}{:  C, C++, Python, JavaScript} \\
+     \vspace{5pt}
+     \textbf{Frameworks \& Tools }{:  PyTorch, Tensorflow, ONNX, Hugging Face, Docker, Git, LaTeX, Markdown } \\
+     \vspace{5pt}
+     \textbf{HPC Frameworks}{: CUDA, Triton, DeepSpeed, TensorRT, ONNX Runtime}
+     % \textbf{Operating Systems }{: Linux, Windows} \\
+     % \textbf{Familiar}{: Tensorrt, JavaScript}\\
+    }
+    % }
+ \end{itemize}
+ \vspace{-16pt}
+
+\section{Achievements}
+    % \resumeSubHeadingListStart
+    \resumeItemListStart
+    % \resumeItem{Secured AIR \textbf{1156} in Open Category \& AIR \textbf{91} in EWS Category in IIT JEE Advanced 2020.}
+    \resumeItem{Rank \textbf{1156} in IIT JEE Advanced 2020 among \textbf{150,000} participants.}
+    % \resumeItem{Secured AIR \textbf{493} in Open Category \& AIR \textbf{45} in EWS Category in JEE Main B Planning 2020.}
+    \resumeItem{Rank \textbf{493} in JEE Main B Planning 2020 among \textbf{59,000} participants.}
+    \resumeItem{\textbf{99.75} percentile in IIT JEE Main 2020 among \textbf{1.1 Million} participants.}
+    \resumeItem{AP EAMCET 2020 Rank \textbf{135} among \textbf{156,000} participants.}
+    \resumeItem{TS EAMCET 2020 Rank \textbf{307} among \textbf{143,000} paricipants.}
+    % \resumeItem{Solved around 700+ CP problems over multiple platforms \href{https://leetcode.com/KRS27/}{\color{Blue}LeetCode} , \href{https://www.codechef.com/users/sravanthk27}{\color{Blue}CodeChef} , \href{https://codeforces.com/profile/mrsravanth}{\color{Blue}CodeForces} , \href{https://auth.geeksforgeeks.org/user/ramasravanthkodavanti}{\color{Blue}GeeksForGeeks}.}
+    \resumeItem{Solved around 700+ CP problems over multiple platforms \href{https://leetcode.com/sravanthkod/}{\color{Blue}LeetCode} , \href{https://www.codechef.com/users/sravanthk27}{\color{Blue}CodeChef} , \href{https://codeforces.com/profile/mrsravanth}{\color{Blue}CodeForces} , \href{https://auth.geeksforgeeks.org/user/ramasravanthkodavanti}{\color{Blue}GeeksForGeeks}.}
+    \resumeItemListEnd
+    
+%-----------INVOLVEMENT---------------
+\section{Leadership / Extracurricular}
+    % \resumeSubHeadingListStart
+    %     \resumeSubheading{Fraternity}{Spring 2020 -- Present}{President}{University Name}
+            \resumeItemListStart
+                \resumeItem{Worked as a Core member for \textbf{Epoch : AI-ML club of IITH}.}
+                \resumeItem{Worked as an \textbf{Internship} \& \textbf{Placement} Coordinator for Office of Carrer Service of IITH.}
+                \resumeItem{Member of IITH \textbf{Chess} team , Represented IITH at \textbf{InterIIT }\& various competitions.}
+            \resumeItemListEnd
+        
+    \resumeSubHeadingListEnd
+
+
+\end{document}

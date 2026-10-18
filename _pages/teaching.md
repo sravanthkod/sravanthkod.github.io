@@ -1,70 +1,45 @@
 ---
 layout: page
 title: Teaching
+subtitle: "Teaching assistant in the Department of CSE at IIT Hyderabad."
 permalink: /teaching/
+description: "Courses Sravanth Kodavanti has assisted as a teaching assistant at IIT Hyderabad: Theory of Computation, Databases, Operating Systems, and Discrete Mathematics."
 order: 4
 ---
 
-As a Teaching Assistant in the [Department of Computer Science and Engineering, IIT Hyderabad](https://cse.iith.ac.in/), I have played a key role in supporting instructors, mentoring students, and fostering a collaborative learning environment. My TA assignments gave me the opportunity to facilitate discussions, organize labs and tutorials, and help deliver challenging course content with clarity and engagement.
+<p class="lede">
+  As a teaching assistant in the
+  <a href="https://cse.iith.ac.in/" target="_blank" rel="noopener">Department of CSE, IIT Hyderabad</a>,
+  I ran tutorials and labs, designed and graded assessments, and mentored students across four core courses.
+</p>
 
-<div style="margin-top: 30px; margin-bottom: 30px; border-bottom: 3px solid var(--color-accent); padding-bottom: 10px;"><h2 style="margin: 0; display: inline;">📖 Courses Assisted</h2></div>
+<section class="section">
+  <div class="section-head"><h2>Courses assisted</h2></div>
+  <div class="card-list">
 
-<div class="research-container">
+    <article class="card">
+      <h3>Theory of Computation</h3>
+      <p class="card-meta">Spring 2024 · <a href="https://people.iith.ac.in/subruk/" target="_blank" rel="noopener">Dr. Subrahmanyam Kalyanasundaram</a>, <a href="https://people.iith.ac.in/karteek/" target="_blank" rel="noopener">Dr. Karteek Sreenivasaiah</a></p>
+      <p>Led tutorials, prepared practice problems, and coordinated assignments and assessments with timely feedback.</p>
+    </article>
 
-<div class="publication-item">
-  <div class="publication-details">
-    <h4>Theory of Computation</h4>
-    <p><strong>Term:</strong> Spring 2024</p>
-    <p><strong>Instructors:</strong> <a href="https://people.iith.ac.in/subruk/">Dr. Subrahmanyam Kalyanasundaram</a>, <a href="https://people.iith.ac.in/karteek/">Dr. Karteek Sreenivasaiah</a></p>
-    <p><strong>Highlights:</strong></p>
-    <ul style="margin-left: 20px; color: var(--color-text-muted);">
-      <li>Assisted in lectures, prepared practice problems, and supported student queries during tutorials.</li>
-      <li>Coordinated assignments and assessments, ensuring timely and constructive feedback.</li>
-    </ul>
+    <article class="card">
+      <h3>Database Management Systems</h3>
+      <p class="card-meta">Fall 2023 · <a href="https://people.iith.ac.in/msingh/" target="_blank" rel="noopener">Dr. Manish Singh</a></p>
+      <p>Guided lab sessions, clarified core concepts, and contributed to assignment design, grading and office hours.</p>
+    </article>
+
+    <article class="card">
+      <h3>Operating Systems</h3>
+      <p class="card-meta">Spring 2022 · <a href="https://people.iith.ac.in/sathya_p/" target="_blank" rel="noopener">Dr. Sathya Peri</a></p>
+      <p>Supervised lab exercises on OS concepts and supported students through programming projects and evaluation.</p>
+    </article>
+
+    <article class="card">
+      <h3>Discrete Mathematics</h3>
+      <p class="card-meta">Spring 2021 · <a href="https://people.iith.ac.in/rakeshvenkat/" target="_blank" rel="noopener">Dr. Rakesh Venkat</a></p>
+      <p>Ran discussion sections and problem-solving sessions, and assisted with quiz design and grading.</p>
+    </article>
+
   </div>
-</div>
-
-<div class="publication-item">
-  <div class="publication-details">
-    <h4>Database Management System</h4>
-    <p><strong>Term:</strong> Fall 2023</p>
-    <p><strong>Instructor:</strong> <a href="https://people.iith.ac.in/msingh/">Dr. Manish Singh</a></p>
-    <p><strong>Highlights:</strong></p>
-    <ul style="margin-left: 20px; color: var(--color-text-muted);">
-      <li>Guided lab sessions and clarified core database concepts for students.</li>
-      <li>Contributed to assignment design, grading, and provided individual guidance during office hours.</li>
-    </ul>
-  </div>
-</div>
-
-<div class="publication-item">
-  <div class="publication-details">
-    <h4>Operating Systems</h4>
-    <p><strong>Term:</strong> Spring 2022</p>
-    <p><strong>Instructor:</strong> <a href="https://people.iith.ac.in/sathya_p/">Dr. Sathya Peri</a></p>
-    <p><strong>Highlights:</strong></p>
-    <ul style="margin-left: 20px; color: var(--color-text-muted);">
-      <li>Supported lectures by managing and supervising lab exercises on OS concepts.</li>
-      <li>Assisted in assignment evaluation and offered hands-on programming project support.</li>
-    </ul>
-  </div>
-</div>
-
-<div class="publication-item">
-  <div class="publication-details">
-    <h4>Discrete Mathematics</h4>
-    <p><strong>Term:</strong> Spring 2021</p>
-    <p><strong>Instructor:</strong> <a href="https://people.iith.ac.in/rakeshvenkat/">Dr. Rakesh Venkat</a></p>
-    <p><strong>Highlights:</strong></p>
-    <ul style="margin-left: 20px; color: var(--color-text-muted);">
-      <li>Led discussion sections and facilitated additional problem-solving sessions.</li>
-      <li>Assisted with quiz design and grading to support student learning.</li>
-    </ul>
-  </div>
-</div>
-
-</div>
-
----
-
-*My experience as a TA has strengthened my communication and teamwork skills, deepened my understanding of computer science fundamentals, and affirmed my commitment to student-centered education.*
+</section>

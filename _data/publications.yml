@@ -1,0 +1,126 @@
+# Publications — single source of truth for the Home ("Selected") and
+# Research pages. Newest first.
+#
+#   authors : plain string; "Sravanth Kodavanti" is bolded automatically
+#   venue   : short badge text (e.g. "CVPR 2026")
+#   venue_full : longer description shown next to the badge
+#   note    : optional highlight (Oral / Spotlight)
+#   topic   : language | vision  (drives the Research page filter)
+#   year    : number, or "Preprint"
+#   selected: true → shown on the Home page
+#   first_author: true → counted in the "first-author" filter
+
+- title: "Unlocking the Edge Deployment and On-Device Acceleration of Multi-LoRA Enabled One-for-All Foundational LLM"
+  authors: "Sravanth Kodavanti, Sowmya Vajrala, Srinivas Miriyala, Utsav Tiwari, Uttam Kumar, Utkarsh Kumar Mahawar, Achal Pratap Singh, Arya D, Narendra Mutyala, Vikram Nelvoy Rajendiran, Sharan Kumar Allur, Euntaik Lee, Dohyoung Kim, HyeonSu Lee, Gyusung Cho, JungBae Kim"
+  venue: "ACL 2026"
+  venue_full: "Findings of the Association for Computational Linguistics"
+  year: 2026
+  topic: language
+  image: /assets/LLM_Meta_Image.png
+  selected: true
+  first_author: true
+  links:
+    - { name: Paper, url: "https://arxiv.org/abs/2604.18655" }
+    - { name: Poster, url: "/assets/ACL_2026_Poster.pdf" }
+    - { name: Slides, url: "/assets/ACL_2026_Presentation.pdf" }
+    - { name: Video, url: "https://www.youtube.com/watch?v=kljdzM_Dk68" }
+
+- title: "TOC-SR: Task-Optimal Compact Diffusion for Image Super Resolution"
+  authors: "Sowmya Vajrala, Akshay Bankar, Manjunath Arveti, Shreyas Pandith, Sravanth Kodavanti, Subhajit Sanyal, Amit Unde, Srinivas Miriyala"
+  venue: "ECCV 2026 W"
+  venue_full: "LoViF Workshop, European Conference on Computer Vision"
+  note: Oral
+  year: 2026
+  topic: vision
+  image: /assets/ToC_SR_Meta_Image.png
+  selected: true
+  links:
+    - { name: Paper, url: "https://arxiv.org/abs/2605.02767" }
+
+- title: "NanoSD: Edge Efficient Foundation Model for Real Time Image Restoration"
+  authors: "Subhajit Sanyal, Srinivas Miriyala, Akshay Bankar, Manjunath Arveti, Sowmya Vajrala, Shreyas Pandith, Sravanth Kodavanti, Abhishek Ameta, Harshit, Amit Unde"
+  venue: "CVPR 2026"
+  venue_full: "IEEE/CVF Conference on Computer Vision and Pattern Recognition"
+  year: 2026
+  topic: vision
+  image: /assets/NanoSD_Meta_Image.png
+  selected: true
+  links:
+    - { name: Paper, url: "https://arxiv.org/abs/2601.09823" }
+    - { name: Poster, url: "/assets/NanoSD_CVPR_2026_Poster.png" }
+    - { name: Video, url: "https://youtu.be/vIJ0tOi9MEg" }
+
+- title: "EdgeDiT: Hardware-Aware Diffusion Transformers for Efficient On-Device Image Generation"
+  authors: "Sravanth Kodavanti, Manjunath Arveti, Sowmya Vajrala, Srinivas Miriyala, Vikram N R"
+  venue: "CVPR 2026 W"
+  venue_full: "Mobile AI Workshop, CVPR"
+  note: Oral
+  year: 2026
+  topic: vision
+  image: /assets/Edge_DiT_Meta_Image.png
+  selected: true
+  first_author: true
+  links:
+    - { name: Paper, url: "https://arxiv.org/abs/2603.28405" }
+
+- title: "Quantization with Unified Adaptive Distillation to Enable Multi-LoRA based One-for-All Generative Vision Models on Edge"
+  authors: "Sowmya Vajrala, Aakash Parmar, Prasanna R, Sravanth Kodavanti, Manjunath Arveti, Srinivas Soumitri Miriyala, Ashok Senapati"
+  venue: "CVPR 2026 W"
+  venue_full: "Mobile AI Workshop, CVPR"
+  note: Oral
+  year: 2026
+  topic: vision
+  image: /assets/QUAD_Meta_Image.png
+  links:
+    - { name: Paper, url: "https://arxiv.org/abs/2603.29535" }
+
+- title: "Hardware-aware Low Light Image Enhancement on Edge"
+  authors: "Sowmya Vajrala, Sravanth Kodavanti, Srinivas Miriyala"
+  venue: "CVPR 2026 W"
+  venue_full: "Women in Computer Vision (WiCV) Workshop, CVPR"
+  note: Spotlight
+  year: 2026
+  topic: vision
+  image: /assets/LLIE_Meta_Image.png
+  links: []
+
+- title: "Mobile-friendly Image De-noising: Hardware Conscious Optimization for Edge Application"
+  authors: "Srinivas Miriyala, Sowmya Vajrala, Hitesh Kumar, Sravanth Kodavanti, Vikram N R"
+  venue: "ICASSP 2025"
+  venue_full: "IEEE International Conference on Acoustics, Speech and Signal Processing"
+  year: 2025
+  topic: vision
+  image: /assets/Denoise_Meta_Image.png
+  links:
+    - { name: Paper, url: "https://arxiv.org/abs/2601.11684" }
+    - { name: Poster, url: "/assets/ICASSP_2025_Poster.pdf" }
+
+- title: "MOSAIC: Multi-Objective Search for Allocating Inference Cache Across LLM Decoder Layers"
+  authors: "Sravanth Kodavanti, Manjunath Arveti"
+  venue: "Preprint"
+  venue_full: "Preprint"
+  year: Preprint
+  topic: language
+  first_author: true
+  links: []
+
+- title: "Edge-Efficient Image Restoration: Transformer Distillation into State-Space Models"
+  authors: "Sravanth Kodavanti, Srinivas Miriyala, Sowmya Vajrala, Vikram N R, Sharan Allur"
+  venue: "Preprint"
+  venue_full: "arXiv"
+  year: Preprint
+  topic: vision
+  image: /assets/Mamba_Meta_Image.png
+  first_author: true
+  links:
+    - { name: Paper, url: "https://arxiv.org/abs/2605.02794" }
+
+- title: "Towards Efficient Image Deblurring for Edge Deployment"
+  authors: "Sowmya Vajrala, Srinivas Miriyala, Sravanth Kodavanti"
+  venue: "Preprint"
+  venue_full: "arXiv"
+  year: Preprint
+  topic: vision
+  image: /assets/Deblur_Meta_Image.png
+  links:
+    - { name: Paper, url: "https://arxiv.org/abs/2601.11685" }

@@ -9,17 +9,19 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     {% include header.html %}
     {% include visitors-beacon.html %}
-    <main class="main-content">
+    <main class="main-content" id="main">
       {{ content }}
     </main>
+    {% include footer.html %}
 
     <script>
       (function () {
         var btn = document.getElementById('theme-toggle');
         var meta = document.querySelector('meta[name="theme-color"]');
-        var chromeColor = { light: '#f8fafc', dark: '#0f172a' };
+        var chromeColor = { light: '#ffffff', dark: '#0d1117' };
 
         function apply(theme, persist) {
           document.documentElement.setAttribute('data-theme', theme);
@@ -56,6 +58,33 @@
         }
 
         apply(document.documentElement.getAttribute('data-theme') || 'light', false);
+      })();
+
+      // Mobile menu + header shadow once the page scrolls
+      (function () {
+        var header = document.getElementById('site-header');
+        var toggle = document.getElementById('nav-toggle');
+        if (toggle && header) {
+          var setOpen = function (open) {
+            header.classList.toggle('nav-open', open);
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+          };
+          toggle.addEventListener('click', function () {
+            setOpen(!header.classList.contains('nav-open'));
+          });
+          document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && header.classList.contains('nav-open')) { setOpen(false); toggle.focus(); }
+          });
+          window.addEventListener('resize', function () {
+            if (window.innerWidth > 860) setOpen(false);
+          });
+        }
+        if (header) {
+          var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 4); };
+          window.addEventListener('scroll', onScroll, { passive: true });
+          onScroll();
+        }
       })();
     </script>
   </body>

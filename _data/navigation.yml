@@ -1,0 +1,9 @@
+# Top navigation. `group: life` items render after a divider.
+- { title: Research, url: /research/ }
+- { title: Projects, url: /projects/ }
+- { title: Teaching, url: /teaching/ }
+- { title: Service, url: /others/ }
+- { title: CV, url: /assets/Sravanth_Kodavanti_CV.pdf, external: true }
+- { title: Travel, url: /travel/, group: life }
+- { title: Binge, url: /binge/, group: life }
+- { title: Visitors, url: /visitors/, group: life }

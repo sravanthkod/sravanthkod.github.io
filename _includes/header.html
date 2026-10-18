@@ -1,20 +1,32 @@
-<nav class="sidenav">
-  <div class="navblock">
-    <div class="navblock_text">
-      <a href="{{ site.baseurl }}/" {% if page.url == "/" or page.url == "/index.html" %}class="active"{% endif %}>Home</a>
-      {% assign sorted_pages = site.pages | sort:"order" %}
-      {% for my_page in sorted_pages %}
-        {% if my_page.title %}
-        <a href="{{ my_page.redirect | default: my_page.url | prepend: site.baseurl }}" {% if page.url == my_page.url %}class="active"{% endif %}>{{ my_page.title }}</a>
-        {% if my_page.nav_divider_after %}<div class="nav-divider" aria-hidden="true"></div>{% endif %}
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-  <div class="nav-footer">
-    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
-      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="6.34" y1="17.66" x2="4.93" y2="19.07"/><line x1="19.07" y1="4.93" x2="17.66" y2="6.34"/></svg>
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ site.baseurl }}/" aria-label="Sravanth Kodavanti — home">
+      <span class="brand-mark" aria-hidden="true">SK</span>
+      <span class="brand-name">Sravanth Kodavanti</span>
+    </a>
+
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+      <span></span><span></span><span></span>
     </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      {% assign in_life = false %}
+      {% for item in site.data.navigation %}
+        {% if item.group == "life" and in_life == false %}
+          <span class="nav-divider" aria-hidden="true"></span>
+          {% assign in_life = true %}
+        {% endif %}
+        {% assign is_active = false %}
+        {% if page.url contains item.url %}{% assign is_active = true %}{% endif %}
+        <a href="{{ item.url | prepend: site.baseurl }}"
+           class="nav-link{% if item.group == 'life' %} nav-link-life{% endif %}{% if is_active %} active{% endif %}"
+           {% if is_active %}aria-current="page"{% endif %}
+           {% if item.external %}target="_blank" rel="noopener"{% endif %}>{{ item.title }}</a>
+      {% endfor %}
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="6.34" y1="17.66" x2="4.93" y2="19.07"/><line x1="19.07" y1="4.93" x2="17.66" y2="6.34"/></svg>
+      </button>
+    </nav>
   </div>
-</nav>
+</header>

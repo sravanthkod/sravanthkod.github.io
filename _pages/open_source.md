@@ -1,51 +1,39 @@
 ---
 layout: page
 title: Projects
+subtitle: "Selected systems and course projects from my undergraduate years."
 permalink: /projects/
+description: "Selected projects by Sravanth Kodavanti — a graph-native compiler, a publication-management system, and drone trajectory optimization."
 order: 5
 ---
 
-Brief highlights of selected projects undertaken during my undergraduate studies:
+<section class="section">
+  <div class="section-head"><h2>Course projects</h2></div>
+  <div class="card-list">
 
-<div class="research-container">
+    <article class="card">
+      <h3>GraphIT — a compiler for a graph-native language</h3>
+      <p class="card-meta">Compilers (CS3423) · advised by <a href="https://people.iith.ac.in/ramakrishna/" target="_blank" rel="noopener">Dr. Ramakrishna Upadrasta</a></p>
+      <p>Designed and implemented a compiler for <strong>GraphIT</strong>, a language with <em>graph</em> as a first-class data type and dedicated syntax for graph operations. Built the front end with <strong>Flex</strong> and <strong>Bison</strong> and generated optimized code through an <strong>LLVM</strong> backend.</p>
+      <div class="pub-links"><a class="chip" href="{{ site.baseurl }}/assets/GraphIT_Report.pdf" target="_blank" rel="noopener">Report</a></div>
+    </article>
 
-<div style="margin-top: 30px; margin-bottom: 30px; border-bottom: 3px solid var(--color-accent); padding-bottom: 10px;"><h2 style="margin: 0; display: inline;">💻 Course Projects</h2></div>
+    <article class="card">
+      <h3>Publication management system</h3>
+      <p class="card-meta">Software Engineering (CS4443) · advised by <a href="https://people.iith.ac.in/msingh/" target="_blank" rel="noopener">Dr. Manish Singh</a></p>
+      <p>A web platform for managing conference submissions, reviews and tracking, with role-based workflows for authors, reviewers and admins.</p>
+      <div class="pub-links"><a class="chip" href="{{ site.baseurl }}/assets/SW_Final_Report.pdf" target="_blank" rel="noopener">Report</a></div>
+    </article>
 
-<div class="publication-item">
-  <div class="publication-details">
-    <h4>GraphIT – Compiler for a Custom Language</h4>
-    <p><strong>Course:</strong> Compilers (CS3423)</p>
-    <p>Designed and implemented a compiler for a new language <strong>GraphIT</strong>, which natively supports <strong>graph</strong> as a built-in data type and provides specialized syntax for graph operations. Utilized <strong>Flex</strong> and <strong>Bison</strong> for lexical and syntax analysis, and <strong>LLVM backend</strong> for code generation and optimization.</p>
-    <p><strong>Supervisor:</strong> <a href="https://people.iith.ac.in/ramakrishna/">Dr. Ramakrishna Upadrasta</a></p>
-    <div class="publication-links">
-      <a href="{{ site.url }}/assets/GraphIT_Report.pdf" target="_blank">Report</a>
-    </div>
+    <article class="card">
+      <h3>Optimizing B-spline curves for robot navigation</h3>
+      <p class="card-meta">Internet of Things (SM5033) · advised by <a href="https://people.iith.ac.in/raji/" target="_blank" rel="noopener">Dr. P. Rajyalakshmi</a></p>
+      <p>A drone navigation system using <strong>B-spline curves</strong> for smoother trajectories and reduced mechanical wear, with tuned control parameters for path planning and obstacle avoidance.</p>
+      <div class="pub-links">
+        <a class="chip" href="{{ site.baseurl }}/assets/IoT_Report.pdf" target="_blank" rel="noopener">Report</a>
+        <a class="chip" href="{{ site.baseurl }}/assets/IoT_Slides.pptx" target="_blank" rel="noopener">Slides</a>
+      </div>
+    </article>
+
   </div>
-</div>
-
-<div class="publication-item">
-  <div class="publication-details">
-    <h4>Website for Publication Management System</h4>
-    <p><strong>Course:</strong> Software Engineering (CS4443)</p>
-    <p>Designed and developed a web-based system to manage conferences and research publications, enabling streamlined submission, review, and tracking processes. Implemented features for author, reviewer, and admin roles to improve usability and workflow efficiency.</p>
-    <p><strong>Supervisor:</strong> <a href="https://people.iith.ac.in/msingh/">Dr. Manish Singh</a></p>
-    <div class="publication-links">
-      <a href="{{ site.url }}/assets/SW_Final_Report.pdf" target="_blank">Report</a>
-    </div>
-  </div>
-</div>
-
-<div class="publication-item">
-  <div class="publication-details">
-    <h4>Optimizing B-Spline Curves for Robot Navigation</h4>
-    <p><strong>Course:</strong> Internet of Things (SM5033)</p>
-    <p>Developed a drone navigation system using <strong>B-spline curves</strong> for smoother trajectories and reduced mechanical damage. Refined control parameters for optimal path planning and obstacle avoidance.</p>
-    <p><strong>Supervisor:</strong> <a href="https://people.iith.ac.in/raji/">Dr. P. Rajyalakshmi</a></p>
-    <div class="publication-links">
-      <a href="{{ site.url }}/assets/IoT_Report.pdf" target="_blank">Report</a>
-      <a href="{{ site.url }}/assets/IoT_Slides.pptx" target="_blank">Slides</a>
-    </div>
-  </div>
-</div>
-
-</div>
+</section>
