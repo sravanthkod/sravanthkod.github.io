@@ -1,9 +1,21 @@
 {
   "username": "sravanthkod",
   "profile_url": "https://letterboxd.com/sravanthkod/",
-  "fetched_at": "2026-10-13",
-  "film_count": 90,
+  "fetched_at": "2026-10-19",
+  "film_count": 91,
   "films": [
+    {
+      "title": "Jailer 2",
+      "year": 2026,
+      "rating": 3.0,
+      "like": true,
+      "rewatch": false,
+      "watched": "2026-10-19",
+      "review": "Thata's aura farming 💥💥",
+      "url": "https://letterboxd.com/sravanthkod/film/jailer-2-2026/",
+      "month": "October 2026",
+      "poster": "/assets/binge/posters/jailer-2-2026.jpg"
+    },
     {
       "title": "Pradhama Drishtiya Kuttakkar",
       "year": 2026,
