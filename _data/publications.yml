@@ -101,8 +101,10 @@
   venue_full: "Preprint"
   year: Preprint
   topic: language
+  image: /assets/MOSAIC_Meta_Image.png
   first_author: true
-  links: []
+  links:
+    - { name: Paper, url: "https://arxiv.org/abs/2610.25431" }
 
 - title: "Edge-Efficient Image Restoration: Transformer Distillation into State-Space Models"
   authors: "Sravanth Kodavanti, Srinivas Miriyala, Sowmya Vajrala, Vikram N R, Sharan Allur"
