@@ -1,9 +1,45 @@
 {
   "username": "sravanthkod",
   "profile_url": "https://letterboxd.com/sravanthkod/",
-  "fetched_at": "2026-10-26",
-  "film_count": 91,
+  "fetched_at": "2026-11-03",
+  "film_count": 94,
   "films": [
+    {
+      "title": "Dorothy",
+      "year": 2026,
+      "rating": 4.0,
+      "like": true,
+      "rewatch": false,
+      "watched": "2026-11-02",
+      "review": "Exceptional 🔥🔥",
+      "url": "https://letterboxd.com/sravanthkod/film/dorothy-2026/",
+      "month": "November 2026",
+      "poster": "/assets/binge/posters/dorothy-2026.jpg"
+    },
+    {
+      "title": "Aadarsha Kutumbam House No: 47 - AK47",
+      "year": 2026,
+      "rating": 2.5,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-11-01",
+      "review": "Okay, First Half bagundhi, second half Assam vellindhi, overall gorintaku padindhi.",
+      "url": "https://letterboxd.com/sravanthkod/film/aadarsha-kutumbam-house-no-47-ak47/",
+      "month": "November 2026",
+      "poster": "/assets/binge/posters/aadarsha-kutumbam-house-no-47-ak47.jpg"
+    },
+    {
+      "title": "418",
+      "year": 2026,
+      "rating": 3.5,
+      "like": true,
+      "rewatch": false,
+      "watched": "2026-10-31",
+      "review": "Story & climax was good. Some scenes worked out, especially the flash back. Some felt boring & you will have the itch to drag mobile phone during them. Decent watch, Devika was awesome.",
+      "url": "https://letterboxd.com/sravanthkod/film/418/",
+      "month": "October 2026",
+      "poster": "/assets/binge/posters/418.jpg"
+    },
     {
       "title": "Jailer 2",
       "year": 2026,
