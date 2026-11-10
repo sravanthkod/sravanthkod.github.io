@@ -1,9 +1,57 @@
 {
   "username": "sravanthkod",
   "profile_url": "https://letterboxd.com/sravanthkod/",
-  "fetched_at": "2026-11-03",
-  "film_count": 94,
+  "fetched_at": "2026-11-10",
+  "film_count": 98,
   "films": [
+    {
+      "title": "Jetlee",
+      "year": 2026,
+      "rating": 1.5,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-11-08",
+      "review": "Idhi jetlee kadhu jetlag",
+      "url": "https://letterboxd.com/sravanthkod/film/jetlee/",
+      "month": "November 2026",
+      "poster": "/assets/binge/posters/jetlee.jpg"
+    },
+    {
+      "title": "Ramayana: Rise of a Legend",
+      "year": 2026,
+      "rating": 4.5,
+      "like": true,
+      "rewatch": false,
+      "watched": "2026-11-07",
+      "review": "Visually too good, a brilliant attempt, Yash & Ranbir, Pallavi did a very good job, visuals kosam chuseyachu.",
+      "url": "https://letterboxd.com/sravanthkod/film/ramayana-rise-of-a-legend/",
+      "month": "November 2026",
+      "poster": "/assets/binge/posters/ramayana-rise-of-a-legend.jpg"
+    },
+    {
+      "title": "Baththa",
+      "year": 2026,
+      "rating": 4.5,
+      "like": true,
+      "rewatch": false,
+      "watched": "2026-11-06",
+      "review": "Such a beautiful fillm, Sabari did a cute acting.",
+      "url": "https://letterboxd.com/sravanthkod/film/baththa/",
+      "month": "November 2026",
+      "poster": "/assets/binge/posters/baththa.jpg"
+    },
+    {
+      "title": "Modha Rathri",
+      "year": 2026,
+      "rating": 3.0,
+      "like": false,
+      "rewatch": false,
+      "watched": "2026-11-03",
+      "review": "Final twist of Nitish is unexpected. Plot was a bit boring though,",
+      "url": "https://letterboxd.com/sravanthkod/film/modha-rathri/",
+      "month": "November 2026",
+      "poster": "/assets/binge/posters/modha-rathri.jpg"
+    },
     {
       "title": "Dorothy",
       "year": 2026,
